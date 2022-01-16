@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <!-- <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="css/coordinate.css">
+    <link rel="stylesheet" href="css/notice.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/teams.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/sponsors.css">
+    <script rel="text/javascript" src="js/timeline.js"></script>
+    <script rel="text/javascript" src="js/team.js"></script>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/deskof.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/newsletter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    #loader {
+        border: 12px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 12px solid #444444;
+        width: 70px;
+        height: 70px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .center {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+</style>
+<script>
+    $(".hover").mouseleave(
+        function () {
+            $(this).removeClass("hover");
+        }
+    );
+    function NavBar() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 1)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        } else {
+            document.getElementById("myTopnav").style.width = "80%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 0.8)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "2rem";
+        }
+    }
+
+
+</script>
+
+<body>
+
+
+    <div id="loader" class="center"></div>
+    <!--header-->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100%;">
+            <div class="container-fluid" >
+              <a class="navbar-brand" href="#"><img src="images/logo.jpeg" width="50" height="50"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li> -->
+    <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li> -->
+    <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </li>
+                </ul> -->
+    <!-- <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+    <!-- </div>
+            </div>
+          </nav> -->
+    <header id="header">
+        <div class="topnav" id="myTopnav">
+            <a href="#"><img class="logo" src="images//logo.jpeg" alt=""></a>
+            <a href="#" style="margin-left: 5%;">Sponsors</a>
+            <a href="#" style="margin-left: 5%;">Home</a>
+            <!-- <div class="dropdown">
+                    <button class="dropbtn"> Categories
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content animate">
+                        <a href="#">Cubic</a>
+                        <a href="#">Square</a>
+                    </div>
+                </div> -->
+            <a href="#contact" style="margin-left: 5%;">Contact</a>
+            <a href="#about" style="margin-left: 5%;">About</a>
+
+            <a href="#about" style="float:right;padding: 24px 2px;">Name</a>
+            <a href="#about" style="float:right;padding: 24px 5px;"><i class="fa fa-user"></i></a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+        </div>
+
+
+
+
+        </div>
+    </header>
+    <div class="topprt">
+        <video autoplay muted loop id="myVideo">
+            <source src="images/Untitled design (3).mp4" type="video/mp4">
+        </video>
+        <!-- <section class="nav-bar">
+            <div class="nav-container"> -->
+        <!-- <div class="brand">
+            <a href="https://webdevtrick.com/"><img src="https://webdevtrick.com/wp-content/uploads/logo-fb-1.png"></a>
+          </div>  -->
+        <!-- <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Desk of</a>
+                        </li>
+                        <li>
+                            <a href="#">Coordinators</a>
+                        </li>
+                        <li>
+                            <a href="#">Team Leads</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+            </div>
+        </section> -->
+
+        <eqtitle class="midhead">
+            <div class="theme"> </div>
+            <div class="namespart">
+                <div class="eqName1">EQUILIBRIO</div>
+                <div class="eqName2">2022</div>
+            </div>
+        </eqtitle>
+        <div class="com" style="z-index:1000">
+            <h1>Coming Soon</h1>
+        </div>
+    </div>
+
+
+    <!-- About -->
+    <div id="about" data-aos="fade-up">
+        <div class="row-about">
+            <div class=" about-content about-content-1">
+                <div class="space"></div>
+                <div class="ot1">
+                    <div class="out-1">
+                        <div class="in-1">
+                            <h5 class="num">30+</h5>
+                            <h6 class="te">Workshops</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="out-2">
+                    <div class="in-2">
+                        <h5 class="num">50+</h5>
+                        <h6 class="te">Speakers</h6>
+                    </div>
+                </div>
+                <div class="out-3">
+                    <div class="in-3">
+                        <h5 class="num">20+</h5>
+                        <h6 class="te">Events</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" about-content about-content-2" style="z-index: 10;">
+                <h2>About</h2>
+                <p style="margin-top: 2%;">"Equilibrio is the annual techno-management fest of Guru Ghasidas
+                    Vishwavidyalaya, Bilaspur.
+                    Initiated in 2013, Equilibrio has served as a platform for technology enthusiasts to showcase their
+                    intelligence, innovation and ingenuity. The fest brings together people from all walks of life,
+                    comprising students, professionals and the general public. Equilibrio organizes a wide range of
+                    events encompassing different genres of technology and management via competitive events, motivating
+                    guest talks, workshops, cultural programs and exhibitions. The aim of Equilibrio is to provide the
+                    technically inclined Indian youth with a national level medium to recognize and reward their
+                    passion, ideas and skills as well as to develop them.
+                    The word 'Equilibrio' means balance. Acknowledging this, every year Equilibrio promotes a natural or
+                    social cause to 'balance' technology with nature and society. Since its launch, Equilibrio has
+                    received enormous participation from all over the country and has become one of the best in central
+                    India. So, tell everyone, mark your calendars and gear up for Equilibrio 2022."
+                </p>
+                <div class="button">
+                    <button class="about-btn">View More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bubble-1"></div>
+    <div class="bubble-2"></div>
+    <div class="bubble-3"></div>
+
+    <!-- Desk Of -->
+    <div id="desk">
+
+   
+    <h1 class="desktitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif;">FROM THE
+        DESK OF</h1>
+    <p style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;">Explore
+        our amazing events</p>
+
+    <div class="DeskSec " style="z-index:70">
+
+        <img src='https://images.unsplash.com/photo-1554079501-a254f876fc77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyNDY0NTMwOQ&ixlib=rb-1.2.1&q=80&w=400'
+            class="pics p1" alt=''>
+
+
+        <p class="textp t1">T1 It's my pleasure to welcome you to the EQUILIBRIO - technical festival & community. I
+            hope you will find this festival enthralling, exciting, and invigorating. When I walk
+            through the corridors of this institute, the enthusiasm of our students captivates me, the
+            expertise of our staff, and the uniqueness of what we, as an institute, offer our
+            community makes me feel proud. We work to foster such an environment that is
+            supportive and encouraging for every stakeholder. I hope you have the same sense of
+            joyful discovery as you navigate this site. Equilibrio has made a huge foray into the
+            noble field of science, technology, and management covering from history to the
+            emerging areas.</p>
+
+        <p class="textp t2">T2 It's my pleasure to welcome you to the EQUILIBRIO - technical festival & community. I
+            hope you will find this festival enthralling, exciting, and invigorating. When I walk
+            through the corridors of this institute, the enthusiasm of our students captivates me, the
+            expertise of our staff, and the uniqueness of what we, as an institute, offer our
+            community makes me feel proud. We work to foster such an environment that is
+            supportive and encouraging for every stakeholder. I hope you have the same sense of
+            joyful discovery as you navigate this site. Equilibrio has made a huge foray into the
+            noble field of science, technology, and management covering from history to the
+            emerging areas.</p>
+        <img src='https://images.unsplash.com/photo-1554079501-a254f876fc77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyNDY0NTMwOQ&ixlib=rb-1.2.1&q=80&w=400'
+            class="pics p2" alt=''>
+
+        <img src='https://images.unsplash.com/photo-1554079501-a254f876fc77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyNDY0NTMwOQ&ixlib=rb-1.2.1&q=80&w=400'
+            class="pics p3" alt=''>
+
+        <p class="textp t3"> T3 It's my pleasure to welcome you to the EQUILIBRIO - technical festival & community. I
+            hope you will find this festival enthralling, exciting, and invigorating. When I walk
+            through the corridors of this institute, the enthusiasm of our students captivates me, the
+            expertise of our staff, and the uniqueness of what we, as an institute, offer our
+            community makes me feel proud. We work to foster such an environment that is
+            supportive and encouraging for every stakeholder. I hope you have the same sense of
+            joyful discovery as you navigate this site. Equilibrio has made a huge foray into the
+            noble field of science, technology, and management covering from history to the
+            emerging areas.</p>
+
+        <p class="textp t4">T4 It's my pleasure to welcome you to the EQUILIBRIO - technical festival & community. I
+            hope you will find this festival enthralling, exciting, and invigorating. When I walk
+            through the corridors of this institute, the enthusiasm of our students captivates me, the
+            expertise of our staff, and the uniqueness of what we, as an institute, offer our
+            community makes me feel proud. We work to foster such an environment that is
+            supportive and encouraging for every stakeholder. I hope you have the same sense of
+            joyful discovery as you navigate this site. Equilibrio has made a huge foray into the
+            noble field of science, technology, and management covering from history to the
+            emerging areas.</p>
+        <img src='https://images.unsplash.com/photo-1554079501-a254f876fc77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyNDY0NTMwOQ&ixlib=rb-1.2.1&q=80&w=400'
+            class="pics p4" alt=''>
+
+
+    </div>
+</div>
+
+   <div id="notice">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>Upcoming Events</h1>
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                        <div class="card-img-overlay card-inverse">
+                            <div class="text-stroke">
+                                21 Dec, 2021
+                            </div>
+                            <div class="para">
+                                <h2>Event Title</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti illum nemo
+                                    asperiores? Quibusdam inventore, aliquid ad repellendus ea minus animi numquam ipsam
+                                    laborum error nemo libero sunt, iusto quaerat!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h1>Important Dates</h1>
+                    <div class="container">
+                        <marquee direction="up" height="380px" behavior="alternate" scrolldelay="5">
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                                </div>
+                                <div class="col-6">
+                                    <h2>Event Title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti illum
+                                        nemo asperiores? Quibusdam inventore, aliquid ad repellendus ea minus animi
+                                        numquam ipsam laborum error nemo libero sunt, iusto quaerat!</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                                </div>
+                                <div class="col-6">
+                                    <h2>Event Title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti illum
+                                        nemo asperiores? Quibusdam inventore, aliquid ad repellendus ea minus animi
+                                        numquam ipsam laborum error nemo libero sunt, iusto quaerat!</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                                </div>
+                                <div class="col-6">
+                                    <h2>Event Title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti illum
+                                        nemo asperiores? Quibusdam inventore, aliquid ad repellendus ea minus animi
+                                        numquam ipsam laborum error nemo libero sunt, iusto quaerat!</p>
+                                </div>
+                            </div>
+
+                        </marquee>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--Events
+    <div id="events">
+        <h1 class="desktitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif;">EVENTS</h1>
+        <p style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;">Explore
+            our amazing events</p>
+    
+        <div class="container">
+            <div class="row" style="margin-bottom:1%;">
+                <div class="col-sm-4 col-12">
+                    <figure class="sadie">
+                        <img src="images/1.jpg" class="img-fluid img-responsive">
+                        <figcaption>
+                            <h2>Event</h2>
+                        </figcaption>
+                        <div class="hover"><i class="fa fa-external-link"></i></div><a href="#"></a>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <figure class="sadie">
+                        <img src="images/1.jpg" class="img-fluid img-responsive">
+                        <figcaption>
+                            <h2>Event</h2>
+                        </figcaption>
+                        <div class="hover"><i class="fa fa-external-link"></i></div><a href="#"></a>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <figure class="sadie">
+                        <img src="images/1.jpg" class="img-fluid img-responsive">
+                        <figcaption>
+                            <h2>Event</h2>
+                        </figcaption>
+                        <div class="hover"><i class="fa fa-external-link"></i></div><a href="#"></a>
+                    </figure>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:1%;">
+                <div class="col-sm-4 col-12">
+                    <figure class="sadie">
+                        <img src="images/1.jpg" class="img-fluid img-responsive">
+                        <figcaption>
+                            <h2>Event</h2>
+                        </figcaption>
+                        <div class="hover"><i class="fa fa-external-link"></i></div><a href="#"></a>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <figure class="sadie">
+                        <img src="images/1.jpg" class="img-fluid img-responsive">
+                        <figcaption>
+                            <h2>Event</h2>
+                        </figcaption>
+                        <div class="hover"><i class="fa fa-external-link"></i></div><a href="#"></a>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <figure class="sadie">
+                        <img src="images/1.jpg" class="img-fluid img-responsive">
+                        <figcaption>
+                            <h2>Event</h2>
+                        </figcaption>
+                        <div class="hover"><i class="fa fa-external-link"></i></div><a href="#"></a>
+                    </figure>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:1%;">
+                <div class="col-sm-4 col-12">
+                    <figure class="sadie">
+                        <img src="images/1.jpg" class="img-fluid img-responsive">
+                        <figcaption>
+                            <h2>Event</h2>
+                        </figcaption>
+                        <div class="hover"><i class="fa fa-external-link"></i></div><a href="#"></a>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <figure class="sadie">
+                        <img src="images/1.jpg" class="img-fluid img-responsive">
+                        <figcaption>
+                            <h2>Event</h2>
+                        </figcaption>
+                        <div class="hover"><i class="fa fa-external-link"></i></div><a href="#"></a>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <figure class="sadie">
+                        <img src="images/1.jpg" class="img-fluid img-responsive">
+                        <figcaption>
+                            <h2>Event</h2>
+                        </figcaption>
+                        <div class="hover"><i class="fa fa-external-link"></i></div><a href="#"></a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <!--Events-->
+    <div id="events">
+        <h1 class="desktitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif;">EVENTS</h1>
+        <p style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;">Explore
+            our amazing events</p>
+    
+        <div class="container">
+            <div id="event-1">
+            <div class="row" >
+                <div class="col-sm-4 col-12">
+                  <div class="card">
+                    <div class="imgBx" data-text="Design">
+                      <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png">
+                    </div>
+                    <div class="content">
+                      <div>
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam necessitatibus corporis porro maxime reprehenderit voluptates? Itaque excepturi illum, sapiente nulla esse tempore, quos facilis enim neque quas tenetur ipsam voluptates?</p>
+                        <a href="#">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                  <div class="card">
+                    <div class="imgBx" data-text="Design">
+                      <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png">
+                    </div>
+                    <div class="content">
+                      <div>
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam necessitatibus corporis porro maxime reprehenderit voluptates? Itaque excepturi illum, sapiente nulla esse tempore, quos facilis enim neque quas tenetur ipsam voluptates?</p>
+                        <a href="#">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                  <div class="card">
+                    <div class="imgBx" data-text="Design">
+                      <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png">
+                    </div>
+                    <div class="content">
+                      <div>
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam necessitatibus corporis porro maxime reprehenderit voluptates? Itaque excepturi illum, sapiente nulla esse tempore, quos facilis enim neque quas tenetur ipsam voluptates?</p>
+                        <a href="#">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div id="event-2">
+            <div class="row">
+                <div class="col-sm-4 col-12">
+                  <div class="card">
+                    <div class="imgBx" data-text="Design">
+                      <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png">
+                    </div>
+                    <div class="content">
+                      <div>
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam necessitatibus corporis porro maxime reprehenderit voluptates? Itaque excepturi illum, sapiente nulla esse tempore, quos facilis enim neque quas tenetur ipsam voluptates?</p>
+                        <a href="#">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                  <div class="card">
+                    <div class="imgBx" data-text="Design">
+                      <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png">
+                    </div>
+                    <div class="content">
+                      <div>
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam necessitatibus corporis porro maxime reprehenderit voluptates? Itaque excepturi illum, sapiente nulla esse tempore, quos facilis enim neque quas tenetur ipsam voluptates?</p>
+                        <a href="#">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                  <div class="card">
+                    <div class="imgBx" data-text="Design">
+                      <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png">
+                    </div>
+                    <div class="content">
+                      <div>
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam necessitatibus corporis porro maxime reprehenderit voluptates? Itaque excepturi illum, sapiente nulla esse tempore, quos facilis enim neque quas tenetur ipsam voluptates?</p>
+                        <a href="#">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div id="event-3">
+            <div class="row">
+                <div class="col-sm-4 col-12">
+                  <div class="card">
+                    <div class="imgBx" data-text="Design">
+                      <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png">
+                    </div>
+                    <div class="content">
+                      <div>
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam necessitatibus corporis porro maxime reprehenderit voluptates? Itaque excepturi illum, sapiente nulla esse tempore, quos facilis enim neque quas tenetur ipsam voluptates?</p>
+                        <a href="#">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                  <div class="card">
+                    <div class="imgBx" data-text="Design">
+                      <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png">
+                    </div>
+                    <div class="content">
+                      <div>
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam necessitatibus corporis porro maxime reprehenderit voluptates? Itaque excepturi illum, sapiente nulla esse tempore, quos facilis enim neque quas tenetur ipsam voluptates?</p>
+                        <a href="#">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                  <div class="card">
+                    <div class="imgBx" data-text="Design">
+                      <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png">
+                    </div>
+                    <div class="content">
+                      <div>
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam necessitatibus corporis porro maxime reprehenderit voluptates? Itaque excepturi illum, sapiente nulla esse tempore, quos facilis enim neque quas tenetur ipsam voluptates?</p>
+                        <a href="#">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <button onclick="myEvents()" id="event-btn" >Know More</button>
+        </div>
+        </div>
+       
+    </div>
+
+    <!--Timeline-->
+    <!-- <div id="timeline" class="container" style="z-index:56;">
+        <h1 class="titletime"
+            style="text-align: center;font-size: 33px;font-weight: 550;color: white;font-family: sans-serif;">TIMELINE
+        </h1>
+        <p style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;">
+            Explore our amazing events</p>
+        <section class="cd-horizontal-timeline">
+            <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events">
+                        <ol>
+                            <li><a href="#0" data-date="16/01/2014" class="selected">Perception</a></li>
+                            <li><a href="#0" data-date="28/02/2014">Web-verse</a></li>
+                            <li><a href="#0" data-date="20/04/2014">Android Wizard</a></li>
+                            <li><a href="#0" data-date="20/05/2014">Code-mania</a></li>
+                            <li><a href="#0" data-date="09/07/2014">Group Debate</a></li>
+                            <li><a href="#0" data-date="30/08/2014">MATLAB</a></li>
+                            <li><a href="#0" data-date="15/09/2014">Design Engineers</a></li>
+                            <li><a href="#0" data-date="01/11/2014">Circuit Design</a></li>
+                            <li><a href="#0" data-date="10/12/2014">Quiz</a></li>
+                            <li><a href="#0" data-date="19/01/2015">SolidWorks</a></li>
+                            <li><a href="#0" data-date="03/03/2015">ECE Trending Discussion</a></li>
+                        </ol>
+
+                        <span class="filling-line" aria-hidden="true"></span>
+                    </div>
+                </div>
+
+                <ul class="cd-timeline-navigation">
+                    <li><a href="#0" class="prev inactive">Prev</a></li>
+                    <li><a href="#0" class="next">Next</a></li>
+                </ul>
+            </div>
+
+            <div class="events-content">
+                <ol>
+                    <li class="selected" data-date="16/01/2014">
+                        <h5>Perception</h5>
+                        <p>
+                            A game of observation and execution of any kind of innovation. An idea-driven contest that
+                            encourages participants to apply their views on solving a problem.
+                        </p>
+                    </li>
+
+                    <li data-date="28/02/2014">
+                        <h5>Web-verse</h5>
+
+                        <p>
+                            A contest to apply your web designing knowledge and skills by the use of some simple
+                            languages [HTML, CSS, JAVAScript] and deliver your creativity.
+
+                        </p>
+                    </li>
+
+                    <li data-date="20/04/2014">
+                        <h5>Android Wizard</h5>
+                        <p>
+                            Turn your imagination of apps into something tangible with some simple development languages
+                            and show you skills of app development.
+
+                        </p>
+                    </li>
+
+                    <li data-date="20/05/2014">
+                        <h5>Code-mania</h5>
+
+                        <p>
+                            A coding contest on algorithms and data structures to encourage participants to apply their
+                            knowledge towards problem-solving.
+                        </p>
+                    </li>
+
+                    <li data-date="09/07/2014">
+                        <h5>Group Debate</h5>
+                        <p>
+                            Now a days during the interviews one of the major task given to the disciples is group
+                            debates. One should have a clear knowledge on what they have studied. So this event deals
+                            with group debates of the trending and upcoming events in Chemical Engineering.
+                        </p>
+                    </li>
+
+                    <li data-date="30/08/2014">
+                        <h5>MATLAB</h5>
+                        <p>
+                            Now a days Chemical Engineers are dealing the complicated design calculations using MATLAB
+                            which is more effective and time saving. Designation and Optimization of the equipment or a
+                            plant is necessary for safety purpose. Keeping them all in mind MATLAB EVENT is being
+                            organised in order to help students in problem solving.
+                        </p>
+                    </li>
+
+                    <li data-date="15/09/2014">
+                        <h5>Design Engineers</h5>
+
+                        <p>
+                            Now a days during the interviews one of the major task given to the disciples is group
+                            debates. One should have a clear knowledge on what they have studied. So this event deals
+                            with group debates of the trending and upcoming events in Chemical Engineering.
+                        </p>
+                    </li>
+
+                    <li data-date="01/11/2014">
+                        <h5>Circuit design</h5>
+                        <p>
+                            Where have to design and simulate most economical circuit. It give opportunity to showcase
+                            your knowledge and your skills.
+                        </p>
+                    </li>
+
+                    <li data-date="03/03/2015">
+                        <h5> ECE Trending topic discussion </h5>
+
+                        <p>
+                            We will give the topic for discussion. Here there will be a chance to showcase your
+                            knowledge. You have explain briefly on its present technology, and what will be its future
+                            prospects.
+                        </p>
+                    </li>
+
+                    <li data-date="19/01/2015">
+                        <h5>SolidWorks</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit
+                            recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic
+                            repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis
+                            eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus
+                            dolores porro doloribus.
+                        </p>
+                    </li>
+
+                    <li data-date="10/12/2014">
+                        <h5>Quizzes</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit
+                            recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic
+                            repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis
+                            eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus
+                            dolores porro doloribus.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </div> -->
+
+    <!--Coordinators-->
+    <div class="student-co-ordinate">
+        <h2 class="main-text" style="padding-top:5%">STUDENT CO-ORDINATORS</h2>
+        <p style="color: white !important;font-family: 'Montserrat', sans-serif;">Introducing our co-ordinators</p>
+        <div class="content">
+            <div class="coordinate">
+                <div class="img">
+                    <img src="images/img-1.jfif" alt="" class="img-c">
+                    <div class="social-media">
+                        <a href=""><i class="fa fa-facebook icon"></i></a>
+                        <a href=""><i class="fa fa-twitter icon"></i></a>
+                        <a href=""><i class="fa fa-linkedin icon"></i></a>
+                    </div>
+                </div>
+                <h3 class="name">Ayush Saxena</h3>
+                <h6 class="designation">Student Coordinate</h6>
+                <hr>
+                <p class="intro-c">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni rerum incidunt est
+                    ducimus. Ipsum perspiciatis nulla magnam suscipit animi. Facere!</p>
+            </div>
+            <div class="coordinate">
+                <div class="img">
+                    <img src="images/img-2.jfif" alt="" class="img-c">
+                    <div class="social-media">
+                        <a href=""><i class="fa fa-facebook icon"></i></a>
+                        <a href=""><i class="fa fa-twitter icon"></i></a>
+                        <a href=""><i class="fa fa-linkedin icon"></i></a>
+                    </div>
+                </div>
+                <h3 class="name">Ayush Saxena</h3>
+                <h6 class="designation">Student Coordinate</h6>
+                <hr>
+                <p class="intro-c">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni rerum incidunt est
+                    ducimus. Ipsum perspiciatis nulla magnam suscipit animi. Facere!</p>
+            </div>
+            <div class="coordinate">
+                <div class="img">
+                    <img src="images/img-3.jfif" alt="" class="img-c">
+                    <div class="social-media">
+                        <a href=""><i class="fa fa-facebook icon"></i></a>
+                        <a href=""><i class="fa fa-twitter icon"></i></a>
+                        <a href=""><i class="fa fa-linkedin icon"></i></a>
+                    </div>
+                </div>
+                <h3 class="name">Ayush Saxena</h3>
+                <h6 class="designation">Student Coordinate</h6>
+                <hr>
+                <p class="intro-c">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni rerum incidunt est
+                    ducimus. Ipsum perspiciatis nulla magnam suscipit animi. Facere!</p>
+            </div>
+            <div class="coordinate">
+                <div class="img">
+                    <img src="images/img-4.jfif" alt="" class="img-c">
+                    <div class="social-media">
+                        <a href=""><i class="fa fa-facebook icon"></i></a>
+                        <a href=""><i class="fa fa-twitter icon"></i></a>
+                        <a href=""><i class="fa fa-linkedin icon"></i></a>
+                    </div>
+                </div>
+                <h3 class="name">Ayush Saxena</h3>
+                <h6 class="designation">Student Coordinate</h6>
+                <hr>
+                <p class="intro-c">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni rerum incidunt est
+                    ducimus. Ipsum perspiciatis nulla magnam suscipit animi. Facere!</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Team Leads-->
+    <div class="container">
+        <div class="team-lead">
+            <section>
+                <div class="customer-feedback">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-sm-offset-2 col-md-8 col-sm-12">
+                                <div>
+                                    <h1 class="section-title">TEAM LEADS</h1>
+                                    <p style="color: white !important;font-family: 'Montserrat', sans-serif;">Meet our
+                                        team leads</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-offset-3 col-lg-6 col-md-8 col-sm-offset-2 col-sm-12">
+                                <div class="owl-carousel feedback-slider">
+                                    <div class="feedback-slider-item">
+                                        <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                                            class="center-block img-circle" width="100%">
+                                        <h3 class="customer-name">Damon</h3>
+                                        <hr>
+                                        <p style="font-family: 'Montserrat', sans-serif;"> Lorem Ipsum is simply dummy
+                                            text of the printing and typesetting industry. It
+                                            is a
+                                            long established fact that a reader will be distracted by the readable its
+                                            layout.
+                                        </p>
+                                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa fa-twitter"></i>
+                                    </div>
+                                    <div class="feedback-slider-item">
+                                        <img src="https://images.unsplash.com/photo-1500048993953-d23a436266cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                            class="center-block img-circle" width="100%">
+                                        <h3 class="customer-name">Stefan</h3>
+                                        <hr>
+                                        <p style="font-family: 'Montserrat', sans-serif;">Lorem Ipsum is simply dummy
+                                            text of the printing and typesetting industry. It
+                                            is a
+                                            long established fact that a reader will be distracted by the readable its
+                                            layout.
+                                        </p>
+                                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa fa-twitter"></i>
+                                    </div>
+                                    <div class="feedback-slider-item">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                                            class="center-block img-circle" width="100%">
+                                        <h3 class="customer-name">Elena</h3>
+                                        <hr>
+                                        <p style="font-family: 'Montserrat', sans-serif;">Lorem Ipsum is simply dummy
+                                            text of the printing and typesetting industry. It
+                                            is a
+                                            long established fact that a reader will be distracted by the readable its
+                                            layout.
+                                        </p>
+                                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa fa-twitter"></i>
+                                    </div>
+                                </div>
+                                <div class="feedback-slider-thumb hidden-xs">
+                                    <div class="thumb-prev">
+                                        <span>
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                                                width="100%">
+                                            <!-- <h3 class="prev-name">Name</h3> -->
+                                        </span>
+                                    </div>
+
+                                    <div class="thumb-next">
+                                        <span>
+                                            <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                                                width="100%">
+                                            <!-- <h3 class="next-name">Name</h3> -->
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="bubble-4"></div>
+    <div class="bubble-5"></div>
+
+    <!--Gallery-->
+    <div class="container text-center ">
+        <div class="row">
+            <div class="col-sm-offset-2 col-md-8 col-sm-12">
+                <div>
+                    <h1 class="section-title">PHOTO GALLERY</h1>
+                    <p style="color: white !important;">Best captured moments</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="container">
+                <div class="box">
+                    <div class="r1">
+                        <img id="image-1"
+                            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
+                        <img id="image-2" src="images/14.jpg">
+                        <img id="image-3" src="images/3.jpg">
+
+                    </div>
+                    <div class="r2">
+                        <img id="image-8" src="images/4.jpg">
+                        <img id="image-7" src="images/3.jpg">
+
+                    </div>
+                    <div class="r3">
+                        <img id="image-4" src="images/6.jpg">
+                        <img id="image-5" src="images/14.jpg">
+                        <img id="image-6" src="images/3.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- <div class="container text-center">
+        <button onclick="myFunction()"
+            style="background-color: #000000;letter-spacing: 2px;font-weight: bold;padding: 10px;color:white;border-radius: 5px;border: none;">View
+            More</button>
+    </div> -->
+
+    <!--Sponsors-->
+    <div id="Sponsors">
+        <div class="container text-center">
+            <div class="row ">
+                <div class="col-md-8 col-sm-12">
+                    <h1 class="sponsors-title text-center">SPONSORS <span
+                            style="font-size:40px;font-weight: 600;color: rgb(193, 125, 188);"> | </span> PARTNERS</h1>
+                    <p style="color: white !important;">A big shout out to our sponsors and partners!</p>
+                </div>
+            </div>
+            <div class="row">
+                <img src="images\1.png">
+                <img src="images\2.png">
+                <img src="images\1.png">
+            </div>
+            <!-- <h3>Partners</h3> -->
+            <div id="partners" class="row">
+                <img src="images/codechef.jpeg">
+                <img src="images/internshala.jpeg">
+                <img src="images/premieracademy.jpeg">
+                <img src="images/careerlauncher.jpeg">
+                <img src="images/time.jpeg">
+            </div>
+            <div id="partners" class="row">
+                <img src="images/BoF.jpeg">
+                <img src="images/lic.jpeg">
+                <img src="images/crazyengineer.jpeg">
+                <img src="images/vlcc.jpeg">
+                <img src="images/gtech.jpeg">
+
+            </div>
+            <div id="myDIV-1">
+                <div id="partners" class="row">
+                    <img src="images/arena.jpeg">
+                    <img src="images/brainbuxa.jpeg">
+                    <img src="images/caddcenter.jpeg">
+                    <img src="images/careerlauncher.jpeg">
+                    <img src="images/punjab.jpeg">
+
+                </div>
+            </div>
+            <div id="myDIV-2">
+                <div id="partners" class="row">
+                    <img src="images/citymall.jpeg">
+                    <img src="images/cms.jpeg">
+                    <img src="images/ebay.jpeg">
+                    <img src="images/meenakshi.jpeg">
+                    <img src="images/skd.jpeg">
+                    <img src="images/twenty19.jpeg">
+                </div>
+            </div>
+            <div id="myDIV-3">
+                <div id="partners" class="row">
+                    <img src="images/naturals.jpeg">
+                    <img src="images/secl.jpeg">
+                    <img src="images/targate.jpeg">
+                    <img src="images/sankalp.jpeg">
+                    <img src="images/talwalkars.jpeg">
+                    <img src="images/tripshire.jpeg">
+                </div>
+            </div>
+            <div class="row text-center">
+                <button onclick="myFunction()" class="sponsors-btn">Know More</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--FAQ-->
+    <div class="container text-center" style="margin-top: 2%;">
+        <h1 class="section-title">FAQ's</h1>
+        <div class="faq-content">
+            <div class="faq-question">
+                <input id="q1" type="checkbox" class="panel">
+                <div class="plus">+</div>
+                <label for="q1" class="panel-title">What is the meaning of life?</label>
+                <div class="panel-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad quo
+                    libero, voluptates eligendi minus totam suscipit expedita iste non repudiandae! Iure est dolorem eum
+                    incidunt quasi impedit quod nisi.</div>
+            </div>
+
+            <div class="faq-question">
+                <input id="q2" type="checkbox" class="panel">
+                <div class="plus">+</div>
+                <label for="q2" class="panel-title">How much wood would a woodchuck chuck?</label>
+                <div class="panel-content">A woodchuck would chuck all the wood he could chuck, if a woodchuck could
+                    chuck
+                    wood!</div>
+            </div>
+
+            <div class="faq-question">
+                <input id="q3" type="checkbox" class="panel">
+                <div class="plus">+</div>
+                <label for="q3" class="panel-title">What happens if Pinocchio says, "my nose will grow now"?</label>
+                <div class="panel-content">Certain questions are better left &nbsp; <a
+                        href="https://en.wikipedia.org/wiki/The_Unanswered_Question" target="_blank">unanswered</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Newsletter-->
+
+<div class="section5">
+    <section>
+    <h1 class="title inline-photo2 show-on-scroll2 animate-reveal animate-first">Subscribe to our newsletter</h1>
+    <p class="inline-photo show-on-scroll animate-reveal animate-second">Get latest news on property postings, bankrupt details, new installment scheme.</p>
+    </section>
+    <section>
+    <button class="btn2 animate-reveal animate-third">Subscribe</button>
+    </section>
+    </div>
+    
+<!--Footer-->
+
+<article id="wrap">
+    <article id="lightings">
+        <div class="footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Peek into</h3>
+                            <ul>
+                                <li><a href="#">Timeline</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Sponsors</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="#">Desk of</a></li>
+                                <li><a href="#">Student Co-ordinators</a></li>
+                                <li><a href="#">Team Leads</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h1>Equilibrio 2022</h1>
+                            <p>Awesome series of events, is coming soon to take breath away!</p>
+                        </div>
+                        <div class="col item social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
+                                    class="fa fa-instagram"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a
+                                href="#"><i class="fa fa-linkedin"></i></a></div>
+                    </div>
+                    
+                </div>
+            </footer>
+        </div>
+
+            <section id="one">
+                <section id="two">
+                    <section id="three">
+                        <section id="four">
+                            <section id="five">
+
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </article>
+    </article>
+
+
+
+</body>
+<script>
+    
+    AOS.init();
+    (function ($) {
+        $(function () {
+            $('nav ul li a:not(:only-child)').click(function (e) {
+                $(this).siblings('.nav-dropdown').toggle();
+                $('.dropdown').not($(this).siblings()).hide();
+                e.stopPropagation();
+            });
+            $('html').click(function () {
+                $('.nav-dropdown').hide();
+            });
+            $('#nav-toggle').click(function () {
+                $('nav ul').slideToggle();
+            });
+            $('#nav-toggle').on('click', function () {
+                this.classList.toggle('active');
+            });
+        });
+    })(jQuery);
+
+    var i = document.getElementById("image-1");
+    var currentPos = 0;
+    var images = ["https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60", "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60", "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60", "https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"]
+    var land = ["https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60", "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60", "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60", "https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"]
+    var por = ["https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60", "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60", "https://images.unsplash.com/photo-1579710758949-3ab36db30f1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60"]
+    function volgendefoto() {
+        if (++currentPos >= images.length)
+            currentPos = 0;
+
+        i.src = images[currentPos];
+    }
+    setInterval(volgendefoto, 3000);
+
+    var i2 = document.getElementById("image-2");
+    var pos2 = 0;
+    function if2() {
+        if (++pos2 >= land.length)
+            pos2 = 0;
+        i2.src = land[pos2];
+    }
+    setInterval(if2, 3000);
+
+    var i3 = document.getElementById("image-3");
+    var pos3 = 0;
+    function if3() {
+        if (++pos3 >= images.length)
+            pos3 = 0;
+        i3.src = images[pos3];
+    }
+    setInterval(if3, 3000);
+
+    var i4 = document.getElementById("image-4");
+    var pos4 = 0;
+    function if4() {
+        if (++pos4 >= images.length)
+            pos4 = 0;
+
+        i4.src = images[currentPos];
+    }
+    setInterval(if4, 3000);
+
+    var i5 = document.getElementById("image-5");
+    var pos5 = 0;
+    function if5() {
+        if (++pos5 >= land.length)
+            pos5 = 0;
+        i5.src = land[pos5];
+    }
+    setInterval(if5, 3000);
+
+    var i6 = document.getElementById("image-6");
+    var pos6 = 0;
+    function if6() {
+        if (++pos6 >= images.length)
+            pos6 = 0;
+        i6.src = images[pos6];
+    }
+    setInterval(if6, 3000);
+
+    var i7 = document.getElementById("image-7");
+    var pos7 = 0;
+    function if7() {
+        if (++pos7 >= land.length)
+            pos7 = 0;
+        i7.src = land[pos7];
+    }
+    setInterval(if7, 3000);
+
+    var i8 = document.getElementById("image-8");
+    var pos8 = 0;
+    function if8() {
+        if (++pos8 >= por.length)
+            pos8 = 0;
+        i8.src = por[pos8];
+    }
+    setInterval(if8, 3000);
+
+    function myFunction() {
+        var x = document.getElementById("myDIV-1");
+        var y = document.getElementById("myDIV-2");
+        var z = document.getElementById("myDIV-3");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        if (y.style.display === "none") {
+            y.style.display = "block";
+        } else {
+            y.style.display = "none";
+        }
+        if (z.style.display === "none") {
+            z.style.display = "block";
+        } else {
+            z.style.display = "none";
+        }
+    }
+</script>
+
+</html>

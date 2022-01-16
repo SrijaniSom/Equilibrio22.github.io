@@ -1,0 +1,87 @@
+marquee{
+    height: 430px;
+}
+#notice{
+    margin: 50px 0;
+    padding: 0;
+}
+#notice h1 {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 5%;
+    font-size: 40px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#notice .card{
+     border: none;
+ } 
+ .text-stroke{
+    background-color: black;
+    opacity: 80%;
+    padding: 5px;
+    width: 40%;
+    color:white;
+    text-align: center;
+    font-size: 19px;
+ }
+ .card img{
+     filter: grayscale(0.3);
+ }
+ .para{
+    margin-top: 39%;
+    color:white;
+    padding:5px;
+    bottom: 0;
+    left:0;
+    margin-left: 0;
+ }
+ #notice h2{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 27px;
+ }
+ @media only screen and (max-width:992px){
+    #notice h1{
+        text-align: center;
+    }
+ }
+ @media only screen and (max-width:700px){
+    .para{
+        margin-top:20%;
+    }
+    .para h2{
+        font-size: 20px;
+    }
+    #notice .para p {
+        font-size: 13px;
+    }
+    #notice .col-6 p{
+        font-size: 13px;
+    }
+ }
+ @media only screen and (max-width:400px){
+    .para{
+        margin-top:12%;
+
+    }
+    .para h2{
+        font-size: 18px;
+    }
+    .para p {
+        font-size: 10px;
+    }
+    .text-stroke{
+        font-size: 15px;
+    }
+    #notice h1{
+        text-align: center;
+    }
+    #notice .col-6 p{
+        font-size: 10px;
+    }
+ }
