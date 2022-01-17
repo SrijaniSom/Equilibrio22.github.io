@@ -1,93 +1,55 @@
-/*.sadie {
-	background-color: #000000;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-	color: #ffffff;
-	font-family: 'Open Sans', Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.6em;
-	overflow: hidden;
-	position: relative;
-	text-align: left;
-	width: 100%;
-  }
-  
-  .sadie * {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-transition: all 0.25s ease;
-	transition: all 0.25s ease;
-  }
-  
-  .sadie img {
-	max-width: 100%;
-	vertical-align: top;
-	position: relative;
-	opacity: 0.75;
-  }
-  
-  .sadie figcaption {
-	padding: 25px 20px 25px;
-	position: absolute;
-	bottom: 0;
-	z-index: 1;
-  }
 
-  
-  .sadie h2 {
-	margin: 0;
-	padding: 0;
-	font-weight: 800;
-	letter-spacing: -0.4px;
-  }
-  
-  
-  .sadie .hover {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	align-items: center;
-	background-image: linear-gradient(
--180deg
-, rgb(193, 125, 188) 0%, rgb(158, 90, 183) 96%);
-	display: flex;
-	font-size: 65px;
-	justify-content: center;
-	opacity: 0;
-  }
-  
-  .sadie a {
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	position: absolute;
-	z-index: 1;
-  }
-  
-  .sadie:hover .hover,
-  .sadie.hover .hover {
-	-webkit-transition-delay: 0.1s;
-	transition-delay: 0.1s;
-	opacity: 0.6;
-  }
-  
-  .sadie:hover figcaption,
-  .sadie.hover figcaption {
-	opacity: 0;
-  }
-  .sadie i {
-	color: white;
-  }
-  */
 
-  #events .container .card{
+	 /* #events  .container .card .imgBx::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(
+      -180deg
+      , rgb(193, 125, 188) 0%, rgb(158, 90, 183) 96%);
+		animation: rotate 4s linear infinite;
+	}
+	
+	 #events  .container .card .imgBx::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: white;
+		border-radius: 5px;
+	} */
+  #events  .container .card .imgBx::before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    height: 100%;
+ /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(to right, rgba(108, 16, 170, 0.637), rgb(235, 71, 235));
+  }
+  
+
+#events .container .card{
     position: relative;
     height: 300px;
-    height: 30px 0;
-	background-color: rgb(158, 90, 183);
-	color: white;
+    /* height: 27px 0; */
+    background-color: rgb(241, 215, 247);
+   
+    color: black;
+    margin: 2%;
+   
 
   }
   #events .col-12{
@@ -99,7 +61,7 @@
 	margin-bottom: 2%;
 }
 #events #event-btn{
-	display: none;
+	display: block;
 	border-radius: 50px;
     white-space: nowrap;
     color: rgb(255, 255, 255);
@@ -154,12 +116,12 @@
     #events .container .card .imgBx:before{
       content: attr(data-text);
       position: absolute;
-      bottom: 0;
+      bottom:0;
       left: 0;
       width: 100%;
       height: 100%;
       text-align: center;
-      font-size: 6em;
+      font-size: 100px;
       color: rgba(255, 255, 255, .05);
       font-weight: 700;
     }
@@ -191,6 +153,9 @@
       text-decoration: none;
       color: #fff;
     }
+    #events #event-2,#event-3{
+      display: none;
+    }
     @media (max-width: 992px){
       /* .container{
         width: 100%;
@@ -205,15 +170,26 @@
 		#events .container .card .content p{
 			font-size: 12px;
 		}
+    #events .container .card .imgBx:before{
+      font-size: 75px;
+      /* :25%top; */
+    }
 		#events .container .card .content a{
 			font-size: 12px;
 		}
+    #events #event-1,#event-2,#event-3{
+      display: block;
+    }
 	}
 	@media (max-width: 992px) and (min-width:768px){
 		#events .container .card .content h3{
 			margin-bottom: 2px;
 			font-style: 17px;
 		  }
+      #events .container .card .imgBx:before{
+        font-size: 60px;
+        /* top:20%; */
+      }
 		#events .container .card .content p{
 			font-size: 9px;
 		}
@@ -223,12 +199,19 @@
 		#events .container .card .content a{
 			margin-top: 3px;
 		  }
+      #events #event-1,#event-2,#event-3{
+        display: block;
+      }
 	}
     @media (max-width: 768px){
 		#events .container .card .content h3{
 			margin-bottom: 0px;
 			font-style: 12px;
 		  }
+      #events .container .card .imgBx:before{
+        font-size: 45px;
+        /* top:25%; */
+      }
 		#events .container .card .content p{
 			font-size: 7px;
 		}
@@ -236,27 +219,33 @@
 			font-size: 7px;
 			margin-top: 0px;
 		}
+    #events #event-1,#event-2,#event-3{
+      display: block;
+    }
 		
     }
 	@media (max-width: 576px) {
-		#events #event-2,#event-3{
-			display: none;
-		}
-		#events #event-btn{
-			display: block;
-		}
+		#events .container .card .imgBx:before{
+      font-size: 45px;
+      bottom: 5%;
+    }
+    #events  .container .card .imgBx{
+      border-radius: 0px;
+
+    }
+  
 		
 		#events .container .card{
 			width: auto;
 			flex-direction: column;
 			height: auto;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
       }
 		#events .container .card .imgBx{
 			position: relative;
 		}
-		#events .container .card .imgBx:before{
-			font-size: 8rem;
-		}
+	
 		#events .container .card .imgBx,
 		#events .container .card:hover .imgBx{
 			width: 100%;
