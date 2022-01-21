@@ -40,6 +40,10 @@
     text-decoration: none !important;
     background-repeat: no-repeat !important;
 }
+.about-btn:hover{
+    color: purple;
+    font-weight: 700;
+}
 .row-about{
     display: flex;
     justify-content: center;

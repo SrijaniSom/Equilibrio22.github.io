@@ -2,7 +2,7 @@
 
 <head>
     <title>SubPage</title>
-    <link href="styles.css" rel="stylesheet">
+    <link href="csit.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
@@ -10,7 +10,12 @@
 </head>
 <body>
 <div id="fp">
-
+    <h1 class="noticetitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif;">
+        CS/IT
+    </h1>
+    <p
+        style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;margin-bottom:5%">
+        Explore Now</p> 
     <section class="cards">
         <article class="card card--1" id="card1">
             <div class="card__info-hover">
@@ -27,7 +32,7 @@
             </a>
             <div class="card__info">
                 <span class="card__category"> event One</span>
-                <h3 class="card__title">APPATHON </h3>             
+                <h3 class="card__title">Appathon </h3>             
                <button id="cli1" onclick="c(1)">Read more</button>
             </div>
         </article>
@@ -47,7 +52,7 @@
             </a>
             <div class="card__info">
                 <span class="card__category"> Event two</span>
-                <h3 class="card__title">SPEECH COMPETITION</h3>
+                <h3 class="card__title">Code mania</h3>
               <button class="cli2" onclick="c(2)">Read more</button>
             </div>
         </article>
@@ -65,8 +70,8 @@
                 <div class="card__img--hover"></div>
             </a>
             <div class="card__info">
-                <span class="card__category"> Event two</span>
-                <h3 class="card__title">SPEECH COMPETITION</h3>
+                <span class="card__category"> Event three</span>
+                <h3 class="card__title">Perception</h3>
               <button class="cli2" onclick="c(3)">Read more</button>
             </div>
         </article>
@@ -84,8 +89,8 @@
                 <div class="card__img--hover"></div>
             </a>
             <div class="card__info">
-                <span class="card__category"> Event two</span>
-                <h3 class="card__title">SPEECH COMPETITION</h3>
+                <span class="card__category"> Event four</span>
+                <h3 class="card__title">Web-verse</h3>
               <button class="cli2" onclick="c(4)">Read more</button>
             </div>
         </article>
@@ -151,52 +156,65 @@ function c(x)
     if(x==4)
     {       
         title1.textContent="Selection Round";
-        title2.textContent="Round 1";
-        title3.textContent="Round 2";
-        hbox.textContent="SPEECH COMPETITION";
-        rbox.textContent="SPEECH COMPETITION: It explores your knowledge on electronics and communication branch with the latest technology.TOPIC OF THE SPEECH: “ECE Trending Topics”";
+        title2.textContent="Round 1: Skill Test";
+        title3.textContent="Round with rules";
+        hbox.textContent="WEB VERSE";
+        rbox.textContent="It’S A GAME OF MIND AND TIME. HOW YOU SHOW YOUR CREATIVITY OF BEING A DESIGNER , WITH THE RACE AGAINST TIME AND USE THIS PLATFORM TO SHOW YOUR SKILLS BY THE USE OF SOME SIMPLE LANGUAGES [HTML, CSS, JAVASCRIPT(BASIC)].This event will consist of one round  Skill Test.A Team can comprise of maximum 2 members.";
         inspart.innerHTML="<li>This round will be held via Video submission. In this round , participants will have to submit their speech via video on the topic given by the committee. </li><li>Participants have to upload their speech in the given Email ID. Email: amannigamitsme@yahoo.com  </li><li>Video must be of minimum 2-3 minutes.</li><li>This competition will be held in two rounds </li>";
-        notepart.innerHTML="<li>Finally three candidates will selected by the judge in  final round (round 2) based on certain criteria</li><li>The judge will ask questions related to the speech.</li> <li> Communication, Expression , Confidence, Choice of words, Points  spoken by the candidates must be relevant, appropriate and  correct. (All these things consider marks out of 15 + First round speech will also  consider out of 15. )</li>";
-        bulPart.innerHTML="<li> Each participant must be present at least 10 minutes before the  competition begins. </li><li> Minimum Time for the speech will be 2-3 minutes Maximum 5  minutes. </li><li>Each participant must make sure that their internet connection is  stable and the camera is turned ON during the competition.</li><li> Each participant must make sure that their internet connection is  stable and the camera is turned ON during the competition.</li><li>  If there are any technical difficulties (such as any error in  microphone/speaker or troubled Internet Connection) or any  problems arise during the performance of the participants in  which there is no fault Of the participant. Then the committee might allow a restart with the discretion of the committee with  the approval of the judges.</li><li>Speech should be completely in English </li><li> During the speech no student is allowed to carry any kind of  paper material. Speech should have a purpose and it should  have an identifiable introduction. body and conclusion.</li><li> All the participants have to mute/ turn off their microphone  during any of the participants' performances . For participants  who violate this rule will be given a warning from the  committee.</li> <li> Depending upon total point Top 10 Participant will select from the first round through the voting of the audience. </li><li> 1 Participant can give only one vote. </li><li> If any person gives more than 1 vote then the vote will  be disqualified. </li>";
-    }
-    if(x==3)
-    {       
-        title1.textContent="Selection Round";
-        title2.textContent="Round 1";
-        title3.textContent="Round 2";
-        hbox.textContent="SPEECH COMPETITION";
-        rbox.textContent="SPEECH COMPETITION: It explores your knowledge on electronics and communication branch with the latest technology.TOPIC OF THE SPEECH: “ECE Trending Topics”";
-        inspart.innerHTML="<li>This round will be held via Video submission. In this round , participants will have to submit their speech via video on the topic given by the committee. </li><li>Participants have to upload their speech in the given Email ID. Email: amannigamitsme@yahoo.com  </li><li>Video must be of minimum 2-3 minutes.</li><li>This competition will be held in two rounds </li>";
-        notepart.innerHTML="<li>Finally three candidates will selected by the judge in  final round (round 2) based on certain criteria</li><li>The judge will ask questions related to the speech.</li> <li> Communication, Expression , Confidence, Choice of words, Points  spoken by the candidates must be relevant, appropriate and  correct. (All these things consider marks out of 15 + First round speech will also  consider out of 15. )</li>";
-        bulPart.innerHTML="<li> Each participant must be present at least 10 minutes before the  competition begins. </li><li> Minimum Time for the speech will be 2-3 minutes Maximum 5  minutes. </li><li>Each participant must make sure that their internet connection is  stable and the camera is turned ON during the competition.</li><li> Each participant must make sure that their internet connection is  stable and the camera is turned ON during the competition.</li><li>  If there are any technical difficulties (such as any error in  microphone/speaker or troubled Internet Connection) or any  problems arise during the performance of the participants in  which there is no fault Of the participant. Then the committee might allow a restart with the discretion of the committee with  the approval of the judges.</li><li>Speech should be completely in English </li><li> During the speech no student is allowed to carry any kind of  paper material. Speech should have a purpose and it should  have an identifiable introduction. body and conclusion.</li><li> All the participants have to mute/ turn off their microphone  during any of the participants' performances . For participants  who violate this rule will be given a warning from the  committee.</li> <li> Depending upon total point Top 10 Participant will select from the first round through the voting of the audience. </li><li> 1 Participant can give only one vote. </li><li> If any person gives more than 1 vote then the vote will  be disqualified. </li>";
-    }
-    if(x==2)
-    {       
-        title1.textContent="Selection Round";
-        title2.textContent="Round 1";
-        title3.textContent="Round 2";
-        hbox.textContent="SPEECH COMPETITION";
-        rbox.textContent="SPEECH COMPETITION: It explores your knowledge on electronics and communication branch with the latest technology.TOPIC OF THE SPEECH: “ECE Trending Topics”";
-        inspart.innerHTML="<li>This round will be held via Video submission. In this round , participants will have to submit their speech via video on the topic given by the committee. </li><li>Participants have to upload their speech in the given Email ID. Email: amannigamitsme@yahoo.com  </li><li>Video must be of minimum 2-3 minutes.</li><li>This competition will be held in two rounds </li>";
-        notepart.innerHTML="<li>Finally three candidates will selected by the judge in  final round (round 2) based on certain criteria</li><li>The judge will ask questions related to the speech.</li> <li> Communication, Expression , Confidence, Choice of words, Points  spoken by the candidates must be relevant, appropriate and  correct. (All these things consider marks out of 15 + First round speech will also  consider out of 15. )</li>";
-        bulPart.innerHTML="<li> Each participant must be present at least 10 minutes before the  competition begins. </li><li> Minimum Time for the speech will be 2-3 minutes Maximum 5  minutes. </li><li>Each participant must make sure that their internet connection is  stable and the camera is turned ON during the competition.</li><li> Each participant must make sure that their internet connection is  stable and the camera is turned ON during the competition.</li><li>  If there are any technical difficulties (such as any error in  microphone/speaker or troubled Internet Connection) or any  problems arise during the performance of the participants in  which there is no fault Of the participant. Then the committee might allow a restart with the discretion of the committee with  the approval of the judges.</li><li>Speech should be completely in English </li><li> During the speech no student is allowed to carry any kind of  paper material. Speech should have a purpose and it should  have an identifiable introduction. body and conclusion.</li><li> All the participants have to mute/ turn off their microphone  during any of the participants' performances . For participants  who violate this rule will be given a warning from the  committee.</li> <li> Depending upon total point Top 10 Participant will select from the first round through the voting of the audience. </li><li> 1 Participant can give only one vote. </li><li> If any person gives more than 1 vote then the vote will  be disqualified. </li>";
-    }
-    if(x==1)
-    {       
-        title1.textContent="Rules And Regulations";
-        title2.textContent="Instructions";
-        title3.textContent="Note";
-        hbox.textContent="CIRCUIT DESIGN";
-        rbox.textContent="CIRCUIT DESIGN: To design and simulate the most economical circuit. It gives an opportunity to showcase your knowledge and your skills.";
-        inspart.innerHTML="<li>All the participants need to install the softwares prior to the event as mentioned in the above page (i.e. RULES). </li><li>Google meet is the platform where online meeting will be held during the event. </li><li>Every participant must ensure that they have a stable internet connection. If any issues then contact the organizers in the meet itself.</li><li>The time allotted to solve the question (theory part calculations) will be 20 minutes. </li><li>The time allotted for the simulation will be 30 minutes. Remember to start the recording before you move with the simulation. Later  no excuses will be entertained for the same. </li><li>And the time which will be allotted to attach the calculation part (i.e. The pdf format) and the recorded video of the simulation will be  20 minutes. </li><li>You have to submit all your submissions in the google form which will be provided to you in the meet itself. If you will submit the  work late then some points will be reduced. </li><li>If there is any network issue while sending the video, then kindly attach the photo of the simulation.</li>";
-        notepart.innerHTML="<li>No argument in case any point is less or more compared to others. </li><li>If anyone is facing a network issue, then inform the organizers at the start of the event, we will provide other source to  submit the work. </li><li>Don’t panic if some of you have not completed the question , submit whatever you have solved, points will be given  on the basis of work.</li>";
+        notepart.innerHTML="<li>All the problems have the same points allotted to them.</li><li>Users are ranked according to the most problems solved. Ties will be broken by the total time for each user in ascending order of time</li><li>Each program will be tested based on our critical test data. However output and input should be exactly as specified in the samples provided.</li>";
+        bulPart.innerHTML="In this round  we will provide some project on github where they have to add their idea in that or find the bug  which is currently present and correct it .There will be two types of website one is static and the other is dynamic.Marking will be done by us on the basis of  their contribution. ";
         r2Title.textContent="";
         r2Txt.innerHTML="";
         pitchingTitle.textContent="";
         pitchingTxt.innerHTML="";
         faqTitle.textContent="";
-        faqTxt.innerHTML="<li>We know it’s the first Ideathon for many of you and obviously, you have some doubts. We believe that there is a need to address some of them:-</li><li>Why is the problem statement not clearly stated?</li><li>Ans- The problem statement is written like this because, in real-world situations, the problems that arise are not descriptive. You have to comprehend the problem using your intelligence and provide a solution for the same.</li><li>There are many ways to solve the problem. How do I know mine is right?</li><li>Ans- The problem statements have been created in such a way that they can have more than one acceptable solution. Our aim of giving a problem statement is to just point you in some direction. You have to choose your own path.</li><li>What exactly do I have to submit in Round 1?</li><li>Ans- In Round 1, you have to submit your app solution with all details including Code, video demo, and other details about your project. </li><li>Do I submit a document, ppt, or video?</li><li>Ans- It is compulsory to submit a video demo as mentioned in the guidelines. Rest all things like ppt is optional.</li>";
-        bulPart.innerHTML="<li>In this event we will give you circuits to solve the questions and also you have to record the video of simulation for the same.</li><li>The calculations done by you must be submitted to us in the pdf format and also the recorded video must be submitted to us before the  deadline.</li><li>For electric circuit simulation use a demonstration version of proteus.</li><li>For recording the video of simulation you may use ShareX. Here is the link attached https://youtu.be/JFWpnDwnon0 </li><li>The topics based on which the questions will be given are some basic circuits, op amp, Bipolar Junction Transistor (BJT), Field Effect  Transistor (FET).</li><li>The overall time limit to solve, simulate, and submit the work will be 1 hour and 10 minutes.</li><li>If the work is submitted late then some points will be reduced.</li>";
+        faqTxt.innerHTML="";
+    }
+    if(x==3)
+    {       
+        title1.textContent="Participation Criteria";
+        title2.textContent="Round 1";
+        title3.textContent="Submission Format Guidelines";
+        hbox.textContent="Perception";
+        rbox.textContent="Perception is an ideation competition where participants will come with their ideas on various themes provided by our team like Health Care, Defense, Women Safety, Agriculture, Travel, Education, Fitness, Open Innovation.And the participants will have to make a ppt of their ideas in which ppt will consist of all details of their idea and how they going to implement the idea in the real world.A 24 hours Ideathon of executing unique ideas. Choose  from the eight themes or create your own under the Open Innovation themes and turn your idea into reality.Get yourself tested beyond limits by the best in the industry.";
+        inspart.innerHTML="<li>There can be 1-4 members in one team. </li><li>Members of a team can be from the same as well as different years and colleges. </li><li>Anyone who is enrolled in a UG/PG course in any college/university across the world is eligible to participate.</li>";
+        notepart.innerHTML="<li>The submission must be in the specified format only. You will be given a format of ppt when Ideathaon starts.</li><li>There are no restrictions on the technologies you use for developing.Plagiarism of any type will not be entertained.</li><li>The decision made by the judges and the organizing committee will be considered final. </li><li>Top 10 solutions in Round 1 will qualify for Round 2 which is the live Pitching Round.</li>";
+        bulPart.innerHTML="<li>Healthcare</li><li>Education</li><li>Defense</li><li>Agriculture</li><li>Women Safety</li><li>Travel</li><li>Fitness</li><li>Open Innovation</li>";
+        r2Title.textContent="Round 2";
+        r2Txt.innerHTML="<li>Each team will be given a slot number and a Google Meet link.You’ll then have to join the Meet link with your team and present your project to the judges</li><li>A team won’t be allowed to see the pitching of other teams.</li>";
+        pitchingTitle.textContent="During pitching";
+        pitchingTxt.innerHTML="<li>You will have 4 minutes to present your project to the judges.</li><li>This will be followed by a 3 minute Q&A session where the judges will ask questions regarding your project.</li><li>No extra time will be given to any teams.</li>";
+        faqTitle.textContent="FAQs";
+        faqTxt.innerHTML="<ul>What exactly do I have to submit in Round 1?</ul><ul>Ans: In Round 1, you have to submit your solution approach in the given format. By solution approach, we mean:- What are the features you plan on including? Give their details.How are you planning the UI to look like?What algorithms (if any) are you planning to use in your submission?</ul><ul>Do I submit a document, ppt, or video?</ul><ul>It is compulsory to submit a document as mentioned in the guidelines. Rest all things like ppt or video is optional.</ul>";
+        
+    }
+    if(x==2)
+    {       
+        title1.textContent="About";
+        title2.textContent="Rules";
+        title3.textContent="Marking Scheme";
+        hbox.textContent="Codemania";
+        rbox.textContent="Theme:A coding contest comprised on your knowledge over algorithms and data structures, and aims to encourage participants to apply their knowledge towards problem solving.";
+        inspart.innerHTML="<ol>1.The Contest will be hosted on the CodeChef Platform.</ol><ol>2.The contest will be having minimum of 6 questions according to the Codechef’s code of conduct.</ol><ol>3.At least 1 logical problem.</ol><ol>4.At least 2 algorithm based problems</ol><ol>5.At least 1 bit manipulation,</ol><ol>6.At least 1 over tree and graph.</ol><ol>7.We will try to make the contest rated this time.</ol>";
+        notepart.innerHTML="<li> All the problems have the same points allotted to them.</li><li>Users are ranked according to the most problems solved. Ties will be broken by the total time for each user in ascending order of time.</li><li>The total time is the sum of the time consumed for each problem solved. The time consumed for a solved problem is the time elapsed from the beginning of the contest to the submission of the first accepted run. There is no time consumed for a problem that is not solved.</li><li>Also note there is no penalty for wrong submissions.</li>";
+        bulPart.innerHTML="<li>All the problems have the same points allotted to them.</li><li>Users are ranked according to the most problems solved. Ties will be broken by the total time for each user in ascending order of time.</li><li>The total time is the sum of the time consumed for each problem solved. The time consumed for a solved problem is the time elapsed from  the beginning of the contest to the submission of the first accepted run. There is no time consumed for a problem that is not solved. </li><li>The decision of the organizers in declaring the results will be final. No queries in this regard will be entertained.</li><li>Any participant found to be indulging in any form of malpractice will be immediately disqualified.</li><li>Discussing CodeChef’s problems or any aspect of the problem, on any other platform on the web, on identification,  Could lead to disabling of respective account and banning from the community.</li><li>Each program will be tested based on our critical test data. However output and input should be exactly as specified in the samples provided.</li>";
+    }
+    if(x==1)
+    {       
+        title1.textContent="Participation Criteria";
+        title2.textContent="Round 1:";
+        title3.textContent="Submission Guidelines";
+        hbox.textContent="APPATHON";
+        rbox.textContent="We are coming up with a 24 hour virtual appathon. It’s a platform where people from diverse backgrounds come together and create new solutions to real life problems as well as helps to grow one’s network by interacting with other fellow students and professionals around the globe. It’s a people's appathon, open for all. Get yourself tested beyond limits by the best in the industry.";
+        inspart.innerHTML="<li>There can be 1-3 members in one team.</li><li>Members of a team can be from the same as well as different years and colleges. </li><li>Anyone who is enrolled in UG/PG course in any college/university across the world is eligible to participate.</li>";
+        notepart.innerHTML="<li>You have to upload your project on any public repository like GitHub.</li><li>It is also compulsory to submit your project code.</li><li>You have to submit a 2 minute video of your project.</li><li>The video should contain your problem and the product/solution that you have built during the hackathon.</li><li>Minimum Length of Video: 2 Mins</li><li>Maximum Length of Video: 4 Mins</li><li>You can also submit the Presentation of your project in video format by adding your audio explaining all the slides.</li><li>Submitting a video is Compulsory for everyone. If you will not submit the video your project will not be evaluated by the judges.Only the valid link of YouTube , Vimeo , or Dailymotion is accepted</li>";
+        r2Title.textContent="Round 2";
+        r2Txt.innerHTML="<li>Each team will be given a slot number and a Google Meet link. You’ll then have to join the Meet link with your team and present your project to the judges.</li><li>A team won’t be allowed to see the pitching of other teams.</li>";
+        pitchingTitle.textContent="During pitching";
+        pitchingTxt.innerHTML="<li>You will have 4 minutes to present your project to the judges.</li><li>This will be followed by a 3 minute Q&A session where the judges will ask questions regarding your project.</li><li>No extra time will be given to any teams.</li>";
+        faqTitle.textContent="FAQs";
+        faqTxt.innerHTML="<ul>Why is the problem statement not clearly stated?</ul><ul>Ans:The problem statement is written like this because, in real-world situations, the problems that arise are not descriptive. You have to comprehend the problem using your intelligence and provide a solution for the same.</ul><ul>There are many ways to solve the problem. How do I know mine is right?</ul><ul>Ans:The problem statements have been created in such a way that they can have more than one acceptable solution. Our aim of giving a problem statement is to just point you in some direction. You have to choose your own path.</ul><ul>What exactly do I have to submit in Round 1?</ul><ul>Ans:In Round 1, you have to submit your app solution with all details including Code, video demo, and other details about your project. </ul><ul>Do I submit a document, ppt, or video?</ul><ul>Ans:It is compulsory to submit a video demo as mentioned in the guidelines. Rest all things like ppt is optional.</ul>";
+        bulPart.innerHTML="<li> You will be provided a problem statement once appathon from which you have to select one problem statement.</li><li>In the 24-hour appathon, you will have to code your proposed app solution approach to make it work. </li><li>There will be judging and mentoring sessions during the appathon and your solution will be under continuous evaluation.</li><li>Do not come up with the initial codebase. All the code development should be done in the 24 hours duration only.</li>";
     }
   
     

@@ -6,21 +6,23 @@
 }
 
 body, html {
-   font-family: 'Roboto Slab', serif;
+  font-family: sans-serif;
     margin: 0;
   width: 100%;
-height: 100%;
-    padding: 0;
+  height: 100%;
+      padding: 0;
 }
 
 body {
-  background-color: #D2DBDD;
+  background: linear-gradient(rgba(21, 21, 37, 0.8), rgba(21, 21, 37, 0.8)), url(https://hosting.renderforestsites.com/images/5699226/139073/661f7933c083e586d1fdbc230e538aff.jpg) center center / cover ;
   display: flex;
   display: -webkit-flex;
   -webkit-justify-content: center;
   -webkit-align-items: center;
   justify-content: center;
   align-items: center;
+  width:100%;
+  height: 100%;
 }
 
 .cards {
@@ -75,9 +77,24 @@ border-top-right-radius: 12px;
 .card__info-hover {
     position: absolute;
     padding: 16px;
-  width: 100%;
-  opacity: 0;
-  top: 0;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+}
+
+button{
+  background: none;
+  border: 2px solid rgb(230, 16, 230);
+  color: white;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding: 10px;
+
+}
+
+button:hover{
+  background-color: rgb(230, 16, 230);
+  border-radius: 10px;
 }
 
 .card__img--hover {
@@ -96,7 +113,7 @@ top: 0;
 .card {
   margin-right: 25px;
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-  background-color: #fff;
+  background-image:linear-gradient(to left, rgb(67, 1, 143) , rgb(152, 18, 156));
     width: 33.3%;
   position: relative;
   border-radius: 12px;
@@ -110,30 +127,33 @@ top: 0;
 
 .card__info {
 z-index: 2;
-  background-color: #fff;
+background-image:linear-gradient(to left, rgb(67, 1, 143) , rgb(152, 18, 156));
   border-bottom-left-radius: 12px;
 border-bottom-right-radius: 12px;
    padding: 16px 24px 24px 24px;
 }
 
 .card__category {
-    font-family: 'Raleway', sans-serif;
+  font-family: sans-serif;
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: 500;
-  color: #868686;
+  color: #cfcbcb;
 }
 
 .card__title {
     margin-top: 5px;
     margin-bottom: 10px;
-    font-family: 'Roboto Slab', serif;
+    font-family: sans-serif;
+    color: rgb(233, 131, 226);
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .card__by {
     font-size: 12px;
-    font-family: 'Raleway', sans-serif;
+    font-family: sans-serif;
     font-weight: 500;
 }
 
@@ -146,14 +166,15 @@ border-bottom-right-radius: 12px;
 .card:hover .card__img--hover {
     height: 100%;
     opacity: 0.3;
+    
 }
 
-.card:hover .card__info {
-    background-color: transparent;
+.card:hover > .card__info {
+    background-image: none;
     position: relative;
 }
 
-.card:hover .card__info-hover {
+.card:hover > .card__info-hover {
     opacity: 1;
 }
 .MainSec
@@ -182,15 +203,17 @@ border-bottom-right-radius: 12px;
 {
     display: none;
 }
-.Newsub .heading
+.Newsub .heading,.notetitle,.r2title,.faqtitle,.ins,.pitchingtitle
 {
-  color: rgb(15, 7, 37);
+  color: rgb(235, 99, 228);
   font-size:4rem;
   text-align: center;
   padding-top: 6%;
+  font-size: 35px;
+  font-weight: 700;
 
 }
-.rules
+.rules,.notetxt,.instxt,.faqtxt,.r2txt,.pitchingtxt
 {
   width: 80%;
   margin-left: 10%;
@@ -199,6 +222,7 @@ border-bottom-right-radius: 12px;
   color: whitesmoke;
   letter-spacing: 0.8px;
   font-weight: lighter;
+  font-size: 22px;
 }
 .regs
 {
@@ -209,21 +233,25 @@ border-bottom-right-radius: 12px;
   color: whitesmoke;
   letter-spacing: 0.8px;
   font-weight: lighter;
+  font-size: 22px;
 
 }
 .closebtn
-{
-  padding: 1%;
-  padding-left: 5%;
-  padding-right: 5%;
-  border-radius: 5px;
-  background-color: rgb(15, 7, 37);
-  border: white solid 1px;
+{ padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  background: none;
+  border: rgb(235, 99, 228) solid 1px;
   color: whitesmoke;
   text-align: center;
   align-items: center;
   margin-left: 43%;
-
+  font-size: 25px;
+ 
+}
+.closebtn:hover{
+  background-color: rgb(235, 99, 228);
+  border-radius: 0px;
 }
 /*.dn
 {
@@ -231,17 +259,14 @@ border-bottom-right-radius: 12px;
 }*/
 .headrules
 {
-  color: rgb(15, 7, 37);
-  font-size:4rem;
+  color: rgb(235, 99, 228);
+  font-weight: 700;
+  font-size:30px;
   text-align: center;
   margin-top: 1.5rem;
 }
 
 
-body
-{
-  background-image:linear-gradient(to left, rgb(67, 1, 143) , rgb(152, 18, 156));
-}
 .container-fluid
 {
   height: 100%;

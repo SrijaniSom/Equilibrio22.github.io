@@ -21,6 +21,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <link href="customcursor.css" rel="stylesheet"/>
   <link rel="stylesheet" href="css/events.css">
   <link rel="stylesheet" href="css/faq.css">
   <!-- <link rel="stylesheet"
@@ -34,6 +35,7 @@
   <link rel="stylesheet" href="css/sponsors.css">
   <script rel="text/javascript" src="js/timeline.js"></script>
   <script rel="text/javascript" src="js/team.js"></script>
+  <script rel="text/javascript" src="customcursor.js"></script>
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/deskof.css">
   <link rel="stylesheet" href="css/nav.css">
@@ -456,6 +458,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <a id="back2Top" title="Back to top" href="#">&#10148;</a>
 
+  
   <!-- Preloader -->
   <div id="preloader">
     <div id="container" class="container-preloader">
@@ -525,9 +528,10 @@
           </nav> -->
   <header id="header">
     <div class="topnav" id="myTopnav">
-      <a href="#"><img class="logo" src="images//logo.jpeg" alt=""></a>
-      <a href="#" style="margin-left: 5%;">Home</a>
-      <a href="#" style="margin-left: 5%;">Sponsors</a>
+      <a href="#"><img class="logo" src="images//logo.jpeg"></a>
+      <a href="#home" style="margin-left: 5%;">Home</a>
+      <a href="#about" style="margin-left: 5%;">About</a>
+      <a href="#events" style="margin-left: 5%;">Events</a>
       <!-- <div class="dropdown">
                     <button class="dropbtn"> Categories
                         <i class="fa fa-caret-down"></i>
@@ -537,8 +541,8 @@
                         <a href="#">Square</a>
                     </div>
                 </div> -->
-      <a href="#contact" style="margin-left: 5%;">Contact</a>
-      <a href="#about" style="margin-left: 5%;">About</a>
+      <a href="#gallery" style="margin-left: 5%;">Gallery</a>
+      <a href="#faq" style="margin-left: 5%;">FAQs</a>
 
       <!-- <a href="#about" style="float:right;padding: 24px 2px;">Name</a>
             <a href="#about" style="float:right;padding: 24px 5px;"><i class="fa fa-user"></i></a> -->
@@ -546,7 +550,7 @@
     </div>
   </header>
 
-  <div class="topprt">
+  <div class="topprt" id="home">
     <video autoplay muted loop id="myVideo">
       <source src="images/Untitled design (3).mp4" type="video/mp4">
     </video>
@@ -587,7 +591,7 @@
       </div>
     </eqtitle>
     <div class="com" style="z-index:1000">
-      <h1 class="glitch">Coming Soon</h1>
+      <h1 class="glitch">Coming Soon...</h1>
     </div>
   </div>
 
@@ -642,7 +646,7 @@
             India. So, tell everyone, mark your calendars and gear up for Equilibrio 2022."
           </p>
           <div class="button">
-            <button class="about-btn">View More</button>
+            <a class="about-btn" href="https://youtu.be/OsGhQv3GoXA" style="text-decoration: none;">Watch teaser</a>
           </div>
         </div>
       </div>
@@ -655,7 +659,7 @@
   <!-- Desk Of -->
   <div class="tag">
     <div id="desk">
-      <h1 class="desktitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif;">FROM
+      <h1 class="desktitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif; margin-bottom: 3%;">FROM
         THE
         DESK OF</h1>
       <!-- <p
@@ -665,11 +669,11 @@
 
                 <div class="DeskSec " style="z-index:70">
 
-                  <img src='images/vc.jpeg' class="pics p1" alt=''>
+                  <img src='images/vc.jpeg' class="pics p1 sides border" alt=''>
   
   
                   <p class="textp t1">
-                      Vice-chancellor: our young minds across the institute. Throughout the year we
+                      <span class="desig">Vice-chancellor</span><br> Throughout the year we
                       organise many academic, non-academic programs, conferences, workshops, etc. and invite eminent
                       experts from national and global platforms. Equilibrio techfest is one such flagship program which
                       the institute has organized every year since 2013. It provides a plethora of opportunities for the
@@ -683,7 +687,7 @@
   
                   </p>
   
-                  <p class="textp t2">Registrar :Overcoming various challenges, our college is encouraging youth to
+                  <p class="textp t2"> <span class="desig">Registrar</span><br>Overcoming various challenges, our college is encouraging youth to
                       achieve
                       brilliance in their fields by showcasing their marvelous ideas and skills in the tech-fest. The
                       catalytic soft-skills training which Equilibrio offers helps the students to polish their
@@ -699,8 +703,8 @@
   
                   <img src='images/dean.jpeg' class="pics p3" alt=''>
   
-                  <p class="textp t3">
-                      Dean It's my pleasure to welcome you to the EQUILIBRIO - technical festival &
+                  <p class="textp t3"><span class="desig">Dean</span><br>
+                      It's my pleasure to welcome you to the EQUILIBRIO - technical festival &
                       community. I
                       hope you will find this festival enthralling, exciting, and invigorating. When I walk
                       through the corridors of this institute, the enthusiasm of our students captivates me, the
@@ -712,7 +716,8 @@
                       emerging areas.
                   </p>
   
-                  <p class="textp t4">Teacher Coodinator: The journey of Equilibrio started in 2013 and it has
+                  <p class="textp t4" ><span class="desig">Teacher coordinator</span><br>
+                      The journey of Equilibrio started in 2013 and it has
                       successfully travelled its destination over the last years. This has been an amazing platform that
                       not only assists the students in becoming technically sound but also has a significant role in
                       adding social values to their life. It provides the students with an opportunity to ameliorate their
@@ -768,17 +773,20 @@
           Register in upcoming events</p>
         <div class="split row">
           <div class="split__left-right split__left-right--finn col-md-8">
-            <h3>Event Name</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, aliquid. Delectus dolore nam consectetur consequuntur eum, libero labore corrupti deserunt.</p>
-            <button class="sponsors-btn">Register Now</button>
+            <h3>Gear up, Technophiles</h3>
+            <p>We have a wide range of events from the entire technical spectrum and, of course, lots of fun! 
+              Registration for the upcoming events is coming soon.
+              We'll catch up soon!</p>
+            <button class="sponsors-btn">Be Ready</button>
           </div>
           <div class="split__left-right split__left-right--jake col-md-4">
             <h3>Stay <span style="color:rgb(172, 26, 209);">Tuned!</span></h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, aliquid. Delectus dolore nam consectetur consequuntur eum, libero labore corrupti deserunt.
+            <p>Equilibrio"22 has numerous events encompassing many of your interests. Check them out to develop yourself holistically! You can contact us for queries. Also, Subscribe to get all essential information right in your inbox.
+              Keep visiting for further updates!
             </p>
             <div class="row" style="margin-top: 2%;">
-              <div class="col-6"><button id="con" class="notify-btn">Contact</button></div>
-              <div class="col-6"><button class="notify-btn">Subscribe</button></div>
+              <div class="col-6"><a id="con" href="#footer" style="text-decoration: none;"  class="notify-btn">Contact</a></div>
+              <div class="col-6"><a href="#newsletter" style="text-decoration: none;" class="notify-btn">Subscribe</a></div>
             </div>
           </div>
         </div>
@@ -878,12 +886,11 @@
                   </div>
                   <div class="content">
                     <div>
-                      <h3>Design</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-                        necessitatibus corporis porro maxime reprehenderit voluptates?
+                      <h3 style="font-weight: bold;">CS/IT</h3>
+                      <p>Contests for the coder, web and app developer in you!
                       </p>
                       <div class="item">
-                        <a href="#"> Check it Out
+                        <a href="csit.html"> Check it Out
                           <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
                         </a>
                       </div>
@@ -898,11 +905,11 @@
                   </div>
                   <div class="content">
                     <div>
-                      <h3>Design</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-                        necessitatibus corporis porro maxime reprehenderit voluptates? </p>
+                      <h3 style="font-weight: bold;">MECH/IPE</h3>
+                      <p>Like quizzes & Machine Designing with SolidWorks? Then, compete here to showcase your skills.
+                         </p>
                       <div class="item">
-                        <a href="#"> Check it Out
+                        <a href="ip.html"> Check it Out
                           <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
                         </a>
                       </div>
@@ -917,11 +924,12 @@
                   </div>
                   <div class="content">
                     <div>
-                      <h3>Design</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-                        necessitatibus corporis porro maxime reprehenderit voluptates??</p>
+                      <h3 style="font-weight: bold;">CHEM</h3>
+                      <p>Events to enrich your MATLAB, group debating skills and, educate you about chemical plant design.
+
+                      </p>
                       <div class="item">
-                        <a href="#"> Check it Out
+                        <a href="chem.html"> Check it Out
                           <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
                         </a>
                       </div>
@@ -943,11 +951,12 @@
                   </div>
                   <div class="content">
                     <div>
-                      <h3>Design</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-                        necessitatibus corporis porro maxime reprehenderit voluptates?</p>
+                      <h3 style="font-weight: bold;">CIVIL</h3>
+                      <p>Like AutoCAD designing, case studies and rapid fires? Then, unleash your abilities here.
+
+                      </p>
                       <div class="item">
-                        <a href="#"> Check it Out
+                        <a href="civil.html"> Check it Out
                           <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
                         </a>
                       </div>
@@ -962,11 +971,10 @@
                   </div>
                   <div class="content">
                     <div>
-                      <h3>Design</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-                        necessitatibus corporis porro maxime reprehenderit voluptates?</p>
+                      <h3 style="font-weight: bold;">ECE</h3>
+                      <p>Competitions constituting circuit designing and topic discussions!</p>
                       <div class="item">
-                        <a href="#"> Check it Out
+                        <a href="ece.html"> Check it Out
                           <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
                         </a>
                       </div>
@@ -981,11 +989,12 @@
                   </div>
                   <div class="content">
                     <div>
-                      <h3>Design</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-                        necessitatibus corporis porro maxime reprehenderit voluptates?</p>
+                      <h3 style="font-weight: bold;">CULTURAL</h3>
+                      <p>Contests comprising comedy, dance, drawing, singing, writing and much more fun!
+
+                      </p>
                       <div class="item">
-                        <a href="#"> Check it Out
+                        <a href="cultural.html"> Check it Out
                           <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
                         </a>
                       </div>
@@ -1008,11 +1017,10 @@
                   </div>
                   <div class="content">
                     <div>
-                      <h3>Design</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-                        necessitatibus corporis porro maxime reprehenderit voluptates?</p>
+                      <h3 style="font-weight: bold;">MANAGERIAL</h3>
+                      <p>Events to make you job-ready and unleash your puzzling skills. </p>
                       <div class="item">
-                        <a href="#"> Check it Out
+                        <a href="managerial.html"> Check it Out
                           <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
                         </a>
                       </div>
@@ -1027,11 +1035,12 @@
                   </div>
                   <div class="content">
                     <div>
-                      <h3>Design</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-                        necessitatibus corporis porro maxime reprehenderit voluptates?</p>
+                      <h3 style="font-weight: bold;">PHOTOGRAPHY</h3>
+                      <p>Stunning Photography and video-making competitions.
+
+                      </p>
                       <div class="item">
-                        <a href="#"> Check it Out
+                        <a href="photography.html"> Check it Out
                           <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
                         </a>
                       </div>
@@ -1047,11 +1056,10 @@
                   </div>
                   <div class="content">
                     <div>
-                      <h3>Design</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-                        necessitatibus corporis porro maxime reprehenderit voluptates?</p>
+                      <h3 style="font-weight: bold;">GAMING</h3>
+                      <p>Astonishing Gaming contests to test your gaming skills.</p>
                       <div class="item">
-                        <a href="#"> Check it Out
+                        <a href="gaming.html"> Check it Out
                           <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
                         </a>
                       </div>
@@ -1235,7 +1243,7 @@
               </div>
             </div>
             <h3 class="name">Ayush Saxena</h3>
-            <h6 class="designation">Student Coordinate</h6>
+            <h6 class="designation">Technical Head (male)</h6>
             <hr>
             <p class="intro-c">In nutshell the journey of leading a team & hosting such an event was a dream once. And now being in those shoes it feels overwhelming to carry with the responsibility. But for sure I will try my level best to bestow
               the best experience against all odds. But I want your support and feedbacks to improve. So feel free to reach out me for any suggestions, collaboration, sponsorship and more.</p>
@@ -1249,8 +1257,8 @@
                 <a href=""><i class="fa fa-linkedin icon"></i></a>
               </div>
             </div>
-            <h3 class="name">Raj Gautam</h3>
-            <h6 class="designation">Student Coordinate</h6>
+            <h3 class="name">Giriraj Gautam</h3>
+            <h6 class="designation">Non-Technical Head (male)</h6>
             <hr>
             <p class="intro-c">The experience of conducting an event on such a wide level is indeed tough but the driving force to actually lead it is tougher than that. I believe in action so let's don't stretch it more. Last but not the least I am
               open for your suggestion, support and advice. So feel free to connect with me.</p>
@@ -1264,8 +1272,8 @@
                 <a href="https://www.linkedin.com/in/reddy-akhila"><i class="fa fa-linkedin icon"></i></a>
               </div>
             </div>
-            <h3 class="name">Akhila Reddy</h3>
-            <h6 class="designation">Student Coordinate</h6>
+            <h3 class="name">Reddy Akhila </h3>
+            <h6 class="designation">Non-Technical Head (female)</h6>
             <hr>
             <p class="intro-c">A huge responsibility and a great way to explore various fields. I realised that the world in me is so competitive on every tiny situation and teaches me a lot. I know the journey ahead is going to be harder than what I
               believe but let's together fight against all odds make this event a grand success.</p>
@@ -1280,12 +1288,12 @@
                 <a href="https://www.linkedin.com/in/amruthasri/"><i class="fa fa-linkedin icon"></i></a>
               </div>
             </div>
-            <h3 class="name"></h3>
-            <h6 class="designation">Student Coordinate</h6>
+            <h3 class="name">A. Amrutha Sri</h3>
+            <h6 class="designation">Technical Head (female)</h6> 
             <hr>
-            <p class="intro-c">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni rerum incidunt
-              est
-              ducimus. Ipsum perspiciatis nulla magnam suscipit animi. Facere!</p>
+            <p class="intro-c">Every challenge is an opportunity to grow, and organizing a national-level event like Equilibrio is the epitome of that. It has given me an ideal platform to enhance my skills. I know the work is going to be more alarming, but I will give my best. I believe that we can move together towards this amazing experience ahead, which will be an ecstatic task and learnable at the same time.
+
+            </p>
           </div>
         </div>
       </div>
@@ -1663,7 +1671,7 @@
   </div>
 
   <!--FAQ-->
-  <div class="container text-center" style="margin-top: 2%;">
+  <div class="container text-center" style="margin-top: 2%;" id="faq">
     <h1 class="section-title">FAQ's</h1>
     <div class="faq-content">
       <div class="tag">
@@ -1701,14 +1709,12 @@
   </div>
   <!--Newsletter-->
 
-  <div class="tag">
+  <div class="tag" id="newsletter">
     <div class="section5">
       <section>
         <h1 class="title inline-photo2 show-on-scroll2 animate-reveal animate-first">Subscribe to our newsletter
         </h1>
-        <p class="inline-photo show-on-scroll animate-reveal animate-second">Get latest news on property
-          postings,
-          bankrupt details, new installment scheme.</p>
+        <p class="inline-photo show-on-scroll animate-reveal animate-second">Get latest news the events and workshops of Equilibrio 2022!</p>
       </section>
       <section>
         <button class="btn2 animate-reveal animate-third">Subscribe</button>
@@ -1745,7 +1751,7 @@
                 <p>Awesome series of events, is coming soon to take breath away!</p>
               </div>
               <div class="tag">
-                <div class="col item social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-instagram"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a>
+                <div class="col item social"><a href="#"><i class="fa fa-facebook"></i></a><a href="https://www.instagram.com/equilibrio_ggv/"><i class="fa fa-instagram"></i></a><a href="https://twitter.com/equilibrio_ggv?t=ocAsYsYHcW2LKyQOpRoA9Q&s=08"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/company/equilibrio-ggv/posts/?feedView=all"><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
 
@@ -1768,7 +1774,6 @@
       </section>
     </article>
   </article>
-
 
 
 </body>
