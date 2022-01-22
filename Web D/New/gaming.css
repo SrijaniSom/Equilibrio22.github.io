@@ -32,9 +32,29 @@ body {
   background-image: url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
 }**/
 
-.card--2 .card__img,
-.card--2 .card__img--hover {
-    background-image: url('https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+.card--2 .card__img_1,
+.card--2 .card__img--hover_1 {
+    background-image: url('https://www.bing.com/th?id=AMMS_64e50cac3b6c1501520c6066b16c6d1d&w=124&h=168&c=7&o=6&dpr=1.25&pid=SANGAM');
+}
+
+.card--2 .card__img_2,
+.card--2 .card__img--hover_2 {
+    background-image: url('https://th.bing.com/th/id/OIP.spc7sGhdnS6ijS4B2lBVewHaEK?w=278&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7');
+}
+
+.card--2 .card__img_3,
+.card--2 .card__img--hover_3 {
+    background-image: url('https://th.bing.com/th/id/OIP.06Vk4GX9qUWhmi0JgbRW6AHaEk?w=275&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7');
+}
+
+.card--2 .card__img_4,
+.card--2 .card__img--hover_4 {
+    background-image: url('https://th.bing.com/th/id/OIP.I9b4gIX-0pjwsOjf4Ca0fgHaEK?w=310&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7');
+}
+
+.card--2 .card__img_5,
+.card--2 .card__img--hover_5 {
+    background-image: url('https://th.bing.com/th/id/OIP.GWUDWf-HQwvOwxkXQViNygHaEX?w=273&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7');
 }
 
 button{
@@ -53,7 +73,7 @@ button{
   }
   
 
-.card__img {
+.card__img_1,.card__img_2,.card__img_3,.card__img_4,.card__img_5 {
     visibility: hidden;
     background-size: cover;
     background-position: center;
@@ -72,7 +92,7 @@ button{
     top: 0;
 }
 
-.card__img--hover {
+.card__img--hover_1,.card__img--hover_2,.card__img--hover_3,.card__img--hover_4,.card__img--hover_5 {
     transition: 0.2s all ease-out;
     background-size: cover;
     background-position: center;
@@ -139,9 +159,25 @@ button{
     color: #AD7D52;
 }
 
-.card:hover .card__img--hover {
+.card:hover .card__img--hover_1 {
     height: 100%;
     opacity: 0.3;
+}
+.card:hover .card__img--hover_2 {
+  height: 100%;
+  opacity: 0.3;
+}
+.card:hover .card__img--hover_3 {
+  height: 100%;
+  opacity: 0.3;
+}
+.card:hover .card__img--hover_4 {
+  height: 100%;
+  opacity: 0.3;
+}
+.card:hover .card__img--hover_5 {
+  height: 100%;
+  opacity: 0.3;
 }
 
 .card:hover .card__info {

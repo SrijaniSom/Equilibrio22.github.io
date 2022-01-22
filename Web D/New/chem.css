@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-*{
-  box-sizing: border-box;
-}
-
-body, html {
-  font-family: sans-serif;
-    margin: 0;
-  width: 100%;
-  height: 100%;
-      padding: 0;
-}
 
 body {
   background: linear-gradient(rgba(21, 21, 37, 0.8), rgba(21, 21, 37, 0.8)), url(https://hosting.renderforestsites.com/images/5699226/139073/661f7933c083e586d1fdbc230e538aff.jpg) no-repeat center center fixed ;
@@ -37,14 +26,16 @@ body {
 }
 
 .card--1 .card__img, .card--1 .card__img--hover {
-    background-image: url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-image: url('https://th.bing.com/th/id/OIP.IEZ2ThvIQWlfmdQHZVmTSwHaEP?w=286&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7');
 }
 
 .card--2 .card__img, .card--2 .card__img--hover {
-    background-image: url('https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-image: url('https://th.bing.com/th/id/OIP.0zMWFYcOwpOfdgYGDHn0lgHaDt?w=295&h=174&c=7&r=0&o=5&dpr=1.25&pid=1.7');
 }
 
-
+.card--3 .card__img, .card--3 .card__img--hover {
+  background-image: url('https://th.bing.com/th/id/OIP.THuHgFECnnbMgwLkXSCtSQHaFW?w=216&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7');
+}
 
 
 .card__img {
