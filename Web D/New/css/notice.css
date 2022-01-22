@@ -1,5 +1,9 @@
 #notice{
-  margin-top: 5%;
+  margin-top:2%;
+}
+.noticetitle
+{
+  margin-top: 4%;
 }
 .split {
   min-height: 60vh;
@@ -22,7 +26,7 @@
   font-family: 'Didact Gothic', sans-serif;
 }
 .notify-btn{
-  padding: 3% 5%;
+  padding: 5% 5%;
   color:white;
   border: 1px solid rgb(172, 26, 209);
   letter-spacing: 2px;
@@ -32,6 +36,9 @@
 .notify-btn:hover{
   background-color: rgb(172, 26, 209);
   color: white;
+}
+a:hover{
+  text-decoration: none;
 }
 
 .split__left-right__avatar {

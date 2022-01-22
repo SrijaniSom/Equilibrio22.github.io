@@ -40,6 +40,10 @@
     text-decoration: none !important;
     background-repeat: no-repeat !important;
 }
+.about-btn:hover{
+    color: rgb(87, 24, 87);
+    font-weight: 700;
+}
 .row-about{
     display: flex;
     justify-content: center;
@@ -91,8 +95,8 @@
     left:10%;
 }
 .out-3{
-    height: 120px;
-    width: 120px;
+    height: 140px;
+    width: 140px;
     border-radius: 50%;
     border: 3px solid rgb(158, 90, 183);
     margin: 1rem;
@@ -120,13 +124,13 @@
     left: 6%;
 }
 .in-3{
-    height: 90px;
-    width: 90px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     border: 2px dashed rgb(126, 15, 118);
     position: absolute;
-    top: 11%;
-    left:11%;
+    top: 13%;
+    left:13%;
 }
 .in-1,.in-2,.in-3{
     display: flex;
