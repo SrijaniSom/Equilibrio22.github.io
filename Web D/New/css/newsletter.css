@@ -1,6 +1,48 @@
  
-    
-    
+    @media(min-width:1022px)
+    {
+      .emailenter
+    {
+      color:purple;
+      width:30rem;
+      font-size: 12px;
+      font-weight: bolder;
+      border-radius: 5px;
+      border:rgb(67, 1, 143) solid 2px;
+      margin-left: 20%;
+    }
+    .section5{
+      padding: 5% 0%;
+    }
+    .emailenter
+    {
+      color:purple;
+      width:80%;
+      font-size: 12px;
+      font-weight: bolder;
+      border-radius: 5px;
+      border:rgb(67, 1, 143) solid 2px;
+    }
+    }
+    @media(max-width:1021px)
+    {
+      .emailenter
+    {
+      color:purple;
+      width:80%;
+      font-size: 12px;
+      font-weight: bolder;
+      border-radius: 5px;
+      
+    }
+    .section5 p{
+      font-size: 15px;
+      margin-top: 5%;
+    }
+    .section5{
+      padding: 6% 0%;
+    }
+    }
   
     .section5{
     background-image:linear-gradient(to left, rgb(67, 1, 143) , rgb(152, 18, 156));
@@ -17,9 +59,7 @@
     padding:2rem 4rem;
     }
     
-    .section5 section p{
-   
-    }
+  
     
     .section5 section .btn2{
     float:right;
@@ -41,6 +81,7 @@
     float:none;
     }
     }
+
     
     
     /*Animation Code*/

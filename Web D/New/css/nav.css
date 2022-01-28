@@ -264,18 +264,19 @@
     color: #f2f2f2;
     text-align: center;
     padding: 24px 16px;
-    margin:auto 1rem;
+    margin:auto 0.5rem;
     text-decoration: none;
     font-size: 17px;
     position:relative;
     }
     
     .logo{
-    width:40px;
+    width:50px;
     position:absolute;
     top:1rem;
     background-color:#fff;
     border-radius:5px;
+    margin-top: 10%;
     }
     
     #icon{
@@ -347,8 +348,9 @@
     
     @media screen and (max-width: 1120px) {
     .logo{
-    width:20px;
+    width:40px;
     position:static;
+    margin-top: 0%;
     }
     .dropdown .dropbtn {
     padding: 14px 16px;

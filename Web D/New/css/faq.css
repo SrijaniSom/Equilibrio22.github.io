@@ -64,6 +64,7 @@
  color:rgb(193, 125, 188);
 }
 
+
 .panel:checked ~ .plus {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
