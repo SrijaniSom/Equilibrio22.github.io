@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="ip.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mech/IPE Tech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container" id="fp">
+    <button class="back-btn">
+        <a href="index.html"> Go Back </a>
+     </button>
+    <h1 class="noticetitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif;">
+        MECH / IPE TECH
+    </h1>
+    <p
+        style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;margin-bottom:5%">
+        Explore Now</p>
+
+    <div class="row">
+        <div class="col-md-6 col-12 d-flex justify-content-center" style="margin-top: 3%;">
+            <article class="card card--1" id="card1">
+                <div class="card__info-hover">
+                   
+                        <path fill="#000000"
+                            d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+                    </svg>
+                   
+    
+                </div>
+                <div class="card__img"></div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category"> event One</span>
+                    <h3 class="card__title"> CADY-FIGHT</h3>             
+                   <button id="cli1" onclick="c(1)">Read more</button>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6 col-12 d-flex justify-content-center" style="margin-top: 3%;">
+            <article class="card card--2">
+                <div class="card__info-hover">
+                   
+                        <path fill="#000000"
+                            d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+                    </svg>
+                   
+                </div>
+                <div class="card__img"></div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category"> Event two</span>
+                    <h3 class="card__title">QUIZY THE MECHEEZ</h3>
+                  <button class="cli2" onclick="c(2)">Read more</button>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<div class="container-fluid Newsub dn text-center" id="whole" >
+    
+        <div class="heading"></div>
+        <p class="rules" style="text-align: justify;"></p>
+        <div class="elg">Eligiblity Criteria</div>
+        <div class="elgtxt" style="text-align: justify;"></div>
+        <div class="headrules">Rules and Regulations</div>
+        <p class="regs" style="text-align: justify;"></p>
+        <div class="judgetitle">Judging Criteria</div>
+        <div class="judgetxt" style="text-align: justify;"></div>
+        <button class="closebtn" onclick="ret()">Go back</button>
+        
+  
+</div>
+
+</body>
+
+<script>
+
+
+function c(x)
+{   
+    var mainPage=document.getElementById('fp');
+    mainPage.style.display="none";
+    var sp4=document.querySelector('.Newsub');
+    sp4.classList.remove("dn");
+    sp4.style.display="block";
+    var hbox=document.querySelector('.heading');
+    var rbox=document.querySelector('.rules');
+    var gobackbtn=document.querySelector('.closebtn');
+    var listpara=document.querySelector('.listp');
+    var eventTitle=document.querySelector('.card__title');
+    var bulPart=document.querySelector('.regs');
+    var elgpart=document.querySelector('.elgtxt');
+    var judgepart=document.querySelector('.judgetxt');
+    
+    
+    if(x==2)
+    {       
+        hbox.textContent="QUIZY THE MECHEEZ";
+        rbox.textContent="QUIZY THE MECHEEZ: If you are looking to grow your mind and test your aptitude then we are going to provide you the platform where you can hone your core knowledge of the subject. Here, we are going to organize a quiz competition. If you participate in this quiz, this will really brush up your theoretical and practical understanding towards the subject. All the participants will surely get the certificate of participation and the winners will get the prize money.";
+        elgpart.innerHTML=" <li>All the students from anywhere who are pursuing their degrees in undergraduate can participate.</li>";
+        judgepart.innerHTML="<li>For each correct answer you will get +2 marks.</li><li>For every wrong answer 1/4 marks will be deducted.</li><li>5 Marks Bonus will be awarded for attempting all questions (whether correct or incorrect).</li><li>The marking scheme will be the same for both Rounds. </li>";
+        bulPart.innerHTML="<li>There will be 2 Rounds.</li><li>In Round 1 you have to solve 20 basic level questions  (Time Limit 30 mins).</li><li>Those who Qualified in Round 1 will be Eligible for Round 2.</li><li>Round 2 will contain 15 questions of Moderate level (Time Limit 30 mins).</li><li>Questions are related to the syllabus of Mechanical & IPE.</li><li>Questions will be given at the moment.</li><li>Questions should be solved within the time period.</li><li>A WhatsApp group will be created. Participants should maintain proper Disciplines.</li><li>Any Information/ Updates will be shared through email.</li><li>Participants Should not cheat/search from the internet or anywhere.</li>";
+    }
+    if(x==1)
+    {       
+        hbox.textContent="CADY-FIGHT";
+        rbox.textContent="CADY-FIGHT:  If you are looking to grow your mind and improve/get to learn new skills which can help you to excel in CAD Designing, then this is the moment you can expertise yourself.We are going to Organize a Workshop on SolidWorks (CAD Software). Attain this Event to enhance your knowledge towards CAD Design and Design your own Model.First, we will give knowledge about the software and teach you some functions so at least you can make a proper model (this will be for all participants and also for beginners). There will be a total of 2 rounds. In Round 1 Team will be assigned a simple designing task, which they have to complete and submit within the time period. Those who are qualified in Round 1 will be selected for round 2. In Round 2 Team will be given a problem-solving Task and they have to complete that within a given time period.Submission and Presentation will be considered and evaluated to finalize the winners. All the participants will surely get the certificate of participation and the winners will get the prize money.";
+        elgpart.innerHTML="<li>All undergraduate pursuing students can participate in a team .</li><li>Team Size =1 to 3. (Minimum 1, Maximum 3 members).</li><li>Inter Branch & Inter College members are allowed in the team.</li>";
+        judgepart.innerHTML="<li>Total points = 100.</li><li>50 points for the model.</li><li>30 points for ideas.</li><li>20 points for presentation.</li><li>Internal marks are added in all criteria.</li>";
+        bulPart.innerHTML="<li>Should have pre-installed CAD-Software.</li><li>Problem Solving Task will be given at the movement.</li><li>Participants Should not copy Ideas/Parts from the net or anywhere.</li><li>WhatsApp groups will be created, participants should maintain proper Disciplines.</li><li>Any Information/ Updates will be shared through email.</li>";
+    }
+  
+    
+}
+/*function c()
+{
+    var mainPage=document.getElementById('fp');
+    mainPage.style.display="none";
+    var sp4=document.querySelector('.NewSub');
+    sp4.classList.remove("dn");
+    sp4.style.display="block";
+    var cname=document.getElementById('card1');
+    var pa=document.getElementById('lp1');
+    var rbox=document.querySelector('.rules');
+    rbox.innerHTML=pa.textContent;
+
+
+
+
+}*/
+function ret() {
+    var mainPage = document.getElementById('fp');
+    mainPage.style.display = "block";
+    var sp4 = document.querySelector('.Newsub');
+    sp4.classList.add("dn");
+    sp4.style.display = "none";
+}
+
+
+</script>
+
+</html>

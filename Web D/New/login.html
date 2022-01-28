@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        background-color: #080710;
+        overflow: hidden;
+    }
+
+    .background {
+        width: 430px;
+        height: 520px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+    }
+
+    .background .shape {
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    .shape:first-child {
+        background: linear-gradient(to left, #9418ad,
+                #d48ad1);
+        left: -80px;
+        top: -80px;
+
+    }
+
+    .shape:last-child {
+        background: linear-gradient(to right,
+                #6b00f7,
+                #f019f0);
+        right: -30px;
+        bottom: -80px;
+
+    }
+
+    form {
+
+        background-color: rgba(255, 255, 255, 0.13);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
+    }
+
+    .btn {
+        margin-top: 25px;
+        width: 100%;
+        background-color: #ffffff;
+        color: #080710;
+        padding: 7px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    ::placeholder {
+        color: #e5e5e5;
+    }
+
+    .form-check-input {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 3px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .form-label {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    form * {
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+    }
+
+    form h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+        text-align: center;
+        margin-bottom: 8%;
+    }
+    @media (min-width:501px){
+        form{
+            width:400px;
+        }
+    }
+
+    @media (max-width:500px) and (min-width:485px) {
+        form{
+            width:90%;
+            
+            height: 70%;
+
+        }
+        .shape:last-child {
+        right: -30px;
+        bottom: -80px;
+
+    }
+        form h3 {
+            margin-bottom: 10%;
+        }
+    }
+    @media (max-width:486px) and (min-width:448px){
+        form{
+            width:90%;
+            
+            height: 70%;
+
+        }
+        .shape:last-child {
+        right: -20px;
+        bottom: -80px;
+    }
+    }
+    @media (max-width:449px) and (min-width:416px) {
+        form{
+            width:90%;
+            
+            height: 70%;
+
+        }
+        .background .shape {
+        height: 165px;
+        width: 165px;
+    }
+   
+    .shape:first-child {
+
+        left: -20px;
+        top: -80px;
+
+    }
+    .shape:last-child {
+        right: 30px;
+        bottom: -90px;
+    }
+    }
+    @media (max-width:415px) and (min-width:401px){
+        form{
+            width:90%;
+            left:51%;
+            height: 70%;
+            top:57%;
+        }
+        .shape:last-child {
+        right: 30px;
+        bottom: -100px;
+    }
+    }
+    @media (max-width:400px) and (min-width:377px){
+        form{
+            width:90%;
+            left:52%;
+            height: 70%;
+            top:57%;
+        }
+        .shape:last-child {
+        right: 30px;
+        bottom: -100px;
+    }
+    }
+    @media (max-width:376px) {
+        form{
+            width:90%;
+            height: 70%;
+            left:57%;
+            top:57%;
+        }
+        form h3{
+            margin-bottom: 20%;
+        }
+        .shape:last-child {
+        right: 30px;
+        bottom: -100px;
+    }
+    .shape:first-child {
+        background: linear-gradient(to left, #9418ad,
+                #d48ad1);
+        left: -30px;
+        top: -70px;
+
+    }
+
+    }
+</style>
+
+<body>
+    
+   
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+
+      <div class="container">
+        <form>
+            <h3>Login Here</h3>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email/Username</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
+
+            </div>
+            <div class="mb-3">
+                <label for="password" name="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="consent">
+                <label class="form-check-label" for="consent">I agree </label>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <a href="index.html" style="text-decoration:none;background: none;border: 1px solid rgb(202, 109, 202);color: white;" class="btn">Go Back</a>
+        </form>
+        
+      </div>
+        
+
+
+
+</body>
+
+</html>

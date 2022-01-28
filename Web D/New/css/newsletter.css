@@ -1,6 +1,29 @@
  
-    
-    
+    @media(min-width:1022px)
+    {
+      .emailenter
+    {
+      color:purple;
+      width:30rem;
+      font-size: 12px;
+      font-weight: bolder;
+      border-radius: 5px;
+      border:rgb(67, 1, 143) solid 2px;
+      margin-left: 20%;
+    }
+    }
+    @media(max-width:1021px)
+    {
+      .emailenter
+    {
+      color:purple;
+      width:30%;
+      font-size: 12px;
+      font-weight: bolder;
+      border-radius: 5px;
+      border:rgb(67, 1, 143) solid 2px;
+    }
+    }
   
     .section5{
     background-image:linear-gradient(to left, rgb(67, 1, 143) , rgb(152, 18, 156));

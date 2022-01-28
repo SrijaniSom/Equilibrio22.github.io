@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="photography.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container" id="fp">
+    <button class="back-btn">
+        <a href="index.html"> Go Back </a>
+     </button>
+    <h1 class="noticetitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif;">
+        PHOTOGRAPHY
+    </h1>
+    <p
+        style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;margin-bottom:5%">
+        Explore Now</p>
+
+    <div class="row">
+        <div class="col-md-6 col-12 d-flex justify-content-center" style="margin-top: 3%;">
+            <article class="card card--1" id="card1">
+                <div class="card__info-hover">
+                   
+                        <path fill="#000000"
+                            d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+                    </svg>
+                   
+    
+                </div>
+                <div class="card__img"></div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category"> event One</span>
+                    <h3 class="card__title">PHOTOGRAPHY </h3>             
+                   <button id="cli1" onclick="c(1)">Read more</button>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6 col-12 d-flex justify-content-center" style="margin-top: 3%;">
+            <article class="card card--2">
+                <div class="card__info-hover">
+                   
+                        <path fill="#000000"
+                            d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+                    </svg>
+                   
+                </div>
+                <div class="card__img"></div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__category"> Event two</span>
+                    <h3 class="card__title">SHORT FILM</h3>
+                  <button class="cli2" onclick="c(2)">Read more</button>
+                </div>
+            </article>
+        </div>
+    </div>
+       
+
+
+       
+
+        <!--<article class="card card--1">
+            <div class="card__info-hover">
+               
+                    <path fill="#000000"
+                        d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+                </svg>
+              
+            </div>
+            <div class="card__img"></div>
+            <a href="#" class="card_link">
+                <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+                <span class="card__category"> Event three</span>
+                <h3 class="card__title">TECHNICAL QUIZ</h3>
+                <button id="cli3" onclick="c(3)"> Read more </button>
+            </div>
+        </article>-->
+
+      
+
+    </section>
+</div>
+<div class="container-fluid Newsub dn" id="whole" >
+    
+        <div class="heading"></div>
+        <p class="rules"></p>
+        <div class="headrules">Rules and Regulations</div>
+        <p class="regs"></p>
+        <button class="closebtn" onclick="ret()">Go back</button>
+        
+  
+</div>
+
+</body>
+
+<script>
+
+
+function c(x)
+{   
+    var mainPage=document.getElementById('fp');
+    mainPage.style.display="none";
+    var sp4=document.querySelector('.Newsub');
+    sp4.classList.remove("dn");
+    sp4.style.display="block";
+    var hbox=document.querySelector('.heading');
+    var rbox=document.querySelector('.rules');
+    var gobackbtn=document.querySelector('.closebtn');
+    var listpara=document.querySelector('.listp');
+    var eventTitle=document.querySelector('.card__title');
+    var bulPart=document.querySelector('.regs');
+
+    if(x==3)
+    {   
+        hbox.textContent="MATLAB CODING";
+        rbox.textContent="MATLAB: Nowadays Chemical Engineers are dealing with complicated design calculations using MATLAB which is more effective and time-saving. Designation and Optimization of the equipment or a plant are necessary for safety purposes. Keeping them all in mind MATLAB EVENT is being organized to help students in problem-solving. ";  
+        bulPart.innerHTML="<li> The quiz includes 3 topics related to chemical engineering. </li><li> Each topic will be given a brief introduction during the workshop. So participants are required to attend the workshop.  </li><li> Participants will be called in an individualized manner during the event. </li><li> Participant’s camera and microphone are to be kept on during the event, background should neither be blurred nor filled with any templates. </li><li> The participants would get 15 seconds to answer after the entire question has been asked. </li><li> 15 questions will be asked to the participant (5 from each topic). Participants with the maximum points will be declared as a winner. </li>";
+    }
+    if(x==2)
+    {       
+        hbox.textContent="SHORT FILM COMPETITIONS";
+        rbox.textContent="Submission Guidelines ";
+        bulPart.innerHTML="<li>Entry is limited to original works for which the entrant holds all applicable rights. </li><li> Only one video should be submitted. </li><li>Entries and the persons depicted therein are restricted to works for which the entrant holds the copyright or for which the entrant has received the prior usage permission of the right holder</li><li>  Before submitting a work, the entrant is responsible for taking all steps necessary to protect the right of publicity and other rights of persons depicted in the work, including but not limited to obtaining their permission, to avoid any problems related to the infringement of these rights. </li><li> Entrants are responsible for the resolution of any legal issues arising from their submitted works and agree to pay any costs thereby incurred. </li><li> Entries including any content from (1) to (5) below may be disqualified at the organizer's discretion if it contains :1) Content that infringes on any laws, or is defamatory or libelous 2) Content that constitutes or encourages criminal behavior, leads to civil liability, or that otherwise violates any laws 3) Commercial content that promotes any products or services 4) Content in which animals were harmed or manipulated in the making of said content 5) Content which infringes on the copyrights, trademarks, contract rights, or any other intellectual property rights of any third person or entity (whether individuals or companies), or violates any person's rights of privacy or publicity, including: - trademarks owned by third parties (examples: billboards or signs on a street) - materials protected by third-party copyrights (including movie dialogue or musical compositions) </li><li>A video work consisting of video footage and/or still images with a length of 180 to 300 seconds. </li><li>Any video-recording device may be used.</li><li>360° videos are restricted to edited works that do not rely on a 360° video playback device or application for viewing. </li><li>File size: up to 600 MB of video data per work at the time of submission. File format: only MOV or MP4 will be accepted. </li><li>If any language is used within the video, please ensure that English language subtitles are included for judging. </li><li>Judging will be carried out using a 2K monitor. </li><h2>Note: Winners might be asked to provide a higher resolution video for promotional or display purposes related to the contest. </h2>";
+    }
+    if(x==1)
+    {       
+        hbox.textContent="PHOTOGRAPHY";
+        rbox.textContent="Theme: emotions in street . Event description: we want you to show us the most exciting, happening moments on the everyday street. Show your best from the theme given.";
+        bulPart.innerHTML="<li>Captured photographs must be based on theme. </li><li>File format :JPEG (max-20mb) </li><li>   Manipulation and double exposure of images is forbidden.(adding or removing elements)  Must add Description with their photograph (50 words)  </li><li> Mention app used for editing.</li><li> Both color and monochrome images will be accepted. </li><li>  Participants have to submit a RAW file along with the processed one (edited). </li><li> Participants will be called in an individualised manner during the event. </li><li> EXIF data compulsory. </li><li>Originality.</li><li>Composition and framing</li><li>Post processing.</li><li> Correlation to theme.</li><li>Color toning.</li>";
+
+    }
+  
+    
+}
+/*function c()
+{
+    var mainPage=document.getElementById('fp');
+    mainPage.style.display="none";
+    var sp4=document.querySelector('.NewSub');
+    sp4.classList.remove("dn");
+    sp4.style.display="block";
+    var cname=document.getElementById('card1');
+    var pa=document.getElementById('lp1');
+    var rbox=document.querySelector('.rules');
+    rbox.innerHTML=pa.textContent;
+
+
+
+
+}*/
+
+function ret() {
+    var mainPage = document.getElementById('fp');
+    mainPage.style.display = "block";
+    var sp4 = document.querySelector('.Newsub');
+    sp4.classList.add("dn");
+    sp4.style.display = "none";
+}
+
+</script>
+
+</html>

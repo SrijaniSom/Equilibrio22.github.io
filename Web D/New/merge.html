@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equilibrio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <link href="customcursor.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/events.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <!-- <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> -->
+  <link rel="stylesheet" href="css/coordinate.css">
+  <link rel="stylesheet" href="css/notice.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="css/teams.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/sponsors.css">
+  <script rel="text/javascript" src="js/timeline.js"></script>
+  <script rel="text/javascript" src="js/team.js"></script>
+  <script rel="text/javascript" src="customcursor.js"></script>
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/deskof.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/newsletter.css">
+  <link rel="stylesheet" href="css/social.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+    rel="stylesheet">
+</head>
+<style>
+  .container-preloader {
+    align-items: center;
+    cursor: none;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+  }
+
+  .container-preloader .animation-preloader {
+    position: absolute;
+    z-index: 100;
+  }
+
+  /* Spinner Loading */
+  .container-preloader .animation-preloader .spinner {
+    animation: spinner 1s infinite linear;
+    border-radius: 50%;
+    border: 10px solid rgba(0, 0, 0, 0.2);
+    border-top-color: green;
+    /* It is not in alphabetical order so that you do not overwrite it */
+    height: 9em;
+    margin: 0 auto 3.5em auto;
+    width: 9em;
+  }
+
+  /* Loading text */
+  .container-preloader .animation-preloader .txt-loading {
+    font: bold 5em 'Montserrat', sans-serif;
+    text-align: center;
+    user-select: none;
+  }
+
+  .container-preloader .animation-preloader .txt-loading .characters:before {
+    animation: characters 7s infinite;
+    color: purple;
+    content: attr(preloader-text);
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: rotateY(-90deg);
+  }
+
+  .container-preloader .animation-preloader .txt-loading .characters {
+    color: rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  .container-preloader .animation-preloader .txt-loading .characters:nth-child(2):before {
+    animation-delay: 0.2s;
+  }
+
+  .container-preloader .animation-preloader .txt-loading .characters:nth-child(3):before {
+    animation-delay: 0.4s;
+  }
+
+  .container-preloader .animation-preloader .txt-loading .characters:nth-child(4):before {
+    animation-delay: 0.6s;
+  }
+
+  .container-preloader .animation-preloader .txt-loading .characters:nth-child(5):before {
+    animation-delay: 0.8s;
+  }
+
+  .container-preloader .animation-preloader .txt-loading .characters:nth-child(6):before {
+    animation-delay: 1s;
+  }
+
+  .container-preloader .animation-preloader .txt-loading .characters:nth-child(7):before {
+    animation-delay: 1.2s;
+  }
+
+  .container-preloader .animation-preloader .txt-loading .characters:nth-child(8):before {
+    animation-delay: 1.4s;
+  }
+
+  .container-preloader .animation-preloader .txt-loading .characters:nth-child(9):before {
+    animation-delay: 1.6s;
+  }
+
+  .container-preloader .animation-preloader .txt-loading .characters:nth-child(10):before {
+    animation-delay: 1.8s;
+  }
+
+  .container-preloader .loader-section {
+    background-color: rgba(6, 18, 33, 1);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: calc(50% + 1px);
+  }
+
+  .container-preloader .loader-section.section-left {
+    left: 0;
+  }
+
+  .container-preloader .loader-section.section-right {
+    right: 0;
+  }
+
+  /* Fade effect on loading animation */
+  .loaded .animation-preloader {
+    opacity: 0;
+    transition: 0.3s ease-out;
+  }
+
+  /* Curtain effect */
+  .loaded .loader-section.section-left {
+    transform: translateX(-101%);
+    transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
+  }
+
+  .loaded .loader-section.section-right {
+    transform: translateX(101%);
+    transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
+  }
+
+  /* Animation of the preloader */
+  #loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -75px 0 15px -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+
+  #loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+  }
+
+  #loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Animation of letters loading from the preloader */
+  @keyframes characters {
+
+    0%,
+    75%,
+    100% {
+      opacity: 0;
+      transform: rotateY(-90deg);
+    }
+
+    25%,
+    50% {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+  }
+
+  /* Laptop size back (laptop, tablet, cell phone) */
+  @media screen and (max-width: 767px) {
+
+    /* Preloader */
+    /* Spinner Loading */
+    .container-preloader .animation-preloader #loader {
+      height: 8em;
+      width: 8em;
+    }
+
+    /* Text Loading */
+    .container-preloader .animation-preloader .txt-loading {
+      font: bold 3.5em 'Montserrat', sans-serif;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+
+    /* Prelaoder */
+    /* Spinner Loading */
+    .container-preloader .animation-preloader #loader {
+      height: 7em;
+      width: 7em;
+    }
+
+    /*Loading text */
+    .container-preloader .animation-preloader .txt-loading {
+      font: bold 2em 'Montserrat', sans-serif;
+    }
+  }
+
+  .tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+  }
+
+  .tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  .reveal {
+    position: relative;
+    opacity: 0;
+  }
+
+  .reveal.active {
+    opacity: 1;
+  }
+
+  .active.fade-left {
+    animation: fade-left 1s ease-in;
+  }
+
+  .active.fade-right {
+    animation: fade-right 1s ease-in;
+  }
+
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  #back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 2%;
+    background-color: rgb(212, 197, 216);
+    color: rgb(209, 116, 201);
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px solid purple;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  #back2Top:hover {
+    background-color: #DDF;
+    color: rgb(174, 43, 226);
+  }
+</style>
+<script>
+  $(window).scroll(function () {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+      $('#back2Top').fadeIn();
+    } else {
+      $('#back2Top').fadeOut();
+    }
+  });
+  $(document).ready(function () {
+    $("#back2Top").click(function (event) {
+      event.preventDefault();
+      $("html, body").animate({
+        scrollTop: 0
+      }, "slow");
+      return false;
+    });
+
+  });
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", reveal);
+  $(document).on("scroll", function () {
+    var pageTop = $(document).scrollTop();
+    var pageBottom = pageTop + $(window).height();
+    var tags = $(".tag");
+
+    for (var i = 0; i < tags.length; i++) {
+      var tag = tags[i];
+
+      if ($(tag).position().top < pageBottom) {
+        $(tag).addClass("visible");
+      } else {
+        $(tag).removeClass("visible");
+      }
+    }
+  });
+
+  $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+
+  function NavBar() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("myTopnav").style.width = "100%";
+      document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 1)";
+      document.getElementById("header").style.position = "fixed";
+      document.getElementById("header").style.top = "0%";
+    } else {
+      document.getElementById("myTopnav").style.width = "80%";
+      document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 0.8)";
+      document.getElementById("header").style.position = "fixed";
+      document.getElementById("header").style.top = "2rem";
+    }
+  }
+</script>
+
+<body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="container" class="container-preloader">
+      <div class="animation-preloader">
+        <div id="loader"></div>
+        <div class="txt-loading">
+          <span preloader-text="E" class="characters">E</span>
+
+          <span preloader-text="Q" class="characters">Q</span>
+
+          <span preloader-text="U" class="characters">U</span>
+
+          <span preloader-text="I" class="characters">I</span>
+
+          <span preloader-text="L" class="characters">L</span>
+
+          <span preloader-text="I" class="characters">I</span>
+
+          <span preloader-text="B" class="characters">B</span>
+          <span preloader-text="R" class="characters">R</span>
+          <span preloader-text="I" class="characters">I</span>
+          <span preloader-text="O" class="characters">O</span>
+        </div>
+      </div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+  </div>
+
+
+  <!--header-->
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100%;">
+            <div class="container-fluid" >
+              <a class="navbar-brand" href="#"><img src="images/logo.jpeg" width="50" height="50"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li> -->
+  <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li> -->
+  <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </li>
+                </ul> -->
+  <!-- <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+  <!-- </div>
+            </div>
+          </nav> -->
+  <header id="header">
+    <div class="topnav" id="myTopnav">
+      <a href="#"><img class="logo" src="images//logo.jpeg"></a>
+      <a href="#home" style="margin-left: 5%;">Home</a>
+      <a href="#about" style="margin-left: 5%;">About</a>
+      <a href="#events" style="margin-left: 5%;">Events</a>
+
+      <!-- <div class="dropdown">
+                    <button class="dropbtn"> Categories
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content animate">
+                        <a href="#">Cubic</a>
+                        <a href="#">Square</a>
+                    </div>
+                </div> -->
+      <a href="#gallery" style="margin-left: 5%;">Gallery</a>
+      <a href="#faq" style="margin-left: 5%;">FAQs</a>
+      <a href="coming.html" style="margin-left: 5%;">Workshops</a>
+      <a href="coming.html" style="margin-left: 5%;">Speakers</a>
+    
+
+      <!-- <a href="#about" style="float:right;padding: 24px 2px;">Name</a>
+            <a href="#about" style="float:right;padding: 24px 5px;"><i class="fa fa-user"></i></a> -->
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+    </div>
+  </header>
+
+  <div class="topprt" id="home">
+    <video autoplay muted loop id="myVideo">
+      <source src="images/Untitled design (3).mp4" type="video/mp4">
+    </video>
+    <!-- <section class="nav-bar">
+            <div class="nav-container"> -->
+    <!-- <div class="brand">
+            <a href="https://webdevtrick.com/"><img src="https://webdevtrick.com/wp-content/uploads/logo-fb-1.png"></a>
+          </div>  -->
+    <!-- <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Desk of</a>
+                        </li>
+                        <li>
+                            <a href="#">Coordinators</a>
+                        </li>
+                        <li>
+                            <a href="#">Team Leads</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </section> -->
+
+    <div class="icon-bar">
+      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/equilibrio_ggv?t=ocAsYsYHcW2LKyQOpRoA9Q&s=08" class="twitter"><i
+          class="fa fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/equilibrio-ggv/posts/?feedView=all" class="linkedin"><i
+          class="fa fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/equilibrio_ggv/" class="instagram"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCBMS9qtWUw-m5k4U7lBth8A" class="youtube"><i
+          class="fa fa-youtube"></i></a>
+    </div>
+
+    <eqtitle class="midhead">
+      <div class="theme"> </div>
+      <div class="namespart">
+        <div class="eqName1">EQUILIBRIO</div>
+        <div class="eqName2">2022</div>
+      </div>
+    </eqtitle>
+    <div class="com" style="z-index:1000">
+      <h1 class="glitch">Coming Soon...</h1>
+    </div>
+  </div>
+
+
+  <!-- About -->
+  <div class="tag">
+    <div id="about">
+      <div class="row-about">
+        <div class=" about-content about-content-1">
+          <div class="space"></div>
+          <div class="ot1">
+            <div class="out-1">
+              <div class="in-1">
+                <h5 class="num">30+</h5>
+                <h6 class="te">Workshops</h6>
+              </div>
+            </div>
+          </div>
+          <div class="out-2">
+            <div class="in-2">
+              <h5 class="num">50+</h5>
+              <h6 class="te">Speakers</h6>
+            </div>
+          </div>
+          <div class="out-3">
+            <div class="in-3">
+              <h5 class="num">20+</h5>
+              <h6 class="te">Events</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class=" about-content about-content-2" style="z-index: 10;">
+          <h2>About</h2>
+          <p style="margin-top: 2%;">"Equilibrio is the annual techno-management fest of Guru Ghasidas
+            Vishwavidyalaya, Bilaspur.
+            Initiated in 2013, Equilibrio has served as a platform for technology enthusiasts to showcase
+            their
+            intelligence, innovation and ingenuity. The fest brings together people from all walks of life,
+            comprising students, professionals and the general public. Equilibrio organizes a wide range of
+            events encompassing different genres of technology and management via competitive events,
+            motivating
+            guest talks, workshops, cultural programs and exhibitions. The aim of Equilibrio is to provide
+            the
+            technically inclined Indian youth with a national level medium to recognize and reward their
+            passion, ideas and skills as well as to develop them.
+            The word 'Equilibrio' means balance. Acknowledging this, every year Equilibrio promotes a
+            natural or
+            social cause to 'balance' technology with nature and society. Since its launch, Equilibrio has
+            received enormous participation from all over the country and has become one of the best in
+            central
+            India. So, tell everyone, mark your calendars and gear up for Equilibrio 2022."
+          </p>
+          <div class="button">
+            <a class="about-btn" href="https://youtu.be/OsGhQv3GoXA" style="text-decoration: none;">Watch teaser</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bubble-1"></div>
+  <div class="bubble-2"></div>
+  <div class="bubble-3"></div>
+
+  <!-- Desk Of -->
+  <div class="tag">
+    <div id="desk">
+      <h1 class="desktitle"
+        style="text-align: center;font-weight: 550;color: white;font-family: sans-serif; margin-bottom: 3%;">FROM
+        THE
+        DESK OF</h1>
+      <!-- <p
+                style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;">
+                Explore
+                our amazing events</p> -->
+
+      <div class="DeskSec " style="z-index:70">
+
+        <img src='images/vc.jpeg' class="pics p1 sides border" alt=''>
+
+
+        <p class="textp t1">
+          <span class="desig">Vice-chancellor</span><br> Throughout the year we
+          organise many academic, non-academic programs, conferences, workshops, etc. and invite eminent
+          experts from national and global platforms. Equilibrio techfest is one such flagship program which
+          the institute has organized every year since 2013. It provides a plethora of opportunities for the
+          students to showcase their talent by competing with students across the country. It not only helps
+          them in honing their professional skills but also imparts social values in them.With the aim of not
+          only producing think tanks from our country, Equilibrio nurtures such minds who can challenge
+          real-life problems and develop solutions for them. Promoting scientific and technological
+          advancements along with helping to create awareness about various social and environmental issues
+          has been Equilibrio’s motto.
+
+
+        </p>
+
+        <p class="textp t2"> <span class="desig">Registrar</span><br>Overcoming various challenges, our college is
+          encouraging youth to
+          achieve
+          brilliance in their fields by showcasing their marvelous ideas and skills in the tech-fest. The
+          catalytic soft-skills training which Equilibrio offers helps the students to polish their
+          personalities with tools of preparedness, strategies and guidance by mentors and seniors.
+          In this festival, students can showcase their creativity and intellect by competing with students
+          from different colleges. Engineering is a journey of four years that is incomplete without fun and
+          learning. It is truly said that the tech-fest of a college is a resemblance of the college in
+          itself. I welcome the students to embark on a journey of success guided by our fellow professors and
+          the best team equipped with a mountain of experience.
+
+        </p>
+        <img src='images/registar.jpeg' class="pics p2  sides border" alt=''>
+
+        <img src='images/dean.jpeg' class="pics p3  sides border" alt=''>
+
+        <p class="textp t3"><span class="desig">Dean</span><br>
+          It's my pleasure to welcome you to the EQUILIBRIO - technical festival &
+          community. I
+          hope you will find this festival enthralling, exciting, and invigorating. When I walk
+          through the corridors of this institute, the enthusiasm of our students captivates me, the
+          expertise of our staff, and the uniqueness of what we, as an institute, offer our
+          community makes me feel proud. We work to foster such an environment that is
+          supportive and encouraging for every stakeholder. I hope you have the same sense of
+          joyful discovery as you navigate this site. Equilibrio has made a huge foray into the
+          noble field of science, technology, and management covering from history to the
+          emerging areas.
+        </p>
+
+        <p class="textp t4"><span class="desig">Teacher coordinator</span><br>
+          The journey of Equilibrio started in 2013 and it has
+          successfully travelled its destination over the last years. This has been an amazing platform that
+          not only assists the students in becoming technically sound but also has a significant role in
+          adding social values to their life. It provides the students with an opportunity to ameliorate their
+          ideas, opinions, perception and make them more inventive.
+          This event will promote and encourage the interest of the students in coming up with ideas to solve
+          real-life problems, be it technical or managerial. With this festival, we not only celebrate
+          technology but also promote social causes like education, health, clean energy, etc. among the
+          youth.
+        </p>
+        <img src='images/teacher cord.jpg' class="pics p4 sides border" alt=''>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="not">
+        <div class="container-fluid">
+            <div class="row">
+                <div class='col-xs-12 col-sm-6 uiux-side'>
+                    <div>
+
+                      <div class='text-content'>
+                        <div class="bold">You want</div>
+                        <div class='big'>UI/UX?</div>
+                      </div>
+                      <a href="#">Submit</a>
+                    </div>
+                  </div>
+                  <div class='col-xs-12 col-sm-6 frontend-side'>
+                    <div>
+
+                      <div class='text-content'>
+                        <div class="bold">You want</div>
+                        <div class='big'>FRONT-END?</div>
+                      </div>
+                      <a class='button'>
+                        SHOW ME THE CODE
+                      </a>
+                    </div>
+                  </div>
+            </div>
+    </div>
+    </div> -->
+  <div class="tag">
+
+
+    <div id="notice">
+
+      <div class="container-fluid">
+        <h1 class="noticetitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif;">
+          WHAT'S NEXT ?
+        </h1>
+        <p style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;">
+          Register in upcoming events</p>
+        <div class="split row">
+          <div class="split__left-right split__left-right--finn col-md-8">
+            <h3>Gear up, Technophiles</h3>
+            <p>We have a wide range of events from the entire technical spectrum and, of course, lots of fun!
+              Registration for the upcoming events is coming soon.
+              We'll catch up soon!</p>
+            <button class="sponsors-btn">Be Ready</button>
+          </div>
+          <div class="split__left-right split__left-right--jake col-md-4">
+            <h3>Stay <span style="color:rgb(172, 26, 209);">Tuned!</span></h3>
+            <p>Equilibrio"22 has numerous events encompassing many of your interests. Check them out to develop yourself
+              holistically! You can contact us for queries. Also, Subscribe to get all essential information right in
+              your inbox.
+              Keep visiting for further updates!
+            </p>
+            <div class="row" style="margin-top: 2%;">
+              <div class="col-6"><a id="con" href="#footer" style="text-decoration: none;"
+                  class="notify-btn">Contact</a></div>
+              <div class="col-6"><a id="con" href="#newsletter" style="text-decoration: none; margin-left: 0;"
+                  class="notify-btn">Subscribe</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div id="notice">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="desktitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif;">Upcoming Events</h1>
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                        <div class="card-img-overlay card-inverse">
+                            <div class="text-stroke">
+                               Newest Update
+                            </div>
+                            <div class="para">
+                                <h2>Event Title</h2>
+                                <p>View More</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="desktitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif;">Recent Updates</h1>
+                    <div class="container">
+                        <marquee direction="up" height="380px" behavior="alternate" scrolldelay="5">
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                                </div>
+                                <div class="col-6">
+                                    <h2>Event Title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti illum
+                                        nemo asperiores? Quibusdam inventore, aliquid ad repellendus ea minus animi
+                                        numquam ipsam laborum error nemo libero sunt, iusto quaerat!</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                                </div>
+                                <div class="col-6">
+                                    <h2>Event Title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti illum
+                                        nemo asperiores? Quibusdam inventore, aliquid ad repellendus ea minus animi
+                                        numquam ipsam laborum error nemo libero sunt, iusto quaerat!</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                                </div>
+                                <div class="col-6">
+                                    <h2>Event Title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti illum
+                                        nemo asperiores? Quibusdam inventore, aliquid ad repellendus ea minus animi
+                                        numquam ipsam laborum error nemo libero sunt, iusto quaerat!</p>
+                                </div>
+                            </div>
+
+                        </marquee>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+  <!--Events-->
+  <div class="tag">
+    <div id="events">
+      <h1 class="desktitle"
+        style="text-align: center;font-weight: 550;color: white;font-family: sans-serif; margin-top: 10%;">
+        EVENTS
+      </h1>
+      <p style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;">
+        Explore
+        our amazing events</p>
+
+      <div class="container">
+        <div id="event-1">
+          <div class="tag">
+            <div class="row">
+              <div class="col-sm-4 col-12">
+                <div class="card">
+                  <div class="imgBx" data-text="CSE/IT Tech">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933190.png">
+                  </div>
+                  <div class="content">
+                    <div>
+                      <h3 style="font-weight: bold;">CS/IT</h3>
+                      <p>Contests for the coder, web and app developer in you!
+                      </p>
+                      <div class="item">
+                        <a href="csit.html"> Check it Out
+                          <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-12">
+                <div class="card">
+                  <div class="imgBx" data-text="Chem Tech">
+                    <img src="https://cdn-icons-png.flaticon.com/128/782/782711.png">
+                  </div>
+                  <div class="content">
+                    <div>
+                      <h3 style="font-weight: bold;">CHEM</h3>
+                      <p>Events to enrich your MATLAB, group debating skills and, educate you about chemical plant
+                        design.
+                      </p>
+                      <div class="item">
+                        <a href="chem.html"> Check it Out
+                          <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-12">
+                <div class="card">
+                  <div class="imgBx" data-text="ECE Tech">
+                    <img src="https://cdn-icons-png.flaticon.com/512/780/780500.png">
+                  </div>
+                  <div class="content">
+                    <div>
+                      <h3 style="font-weight: bold;">ECE</h3>
+                      <p>Competitions constituting circuit designing and topic discussions!
+
+                      </p>
+                      <div class="item">
+                        <a href="ece.html"> Check it Out
+                          <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="event-2">
+          <div class="tag">
+            <div class="row">
+              <div class="col-sm-4 col-12">
+                <div class="card">
+                  <div class="imgBx" data-text="Mech/IPE Tech">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2593/2593066.png">
+                  </div>
+                  <div class="content">
+                    <div>
+                      <h3 style="font-weight: bold;">Mech/IPE</h3>
+
+                      <p>Like quizzes & Machine Designing with SolidWorks? Then, compete here to showcase your skills.
+
+                      </p>
+                      <div class="item">
+                        <a href="ip.html"> Check it Out
+                          <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-12">
+                <div class="card">
+                  <div class="imgBx" data-text="Civil Tech">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1839/1839274.png">
+                  </div>
+                  <div class="content">
+                    <div>
+                      <h3 style="font-weight: bold;">CIVIL</h3>
+                      <p>Like AutoCAD designing, case studies and rapid fires? Then, unleash your abilities here.</p>
+                      <div class="item">
+                        <a href="civil.html"> Check it Out
+                          <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-12">
+                <div class="card">
+                  <div class="imgBx" data-text="Managerial">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1283/1283342.png">
+                  </div>
+                  <div class="content">
+                    <div>
+                      <h3 style="font-weight: bold;">MANAGERIAL</h3>
+                      <p>Events to make you job-ready and unleash your puzzling skills.
+
+                      </p>
+                      <div class="item">
+                        <a href="managerial.html"> Check it Out
+                          <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="event-3">
+          <div class="tag">
+            <div class="row">
+              <div class="col-sm-4 col-12">
+                <div class="card">
+                  <div class="imgBx" data-text="Cultural">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3349/3349375.png">
+                  </div>
+                  <div class="content">
+                    <div>
+                      <h3 style="font-weight: bold;">CULTURAL</h3>
+                      <p>Contests comprising comedy, dance, drawing, singing, writing and much more fun!</p>
+                      <div class="item">
+                        <a href="cultural.html"> Check it Out
+                          <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-12">
+                <div class="card">
+                  <div class="imgBx" data-text="Photography">
+                    <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png">
+                  </div>
+                  <div class="content">
+                    <div>
+                      <h3 style="font-weight: bold;">PHOTOGRAPHY</h3>
+                      <p>Stunning Photography and video-making competitions.
+
+                      </p>
+                      <div class="item">
+                        <a href="photography.html"> Check it Out
+                          <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-sm-4 col-12">
+                <div class="card">
+                  <div class="imgBx" data-text="Gaming">
+                    <img src="https://cdn-icons-png.flaticon.com/128/686/686589.png">
+                  </div>
+                  <div class="content">
+                    <div>
+                      <h3 style="font-weight: bold;">GAMING</h3>
+                      <p>Astonishing Gaming contests to test your gaming skills.</p>
+                      <div class="item">
+                        <a href="gaming.html"> Check it Out
+                          <i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <button id="event-btn" onclick="myEvents()">View More</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!--Timeline-->
+  <!-- <div id="timeline" class="container" style="z-index:56;">
+        <h1 class="titletime"
+            style="text-align: center;font-size: 33px;font-weight: 550;color: white;font-family: sans-serif;">TIMELINE
+        </h1>
+        <p style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;">
+            Explore our amazing events</p>
+        <section class="cd-horizontal-timeline">
+            <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events">
+                        <ol>
+                            <li><a href="#0" data-date="16/01/2014" class="selected">Perception</a></li>
+                            <li><a href="#0" data-date="28/02/2014">Web-verse</a></li>
+                            <li><a href="#0" data-date="20/04/2014">Android Wizard</a></li>
+                            <li><a href="#0" data-date="20/05/2014">Code-mania</a></li>
+                            <li><a href="#0" data-date="09/07/2014">Group Debate</a></li>
+                            <li><a href="#0" data-date="30/08/2014">MATLAB</a></li>
+                            <li><a href="#0" data-date="15/09/2014">Design Engineers</a></li>
+                            <li><a href="#0" data-date="01/11/2014">Circuit Design</a></li>
+                            <li><a href="#0" data-date="10/12/2014">Quiz</a></li>
+                            <li><a href="#0" data-date="19/01/2015">SolidWorks</a></li>
+                            <li><a href="#0" data-date="03/03/2015">ECE Trending Discussion</a></li>
+                        </ol>
+
+                        <span class="filling-line" aria-hidden="true"></span>
+                    </div>
+                </div>
+
+                <ul class="cd-timeline-navigation">
+                    <li><a href="#0" class="prev inactive">Prev</a></li>
+                    <li><a href="#0" class="next">Next</a></li>
+                </ul>
+            </div>
+
+            <div class="events-content">
+                <ol>
+                    <li class="selected" data-date="16/01/2014">
+                        <h5>Perception</h5>
+                        <p>
+                            A game of observation and execution of any kind of innovation. An idea-driven contest that
+                            encourages participants to apply their views on solving a problem.
+                        </p>
+                    </li>
+
+                    <li data-date="28/02/2014">
+                        <h5>Web-verse</h5>
+
+                        <p>
+                            A contest to apply your web designing knowledge and skills by the use of some simple
+                            languages [HTML, CSS, JAVAScript] and deliver your creativity.
+
+                        </p>
+                    </li>
+
+                    <li data-date="20/04/2014">
+                        <h5>Android Wizard</h5>
+                        <p>
+                            Turn your imagination of apps into something tangible with some simple development languages
+                            and show you skills of app development.
+
+                        </p>
+                    </li>
+
+                    <li data-date="20/05/2014">
+                        <h5>Code-mania</h5>
+
+                        <p>
+                            A coding contest on algorithms and data structures to encourage participants to apply their
+                            knowledge towards problem-solving.
+                        </p>
+                    </li>
+
+                    <li data-date="09/07/2014">
+                        <h5>Group Debate</h5>
+                        <p>
+                            Now a days during the interviews one of the major task given to the disciples is group
+                            debates. One should have a clear knowledge on what they have studied. So this event deals
+                            with group debates of the trending and upcoming events in Chemical Engineering.
+                        </p>
+                    </li>
+
+                    <li data-date="30/08/2014">
+                        <h5>MATLAB</h5>
+                        <p>
+                            Now a days Chemical Engineers are dealing the complicated design calculations using MATLAB
+                            which is more effective and time saving. Designation and Optimization of the equipment or a
+                            plant is necessary for safety purpose. Keeping them all in mind MATLAB EVENT is being
+                            organised in order to help students in problem solving.
+                        </p>
+                    </li>
+
+                    <li data-date="15/09/2014">
+                        <h5>Design Engineers</h5>
+
+                        <p>
+                            Now a days during the interviews one of the major task given to the disciples is group
+                            debates. One should have a clear knowledge on what they have studied. So this event deals
+                            with group debates of the trending and upcoming events in Chemical Engineering.
+                        </p>
+                    </li>
+
+                    <li data-date="01/11/2014">
+                        <h5>Circuit design</h5>
+                        <p>
+                            Where have to design and simulate most economical circuit. It give opportunity to showcase
+                            your knowledge and your skills.
+                        </p>
+                    </li>
+
+                    <li data-date="03/03/2015">
+                        <h5> ECE Trending topic discussion </h5>
+
+                        <p>
+                            We will give the topic for discussion. Here there will be a chance to showcase your
+                            knowledge. You have explain briefly on its present technology, and what will be its future
+                            prospects.
+                        </p>
+                    </li>
+
+                    <li data-date="19/01/2015">
+                        <h5>SolidWorks</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit
+                            recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic
+                            repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis
+                            eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus
+                            dolores porro doloribus.
+                        </p>
+                    </li>
+
+                    <li data-date="10/12/2014">
+                        <h5>Quizzes</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit
+                            recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic
+                            repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis
+                            eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus
+                            dolores porro doloribus.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </div> -->
+
+  <!--Coordinators-->
+  <div class="tag">
+    <div id="co-ordinators">
+      <div class="student-co-ordinate">
+        <h2 class="main-text" style="padding-top:5%">STUDENT CO-ORDINATORS</h2>
+        <p style="color: white !important;font-family: 'Montserrat', sans-serif;">Introducing our co-ordinators
+        </p>
+        <div class="content">
+          <div class="coordinate">
+            <div class="img">
+              <img src="images/Ayush Saxena.jpg" alt="" class="img-c" width="347px" height="347px">
+              <div class="social-media">
+                <a href=""><i class="fa fa-facebook icon"></i></a>
+                <a href=""><i class="fa fa-twitter icon"></i></a>
+                <a href="https://www.linkedin.com/in/ayush-saxena78781"><i class="fa fa-linkedin icon"></i></a>
+              </div>
+            </div>
+            <h3 class="name">Ayush Saxena</h3>
+            <h6 class="designation">Technical Head (male)</h6>
+            <hr>
+            <p class="intro-c">In nutshell the journey of leading a team & hosting such an event was a dream once. And
+              now being in those shoes it feels overwhelming to carry with the responsibility. But for sure I will try
+              my level best to bestow
+              the best experience against all odds. But I want your support and feedbacks to improve. So feel free to
+              reach out me for any suggestions, collaboration, sponsorship and more.</p>
+          </div>
+          <div class="coordinate" style="margin-bottom: 5%;">
+            <div class="img">
+              <img src="images/Giriraj Gautam.jpg" alt="" class="img-c">
+              <div class="social-media">
+                <a href=""><i class="fa fa-facebook icon"></i></a>
+                <a href=""><i class="fa fa-twitter icon"></i></a>
+                <a href=""><i class="fa fa-linkedin icon"></i></a>
+              </div>
+            </div>
+            <h3 class="name">Giriraj Gautam</h3>
+            <h6 class="designation">Non-Technical Head (male)</h6>
+            <hr>
+            <p class="intro-c">The experience of conducting an event on such a wide level is indeed tough but the
+              driving force to actually lead it is tougher than that. I believe in action so let's don't stretch it
+              more. Last but not the least I am
+              open for your suggestion, support and advice. So feel free to connect with me.</p>
+          </div>
+          <div class="coordinate" style="margin-bottom: 5%;">
+            <div class="img">
+              <img src="images/Akhila Reddy.jpg" alt="" class="img-c">
+              <div class="social-media">
+                <a href=""><i class="fa fa-facebook icon"></i></a>
+                <a href=""><i class="fa fa-twitter icon"></i></a>
+                <a href="https://www.linkedin.com/in/reddy-akhila"><i class="fa fa-linkedin icon"></i></a>
+              </div>
+            </div>
+            <h3 class="name">Reddy Akhila </h3>
+            <h6 class="designation">Non-Technical Head (female)</h6>
+            <hr>
+            <p class="intro-c">A huge responsibility and a great way to explore various fields. I realised that the
+              world in me is so competitive on every tiny situation and teaches me a lot. I know the journey ahead is
+              going to be harder than what I
+              believe but let's together fight against all odds make this event a grand success.</p>
+          </div>
+          <div class="coordinate">
+            <div class="img">
+              <img src="images/amrutha.jpeg" alt="" class="img-c">
+              <div class="social-media">
+                <a href=""><i class="fa fa-facebook icon"></i></a>
+                <a href="https://www.instagram.com/agreatsquare/"><i class="fa fa-instagram icon"></i></a>
+
+                <a href="https://www.linkedin.com/in/amruthasri/"><i class="fa fa-linkedin icon"></i></a>
+              </div>
+            </div>
+            <h3 class="name">A. Amrutha Sri</h3>
+            <h6 class="designation">Technical Head (female)</h6>
+            <hr>
+            <p class="intro-c">Every challenge is an opportunity to grow, and organizing a national-level event like
+              Equilibrio is the epitome of that. It has given me an ideal platform to enhance my skills. I know the work
+              is going to be more alarming, but I will give my best. I believe that we can move together towards this
+              amazing experience ahead, which will be an ecstatic task and learnable at the same time.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--Team Leads-->
+  <div class="tag">
+    <div id="team-leads">
+      <div class="container">
+        <div class="team-lead">
+          <section>
+            <div class="customer-feedback">
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col-sm-offset-2 col-md-8 col-sm-12">
+                    <div>
+                      <h1 class="section-title">TEAM LEADS</h1>
+                      <p style="color: white !important;font-family: 'Montserrat', sans-serif;">
+                        Meet our
+                        team leads</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-offset-3 col-lg-6 col-md-8 col-sm-offset-2 col-sm-12">
+                    <div class="owl-carousel feedback-slider">
+                      <div class="feedback-slider-item">
+                        <img src="images/KVB_0969 - Jay Ram.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Sai Jaya Ram</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;"> I am Sai Jaya Ram
+                          from Civil, 3rd Year.
+                          I am the lead of Technical team- Civil engineering.
+                          I will give my best with my team to build astonishing projects at
+                          Equilibrio’ 22.
+                        </p>
+                        <a href="http://www.linkedin.com/in/challa-sai-jaya-ram-0269a420b"><i
+                            class="fa fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><i
+                            class="fa fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/Vijaya kumar.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Dasu Vijaya Kumar Bhagavan</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">I am Dasu Vijaya Kumar
+                          Bhagavan from Chemical, 3rd Year.
+                          I am the lead of Technical team- Chemical engineering at
+                          Equilibrio’22.
+                          I will strive with my team to build stunning projects at Equilibrio’
+                          22.
+                        </p>
+                        <a href="https://www.linkedin.com/in/dasu-vijaya-kumar-bhagavan-94a9b61aa"><i
+                            class="fa fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                          href="https://www.facebook.com/vijayakumarbhagavan.dasu"><i
+                            class="fa fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/Mihir Verma.jpeg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Mihir Verma</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">I am Mihir Verma from
+                          Mech, 3rd Year
+                          I am the lead of Photography team at Equilibrio’ 22.
+                          I am will work with my team to give you the finest visual experience
+                          via images at Equilibrio’ 22.
+
+                        </p>
+                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/Mahith Kanchi.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Kanchi Venkata Mahith</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;;">I am Kanchi Venkata
+                          Mahith from ECE, 3rd Year.
+                          I am the lead of Managerial team at Equilibrio’22.
+                          I will give my best with my team to manage all important events,
+                          workshops, etc., and work coordinately with other teams at
+                          Equilibrio’ 22.
+                        </p>
+                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/Avinash Kumar Singh 11.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Avinash Kumar Singh</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">I am Avinash Kumar
+                          Singh from Civil, 3rd Year.
+                          I am the lead of Office and Finance Team at Equilibrio’22.
+                          I will endeavour with my team to handle the writing and finance
+                          related works as well as cooperate with other teams well to get
+                          crucial works done.
+                        </p>
+                        <a href="https://www.linkedin.com/in/avinash-kumar-singh-a592171ba"><i
+                            class="fa fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                          href="https://instagram.com/avinashks17?utm_medium=copy_link"><i
+                            class="fa fa-instagram"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/Amogh Pete.png" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Amogh Pravin Pete</h3>
+
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">
+                          I am Amogh Pravin Pete from CSE, 3rd Year.
+                          I am the lead of Office and Finance Team at Equilibrio’22.
+                          I will try my best with my team to handle the writing and finance
+                          related works as well as cooperate with other teams to do all
+                          important works.
+                        </p>
+                        <a href="https://www.linkedin.com/in/amoghpete/"><i
+                            class="fa fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/Reshma Tungana.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Reshma Tungana</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">I am Reshma Tungana
+                          from IT, 3rd Year.
+                          I am the lead of Cultural Team at Equilibrio’22.
+                          I will give my best with my team to organize all cultural events and
+                          do other works well to give you everlasting memories from
+                          Equilibrio’22!
+                        </p>
+                        <a href="https://www.linkedin.com/in/reshma-tungana-97bb46204" <i
+                          class="fa fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                          href="https://www.instagram.com/invites/contact/?i=szcv9em00vtz&utm_content=chf158q"><i
+                            class="fa fa-instagram"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/ALOK TIRKEY.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Alok Tirkey</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">I am Alok Tirkey from
+                          Mech, 3rd Year.
+                          I am the lead of Publicity Team at Equilibrio’22.
+                          I will strive with my team to make sure that maximum technical
+                          enthusiasts will join the spectacular fest- Equilibrio!
+                        </p>
+                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/shubhangi swaraj.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Shubhangi Swaraj</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">I am Shubhangi Swaraj
+                          from Chem, 3rd Year.
+                          I am the lead of Hospitality Team at Equilibrio’22.
+                          I will beaver away with my team to handle all hospitality related
+                          works.
+                        </p>
+                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/Amit Mishra.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Amit Mishra</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">I am Amit Mishra from
+                          ECE, 3rd Year.
+                          I am the lead of Marketing Team at Equilibrio’22.
+                          I will strive with my team to handle all marketing related works.
+                        </p>
+                        <a href="https://www.linkedin.com/in/amit-mishra-95b6371a0"><i
+                            class="fa fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/Kunal Dewangan.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Kunal Dewangan</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">I am Kunal Dewangan
+                          from Mech, 3rd Year.
+                          I am the lead of Technical Team- Mechanical / Industrial Production
+                          at Equilibrio’22.
+                          I will give my best with my team to make remarkable projects you
+                          will always remember.
+                        </p>
+                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/Aman Nigam.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Aman Nigam</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;;">
+                          I am Aman Nigam from ECE, 3rd Year.
+                          I am the lead of Technical Team- ECE at Equilibrio’22.
+                          I will strive with my team to make marvellous projects you will
+                          always definitely wanna see!
+                        </p>
+                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/Gourav Bansal.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Gourav Bansal</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;;">
+                          I am Aman Nigam from ECE, 3rd Year.
+                          I am the lead of Technical Team- ECE at Equilibrio’22.
+                          I will strive with my team to make marvellous projects you will
+                          always definitely wanna see!
+                        </p>
+                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                          href="https://instagram.com/gourav_bansal__"><i
+                            class="fa fa-instagram"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/bhavesh.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Bhavesh Khatri</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">
+                          I am Bhavesh Khatri from IT, 3rd Year.
+                          I am the lead of Graphic Design Team at Equilibrio’22.
+                          I will endeavour with my team to design graphics that will direct
+                          you to the astonishing world of graphics!
+                        </p>
+                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/surya tripathi.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Surya Tripathi</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">
+                          I am Surya Tripathi from IT, 3rd Year.
+                          I am the lead of Technical Team- CSE/ IT at Equilibrio’22.
+                          I will give my best with my team to make stunning projects you will
+                          always definitely wanna see!
+                        </p>
+                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                      <div class="feedback-slider-item">
+                        <img src="images/Parshant Yadav.jpg" class="center-block img-circle" width="100%">
+                        <h3 class="customer-name">Parshant Yadav</h3>
+                        <hr>
+                        <p style="font-family: 'Montserrat', sans-serif;">
+                          I am Parshant Yadav from IT, 2nd Year.
+                          I am the lead of Gaming team.
+                          I will beaver away with my team to develop spectacular games that
+                          you would definitely wanna try!
+                        </p>
+                        <i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+                      </div>
+                    </div>
+                    <div class="feedback-slider-thumb hidden-xs">
+                      <div class="thumb-prev">
+                        <span>
+                          <img src="images/Parshant Yadav.jpg" width="100%">
+                          <!-- <h3 class="prev-name">Name</h3> -->
+                        </span>
+                      </div>
+
+                      <div class="thumb-next">
+                        <span>
+                          <img src="images/KVB_0969 - Jay Ram.jpg" width="100%">
+                          <!-- <h3 class="next-name">Name</h3> -->
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bubble-4"></div>
+  <div class="bubble-5"></div>
+  <div class="bubble-6"></div>
+  <div class="bubble-7"></div>
+
+  <!--Gallery-->
+  <div class="tag">
+    <div id="gallery">
+
+      <div class="container text-center ">
+        <div class="row">
+          <div class="col-sm-offset-2 col-md-8 col-sm-12">
+            <div>
+              <h1 class="section-title">PHOTO GALLERY</h1>
+              <p style="color: white !important;">Best captured moments</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <div class="container">
+            <div class="box">
+              <div class="r1">
+                <img id="image-1" src="images/1.JPG">
+                <img id="image-2" src="images/14.jpg">
+                <img id="image-3" src="images/3.jpg">
+
+              </div>
+              <div class="r2">
+                <img id="image-7" src="images/1.JPG">
+                <img id="image-8" src="images/14.jpg">
+                <img id="image-9" src="images/9.JPG">
+              </div>
+              <div class="r3">
+                <img id="image-4" src="images/6.jpg">
+                <img id="image-5" src="images/14.jpg">
+                <img id="image-6" src="images/3.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!-- <div class="container text-center">
+        <button onclick="myFunction()"
+            style="background-color: #000000;letter-spacing: 2px;font-weight: bold;padding: 10px;color:white;border-radius: 5px;border: none;">View
+            More</button>
+    </div> -->
+
+  <!--Sponsors-->
+  <div class="tag">
+    <div id="Sponsors">
+      <div class="container text-center">
+        <div class="row ">
+          <div class="col-md-8 col-sm-12">
+            <h1 class="sponsors-title text-center">SPONSORS <span
+                style="font-size:40px;font-weight: 600;color: rgb(193, 125, 188);"> | </span> PARTNERS
+            </h1>
+            <p style="color: white !important;">A big shout out to our sponsors and partners!</p>
+          </div>
+        </div>
+        <div class="row">
+          <img src="https://www.edualgoacademy.com/myapp/static/images/logo/logo.svg">
+          <img src="https://cdn.codechef.com/images/cc-logo-sd.svg" style="border-radius: 0%;">
+        </div>
+        <!-- <h3>Partners</h3> -->
+        <div id="partners" class="row">
+          <img src="https://cdn.codechef.com/images/cc-logo-sd.svg" style="border-radius: 0%;">
+          <img src="https://internshala.com/static/images/common/new_internshala_logo.svg">
+          <img src="https://www.hackerrank.com/wp-content/uploads/2018/08/hackerrank_logo.png"
+            style="border-radius: 0%; height: 20px; width: auto;">
+          <img src="https://www.time4education.com/theme/times/time/images/logonew.png"
+            style="border-radius: 0%; height: 20px; width: auto;">
+        </div>
+        <div id="partners" class="row">
+          <img src="https://bankofindia.co.in/Content/Images/logo.png" style="width:auto;height:35px">
+          <img src="https://licindia.in/CorporateSiteDemo/media/LIC_Media/LIC_LOGO_1.png">
+          <img src="https://www.pnbindia.in/images/logo-new.png">
+          <img src="https://www.vlccwellness.com/India/media/images/logo.png">
+
+        </div>
+        <div id="myDIV-1">
+          <div id="partners" class="row">
+            <img src="https://www.arena-multimedia.com/frontend/images/logo-arena.png">
+            <img src="https://www.brainbuxa.com/static/img/logo-front.png">
+            <img src="https://www.caddcentre.com/images/logo.png">
+            <img src="images/careerlauncher.jpeg">
+            <img src="https://www.premieracademy.in/images/logo.png">
+            <img src="https://www.naturals.in/wp-content/themes/naturals/images/logo.png">
+          </div>
+        </div>
+        <div id="myDIV-2">
+          <div id="partners" class="row">
+            <img src="images/citymall.jpeg">
+            <img src="images/cms.jpeg">
+            <img src="images/ebay.jpeg">
+            <img src="images/meenakshi.jpeg">
+            <img src="images/skd.jpeg">
+            <img src="images/twenty19.jpeg">
+          </div>
+        </div>
+        <div id="myDIV-3">
+          <div id="partners" class="row">
+            <img src="images/gtech.jpeg">
+            <img src="images/secl.jpeg">
+            <img src="images/targate.jpeg">
+            <img src="images/sankalp.jpeg">
+            <img src="images/talwalkars.jpeg">
+            <img src="images/tripshire.jpeg">
+          </div>
+        </div>
+        <div class="row text-center">
+          <button onclick="myFunction()" class="sponsors-btn">Know More</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!--FAQ-->
+  <div class="container text-center" style="margin-top: 2%;" id="faq">
+    <h1 class="section-title">FAQ's</h1>
+    <div class="faq-content">
+      <div class="tag">
+        <div class="faq-question">
+          <input id="q1" type="checkbox" class="panel">
+          <div class="plus">+</div>
+          <label for="q1" class="panel-title">What is Equlibrio ? </label>
+          <div class="panel-content">EQUILIBRIO is the technical extravaganza held in Guru
+            Ghasidas University, Bilaspur. It is a platform to
+            showcase your talent teaming with spirit and passion.
+            An amalgamation of technical events and cultural galas
+            where students can hone their technical and
+            managerial skills. It provides the students an
+            opportunity to prove their mettle by competing with
+            students from top institutes across India.</div>
+        </div>
+      </div>
+      <div class="tag">
+        <div class="faq-question">
+          <input id="q2" type="checkbox" class="panel">
+          <div class="plus">+</div>
+          <label for="q2" class="panel-title">How many teams are there ?</label>
+          <div class="panel-content">WE HAVE 11 TEAMS
+            NAMELY ;
+            OFFICE AND FINANCE,
+            GRAPHIC DESIGNING,
+            WEB DEVELOPMENT,
+            MANAGERIAL TEAM,
+            CULTURAL TEAM,
+            HOSPITALITY,
+            MARKETING TEAM,
+            PUBLICITY TEAM,
+            PHOTOGRAPHY,
+            GAMING TEAM,
+            AND TECH TEAMS.</div>
+        </div>
+      </div>
+      <div class="tag">
+        <div class="faq-question">
+          <input id="q3" type="checkbox" class="panel">
+          <div class="plus">+</div>
+          <label for="q3" class="panel-title">Is the event conducted online/offline mode ?</label>
+          <div class="panel-content">Equilibrio'22 is conducted completely in online mode keeping all the circumstances
+            under consideration &nbsp; <a href="https://en.wikipedia.org/wiki/The_Unanswered_Question"
+              target="_blank">unanswered</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Newsletter-->
+
+  <div class="tag" id="newsletter">
+    <div class="section5">
+      <section>
+        <h1 class="title inline-photo2 show-on-scroll2 animate-reveal animate-first">Subscribe to our newsletter
+        </h1>
+        <p class="inline-photo show-on-scroll animate-reveal animate-second">Get latest news the events and workshops of
+          Equilibrio 2022!</p>
+      </section>
+      <section>
+        <input class="emailenter" placeholder="Enter email" style="padding:1.5%;">
+        <button class="btn2 animate-reveal animate-third">Subscribe</button>
+      </section>
+    </div>
+  </div>
+
+  <!--Footer-->
+
+  <article id="wrap">
+    <article id="lightings">
+      <div class="footer-dark">
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-3 item">
+                <h3>Peek into</h3>
+                <ul>
+                  <li><a href="#events">Events</a></li>
+                  <li><a href="#gallery">Gallery</a></li>
+                  <li><a href="#Sponsors">Sponsors</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item">
+                <h3>About</h3>
+                <ul>
+                  <li><a href="#desk">Desk of</a></li>
+                  <li><a href="#co-ordinators">Student Co-ordinators</a></li>
+                  <li><a href="#team-leads">Team Leads</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 item text">
+                <h1>Equilibrio 2022</h1>
+                <p>Awesome series of events, is coming soon to take breath away!</p>
+              </div>
+              <div class="tag">
+                <div class="col item social"><a href="#"><i class="fa fa-facebook"></i></a><a
+                    href="https://www.instagram.com/equilibrio_ggv/"><i class="fa fa-instagram"></i></a><a
+                    href="https://twitter.com/equilibrio_ggv?t=ocAsYsYHcW2LKyQOpRoA9Q&s=08"><i
+                      class="fa fa-twitter"></i></a><a
+                    href="https://www.linkedin.com/company/equilibrio-ggv/posts/?feedView=all"><i
+                      class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </footer>
+      </div>
+
+      <section id="one">
+        <section id="two">
+          <section id="three">
+            <section id="four">
+              <section id="five">
+
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </article>
+  </article>
+
+
+</body>
+<script>
+  $(document).ready(function () {
+    setTimeout(function () {
+      $('#container').addClass('loaded');
+      // Once the container has finished, the scroll appears
+      if ($('#container').hasClass('loaded')) {
+        // It is so that once the container is gone, the entire preloader section is deleted
+        $('#preloader').delay(9000).queue(function () {
+          $(this).remove();
+        });
+      }
+    }, 3000);
+  });
+  /** code by webdevtrick ( https://webdevtrick.com ) **/
+  (function ($) {
+    $(function () {
+      $('nav ul li a:not(:only-child)').click(function (e) {
+        $(this).siblings('.nav-dropdown').toggle();
+        $('.dropdown').not($(this).siblings()).hide();
+        e.stopPropagation();
+      });
+      $('html').click(function () {
+        $('.nav-dropdown').hide();
+      });
+      $('#nav-toggle').click(function () {
+        $('nav ul').slideToggle();
+      });
+      $('#nav-toggle').on('click', function () {
+        this.classList.toggle('active');
+      });
+    });
+  })(jQuery);
+
+  var i = document.getElementById("image-1");
+  var currentPos = 0;
+  var images1 = ["images/1.JPG", "images/2.JPG", "images/3.JPG", "images/4.JPG", "images/5.JPG"]
+  var images2 = ["images/6.JPG", "images/7.JPG", "images/8.JPG", "images/9.JPG", "images/10.JPG"]
+  var images3 = ["images/11.JPG", "images/12.JPG", "images/13.JPG", "images/14.JPG", "images/15.JPG"]
+  var images4 = ["images/16.JPG", "images/17.JPG", "images/18.JPG", "images/19.JPG", "images/20.JPG"]
+  var images5 = ["images/21.JPG", "images/22.JPG", "images/23.JPG", "images/24.JPG", "images/25.JPG"]
+  var images6 = ["images/17.JPG", "images/27.JPG", "images/8.JPG", "images/29.JPG", "images/30.JPG"]
+  var images7 = ["images/26.JPG", "images/17.JPG", "images/28.JPG", "images/14.JPG", "images/42.JPG"]
+  var images8 = ["images/40.JPG", "images/18.JPG", "images/9.JPG", "images/1.JPG", "images/30.JPG"]
+  var images9 = ["images/4.JPG", "images/5.JPG", "images/10.JPG", "images/11.JPG", "images/3.JPG"]
+
+  var land = ["https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+  ]
+  var por = ["https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1579710758949-3ab36db30f1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+  ]
+
+  function volgendefoto() {
+    if (++currentPos >= images1.length)
+      currentPos = 0;
+
+    i.src = images1[currentPos];
+  }
+  setInterval(volgendefoto, 3000);
+
+  var i2 = document.getElementById("image-2");
+  var pos2 = 0;
+
+  function if2() {
+    if (++pos2 >= images2.length)
+      pos2 = 0;
+    i2.src = images2[pos2];
+  }
+  setInterval(if2, 3000);
+
+  var i3 = document.getElementById("image-3");
+  var pos3 = 0;
+
+  function if3() {
+    if (++pos3 >= images3.length)
+      pos3 = 0;
+    i3.src = images3[pos3];
+  }
+  setInterval(if3, 3000);
+
+  var i4 = document.getElementById("image-4");
+  var pos4 = 0;
+
+  function if4() {
+    if (++pos4 >= images4.length)
+      pos4 = 0;
+
+    i4.src = images4[currentPos];
+  }
+  setInterval(if4, 3000);
+
+  var i5 = document.getElementById("image-5");
+  var pos5 = 0;
+
+  function if5() {
+    if (++pos5 >= images5.length)
+      pos5 = 0;
+    i5.src = images5[pos5];
+  }
+  setInterval(if5, 3000);
+
+  var i6 = document.getElementById("image-6");
+  var pos6 = 0;
+
+  function if6() {
+    if (++pos6 >= images6.length)
+      pos6 = 0;
+    i6.src = images6[pos6];
+  }
+  setInterval(if6, 3000);
+
+  var i7 = document.getElementById("image-7");
+  var pos7 = 0;
+
+  function if7() {
+    if (++pos7 >= images7.length)
+      pos7 = 0;
+    i7.src = images7[pos7];
+  }
+  setInterval(if7, 3000);
+
+  var i8 = document.getElementById("image-8");
+  var pos8 = 0;
+
+  function if8() {
+    if (++pos8 >= images8.length)
+      pos8 = 0;
+    i8.src = images8[pos8];
+  }
+  setInterval(if8, 3000);
+
+  var i8 = document.getElementById("image-9");
+  var pos8 = 0;
+
+  function if8() {
+    if (++pos8 >= images9.length)
+      pos8 = 0;
+    i8.src = images9[pos8];
+  }
+  setInterval(if8, 3000);
+
+  function myFunction() {
+    var x = document.getElementById("myDIV-1");
+    var y = document.getElementById("myDIV-2");
+    var z = document.getElementById("myDIV-3");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+    if (y.style.display === "none") {
+      y.style.display = "block";
+    } else {
+      y.style.display = "none";
+    }
+    if (z.style.display === "none") {
+      z.style.display = "block";
+    } else {
+      z.style.display = "none";
+    }
+  }
+
+  // function myEvents() {
+  //     var x = window.matchMedia("(max-width: 576px)");
+  //     var y = document.getElementById("event-2");
+  //     var z = document.getElementById("event-3");
+  //     if (x.matches) {
+  //         if (y.style.display === "none") {
+  //             y.style.display = "block";
+  //         } else {
+  //             y.style.display = "none";
+  //         }
+  //         if (z.style.display === "none") {
+  //             z.style.display = "block";
+  //         } else {
+  //             z.style.display = "none";
+  //         }
+  //     } else{
+  //         z.style.display ="block";
+  //         y.style.display = "block";
+  //     }
+
+
+  // }
+  function myEvents() {
+    var x = document.getElementById("event-btn")
+    var y = document.getElementById("event-2");
+    var z = document.getElementById("event-3");
+
+    if (y.style.display === "none") {
+      y.style.display = "block";
+      x.innerHTML = "Show Less";
+    } else {
+      y.style.display = "none";
+      x.innerHTML = "View More";
+    }
+    if (z.style.display === "none") {
+      z.style.display = "block";
+    } else {
+      z.style.display = "none";
+    }
+  }
+</script>
+
+</html>

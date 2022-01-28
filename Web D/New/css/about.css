@@ -67,11 +67,14 @@
     color: white;
 }
 .te,.num{
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 400;
     font-family: sans-serif;
 }
-
+.out-3 .te,.out-3 .num
+{
+    font-size: 24px;
+}
 .out-1 {
     height: 150px;
     width: 150px;
@@ -95,14 +98,14 @@
     left:10%;
 }
 .out-3{
-    height: 120px;
-    width: 120px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     border: 3px solid rgb(158, 90, 183);
     margin: 1rem;
     position: relative;
     position: absolute;
-    right:20%;
+    right:5%;
     bottom: 5%;
 }
 .in-1{
@@ -124,13 +127,13 @@
     left: 6%;
 }
 .in-3{
-    height: 90px;
-    width: 90px;
+    height:170px;
+    width: 170px;
     border-radius: 50%;
     border: 2px dashed rgb(126, 15, 118);
     position: absolute;
-    top: 11%;
-    left:11%;
+    top: 6%;
+    left:6%;
 }
 .in-1,.in-2,.in-3{
     display: flex;
@@ -156,6 +159,10 @@
     }
 }
 @media only screen and (max-width:900px){
+    .out-3 .te,.out-3 .num
+{
+    font-size: 13px;
+}
     .out-1{        
     height: 120px;
     width: 120px;                
@@ -177,16 +184,16 @@
     left:9%;    
     }
     .out-3{        
-    height: 90px;
-    width: 90px;     
+    height: 170px;
+    width: 170px;     
     bottom: 15%; 
-    right:15%; 
+    right:5%; 
     }
     .in-3{
-    height:60px;
-    width:60px;
-    top:15%;
-    left:15%;    
+    height:140px;
+    width:140px;
+    top:9%;
+    left:9%;    
     }
     .in-1 h5,.in-1 h6{
         font-size: 15px;
@@ -220,9 +227,9 @@
         top:30%;
     }
     .out-3{
-        height: 120px;
-        width: 120px;
-        right:5%;
+        height: 200px;
+        width: 200px;   
+        right:-10%;
         bottom: 10%;
     }
     .in-1{
@@ -238,10 +245,10 @@
         left: 7%;
     }
     .in-3{
-        height: 90px;
-        width: 90px;
-        top: 12%;
-        left:12%;
+        height: 170px;
+        width: 170px;
+        top: 7%;
+        left: 7%;
     }
 }
 @media only screen and (max-width:600px){
@@ -269,16 +276,16 @@
     left:9%;    
     }
     .out-3{        
-    height: 90px;
-    width: 90px;     
+    height: 170px;
+    width: 170px;    
     bottom: 20%; 
     right:15%; 
     }
     .in-3{
-    height:60px;
-    width:60px;
-    top:15%;
-    left:15%;    
+    height:140px;
+    width:140px;
+    top:9%;
+    left:9%;   
     }
     .out-1 {
         top:5%;
@@ -302,6 +309,10 @@
     }    
 }
 @media only screen and (max-width:400px){
+    .out-3 .te,.out-3 .num
+{
+    font-size: 11px;
+}
     .about-content{
         width: 100%;
     }
