@@ -1,0 +1,1526 @@
+@media screen and (min-width:1053px) {
+    #desk {
+        margin-top: 10%;
+    }
+}
+
+@media (max-width:1052px) and (min-width:510px) {
+    #desk {
+        margin-top: 20%;
+    }
+}
+
+@media (max-width:509px) {
+    #desk {
+        margin-top: 35%;
+    }
+}
+
+.border {
+    font-size: 1.6rem;
+    display: grid;
+    place-items: center;
+    min-height: 200px;
+    border: 8px solid;
+    padding: 1rem;
+}
+
+.sides {
+    border-image: linear-gradient(to left, turquoise, greenyellow) 1 0;
+}
+
+@keyframes vawe {
+    20% {
+        border-radius: 45% 55% 62% 38% / 53% 51% 49% 47%;
+    }
+    40% {
+        border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
+    }
+    60% {
+        border-radius: 60% 40% 57% 43% / 47% 62% 38% 53%;
+    }
+    80% {
+        border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
+    }
+}
+
+.desktitle {
+    margin-top: 3%;
+    margin-bottom: 2px;
+}
+
+@media (min-width:1377px) {
+    .desktitle {
+        font-size: 33px;
+    }
+    .bubble-1 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: -10%;
+        top: 130%;
+        z-index: -80;
+        background-image: linear-gradient(to left, rgb(67, 1, 143), rgb(152, 18, 156));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-2 {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 55%;
+        top: 90%;
+        z-index: -8;
+        background-image: linear-gradient(to bottom, rgb(86, 9, 175), rgb(170, 8, 175));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-3 {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 80%;
+        top: 240%;
+        z-index: -90;
+        background-image: linear-gradient(to right, rgb(67, 1, 143), rgb(140, 11, 145));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-4 {
+        height: 175px;
+        width: 175px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 30%;
+        top: 340%;
+        z-index: -70;
+        background-image: linear-gradient(to bottom, rgb(73, 29, 122), rgb(69, 8, 71));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-5 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 29%;
+        top: 510%;
+        z-index: -60;
+        background-image: linear-gradient(to left, rgb(33, 3, 66), rgb(129, 21, 133));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-6 {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 22%;
+        top: 770%;
+        z-index: -60;
+        background-image: linear-gradient(to left, rgb(33, 3, 66), rgb(129, 21, 133));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-7 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 63%;
+        top: 790%;
+        z-index: -60;
+        background-image: linear-gradient(to left, rgb(33, 3, 66, 0.8), rgb(129, 21, 133, 0.6));
+        animation: vawe 4s linear infinite;
+    }
+}
+
+@media (max-width:1377px) and (min-width:1040px) {
+    .bubble-1 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: -12%;
+        top: 135%;
+        z-index: -80;
+        background-image: linear-gradient(to left, rgb(67, 1, 143), rgb(152, 18, 156));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-2 {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 55%;
+        top: 88%;
+        z-index: -8;
+        background-image: linear-gradient(to bottom, rgb(86, 9, 175), rgb(170, 8, 175));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-3 {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 60%;
+        top: 230%;
+        z-index: -90;
+        background-image: linear-gradient(to right, rgb(67, 1, 143), rgb(140, 11, 145));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-4 {
+        height: 175px;
+        width: 175px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 30%;
+        top: 340%;
+        z-index: -70;
+        background-image: linear-gradient(to bottom, rgb(73, 29, 122), rgb(69, 8, 71));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-5 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 28%;
+        top: 495%;
+        z-index: -60;
+        background-image: linear-gradient(to left, rgb(33, 3, 66), rgb(129, 21, 133));
+        animation: vawe 4s linear infinite;
+    }
+}
+
+@media (max-width:1040px) and (min-width:758px) {
+    .bubble-1 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: -12%;
+        top: 135%;
+        z-index: -80;
+        background-image: linear-gradient(to left, rgb(67, 1, 143), rgb(152, 18, 156));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-2 {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 60%;
+        top: 90%;
+        z-index: -8;
+        background-image: linear-gradient(to bottom, rgb(86, 9, 175), rgb(170, 8, 175));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-3 {
+        height: 180px;
+        width: 180px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 67%;
+        top: 230%;
+        z-index: -90;
+        background-image: linear-gradient(to right, rgb(67, 1, 143), rgb(140, 11, 145));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-4 {
+        height: 175px;
+        width: 175px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 7%;
+        top: 362%;
+        z-index: -70;
+        background-image: linear-gradient(to bottom, rgb(73, 29, 122), rgb(69, 8, 71));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-5 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 6%;
+        top: 567%;
+        z-index: -60;
+        background-image: linear-gradient(to left, rgb(52, 6, 102), rgb(97, 13, 100));
+        animation: vawe 4s linear infinite;
+    }
+}
+
+@media (max-width:758px) and (min-width:509px) {
+    .bubble-1 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: -12%;
+        top: 135%;
+        z-index: -80;
+        background-image: linear-gradient(to left, rgb(67, 1, 143), rgb(152, 18, 156));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-2 {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 60%;
+        top: 90%;
+        z-index: -8;
+        background-image: linear-gradient(to bottom, rgb(86, 9, 175), rgb(170, 8, 175));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-3 {
+        height: 180px;
+        width: 180px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 64%;
+        top: 234%;
+        z-index: -90;
+        background-image: linear-gradient(to right, rgb(67, 1, 143), rgb(140, 11, 145));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-4 {
+        height: 175px;
+        width: 175px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 3%;
+        top: 376%;
+        z-index: -70;
+        background-image: linear-gradient(to bottom, rgb(73, 29, 122), rgb(69, 8, 71));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-5 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 4%;
+        top: 576%;
+        z-index: -60;
+        background-image: linear-gradient(to left, rgb(33, 3, 66), rgb(129, 21, 133));
+        animation: vawe 4s linear infinite;
+    }
+}
+
+@media (max-width:509px) and (min-width:436px) {
+    .bubble-1 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: -13%;
+        top: 135%;
+        z-index: -80;
+        background-image: linear-gradient(to left, rgb(67, 1, 143), rgb(152, 18, 156));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-2 {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 50%;
+        top: 88%;
+        z-index: -8;
+        background-image: linear-gradient(to bottom, rgb(86, 9, 175), rgb(170, 8, 175));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-3 {
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 68%;
+        top: 243%;
+        z-index: -90;
+        background-image: linear-gradient(to right, rgb(67, 1, 143), rgb(140, 11, 145));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-4 {
+        height: 175px;
+        width: 175px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 3%;
+        top: 376%;
+        z-index: -70;
+        background-image: linear-gradient(to bottom, rgb(73, 29, 122), rgb(69, 8, 71));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-5 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 4%;
+        top: 576%;
+        z-index: -60;
+        background-image: linear-gradient(to left, rgb(33, 3, 66), rgb(129, 21, 133));
+        animation: vawe 4s linear infinite;
+    }
+}
+
+@media (max-width:436px) and (min-width:320px) {
+    .bubble-1 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: -20%;
+        top: 135%;
+        z-index: -80;
+        background-image: linear-gradient(to left, rgb(67, 1, 143), rgb(152, 18, 156));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-2 {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 50%;
+        top: 88%;
+        z-index: -8;
+        background-image: linear-gradient(to bottom, rgb(86, 9, 175), rgb(170, 8, 175));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-3 {
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 62%;
+        top: 258%;
+        z-index: -90;
+        background-image: linear-gradient(to right, rgb(67, 1, 143), rgb(140, 11, 145));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-4 {
+        height: 175px;
+        width: 175px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 3%;
+        top: 376%;
+        z-index: -70;
+        background-image: linear-gradient(to bottom, rgb(112, 63, 168), rgb(69, 8, 71));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-5 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 4%;
+        top: 630%;
+        z-index: -60;
+        background-image: linear-gradient(to right, rgb(33, 3, 66), rgb(166, 50, 170));
+        animation: vawe 4s linear infinite;
+    }
+}
+
+@media (max-width:320px) {
+    .bubble-1 {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: -30%;
+        top: 135%;
+        z-index: -80;
+        background-image: linear-gradient(to left, rgb(67, 1, 143), rgb(152, 18, 156));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-2 {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 40%;
+        top: 90%;
+        z-index: -8;
+        background-image: linear-gradient(to bottom, rgb(86, 9, 175), rgb(170, 8, 175));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-3 {
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 52%;
+        top: 285%;
+        z-index: -90;
+        background-image: linear-gradient(to right, rgb(67, 1, 143), rgb(140, 11, 145));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-4 {
+        height: 175px;
+        width: 175px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 1%;
+        top: 369%;
+        z-index: -70;
+        background-image: linear-gradient(to bottom, rgb(112, 63, 168), rgb(69, 8, 71));
+        animation: vawe 4s linear infinite;
+    }
+    .bubble-5 {
+        height: 270px;
+        width: 270px;
+        border-radius: 50%;
+        margin: 1rem;
+        position: absolute;
+        left: 4%;
+        top: 657%;
+        z-index: -60;
+        background-image: linear-gradient(to right, rgb(33, 3, 66), rgb(166, 50, 170));
+        animation: vawe 4s linear infinite;
+    }
+}
+
+.DeskSec {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font: 500 100%/1.5 system-ui;
+    position: relative;
+    color: aliceblue;
+}
+
+.pics {
+    height: auto;
+    border-radius: 10px;
+}
+
+.desig {
+    margin-bottom: 2%;
+    font-size: 30px;
+    color: rgb(204, 94, 204);
+    font-weight: bold;
+}
+
+@media (max-width: 1327px) {
+    .DeskSec {
+        display: flex;
+        flex-direction: column;
+        font-size: 80%;
+    }
+    .p1,
+    .p2,
+    .p3,
+    .p4 {
+        width: 400px;
+        height: 300px;
+    }
+    .textp {
+        position: relative;
+        margin: -3rem 0 2rem 1rem;
+        padding: 1rem;
+        background: rgba(white, 0.8);
+    }
+    .p1 {
+        margin-bottom: 75%;
+    }
+    .p2 {
+        margin-bottom: 85%;
+    }
+    .t2 {
+        position: absolute;
+        top: 45%;
+        z-index: 999;
+    }
+    .t1 {
+        position: absolute;
+        top: 12%;
+        z-index: 999;
+    }
+    .textp {
+        width: 73%;
+        margin-left: 25%;
+        margin-right: 25%;
+        background-color: rgb(158, 90, 183);
+    }
+    .desig {
+        margin-bottom: 2%;
+        font-size: 30px;
+        color: rgb(87, 19, 87);
+        font-weight: bold;
+    }
+}
+
+@media(min-width: 1327px) {
+    .footer {
+        padding-top: 5%;
+    }
+    .pics:hover,
+    .p1:hover {
+        background: rgba(255, 255, 255, 0);
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+    .p1,
+    .p3 {
+        width: 400px;
+        height: 400px;
+    }
+    .p1,
+    .p2,
+    .p3,
+    .p4 {
+        width: 400;
+        height: 300;
+    }
+    .t1,
+    .t3 {
+        margin-left: 15rem;
+        /*  background-color: rgb(158, 90, 183);*/
+    }
+    .p1,
+    .p2,
+    .t1 {
+        margin-bottom: 4rem;
+    }
+    .t2,
+    .t4 {
+        margin-bottom: 4rem;
+        width: 750px;
+        /* background-color: rgb(158, 90, 183);*/
+        z-index: 99;
+        padding-left: 0%;
+        padding-right: 30%;
+    }
+    .p2,
+    .p4 {
+        margin-left: 40rem;
+        width: 400px;
+        height: 400px;
+    }
+    .t1,
+    .t3 {
+        padding-right: 5%;
+        padding-left: 0%;
+    }
+}
+
+.textp {
+    text-align: justify;
+}
+
+<<<<<<< HEAD
+@media (min-width:717px) and (max-width:1327px) {
+    .footer {
+        padding-top: 5%;
+    }
+    .p1 {
+        margin-bottom: 20%;
+    }
+    .p1,
+    .p2,
+    .p3,
+    .p4 {
+        width: 400;
+        height: 300;
+    }
+    .p2 {
+        margin-bottom: 24%;
+        margin-top: 10%;
+    }
+    .p3 {
+        margin-bottom: 24%;
+    }
+    .p4 {
+        margin-top: 8%;
+        margin-bottom: 24%;
+    }
+    .t2 {
+        position: absolute;
+        top: 35%;
+        z-index: 999;
+    }
+    .t3 {
+        position: absolute;
+        top: 63%;
+        z-index: 999;
+    }
+    .t1 {
+        position: absolute;
+        top: 12%;
+        z-index: 999;
+    }
+    .textp {
+        width: 73%;
+        margin-left: 25%;
+        margin-right: 25%;
+        background-color: rgb(158, 90, 183);
+        font-size: 12px;
+    }
+    #timeline h1,
+    .noticetitle {
+        margin-top: -1%;
+    }
+    .t4 {
+        position: absolute;
+        top: 88%;
+        z-index: 999;
+    }
+    .desig {
+        margin-bottom: 2%;
+        font-size: 30px;
+        color: rgb(87, 19, 87);
+        font-weight: bold;
+    }
+}
+
+@media (min-width:602px) and (max-width:716px) {
+    .footer {
+        padding-top: 10%;
+    }
+    .p1 {
+        margin-bottom: 20%;
+    }
+    .p1,
+    .p2,
+    .p3,
+    .p4 {
+        width: 400;
+        height: 300;
+    }
+    .p2 {
+        margin-bottom: 24%;
+        margin-top: 15%;
+    }
+    .p3 {
+        margin-bottom: 24%;
+    }
+    .p4 {
+        margin-top: 8%;
+        margin-bottom: 24%;
+    }
+    .t2 {
+        position: absolute;
+        top: 36%;
+        z-index: 999;
+    }
+    .t3 {
+        position: absolute;
+        top: 63%;
+        z-index: 999;
+    }
+    .t1 {
+        position: absolute;
+        top: 12%;
+        z-index: 999;
+    }
+    .textp {
+        width: 73%;
+        margin-left: 25%;
+        margin-right: 25%;
+        background-color: rgb(158, 90, 183);
+        font-size: 12px;
+    }
+    .desig {
+        margin-bottom: 2%;
+        font-size: 30px;
+        color: rgb(87, 19, 87);
+        font-weight: bold;
+    }
+    #timeline h1,
+    .noticetitle {
+        margin-top: -1%;
+    }
+    .t4 {
+        position: absolute;
+        top: 88%;
+        z-index: 999;
+    }
+}
+
+@media (min-width:457px) and (max-width:601px) {
+    .foot {
+        padding-top: 40%;
+    }
+    #not h1,
+    .noticetitle {
+        margin-top: 40%;
+    }
+    .p1,
+    .p2,
+    .p3,
+    .p4 {
+        width: 400;
+        height: 300;
+    }
+    .p1 {
+        margin-bottom: 25%;
+    }
+    .p2 {
+        margin-bottom: 25%;
+        margin-top: 9%;
+    }
+    .p3 {
+        margin-top: 8%;
+    }
+    .p4 {
+        margin-top: 29%;
+    }
+    .t2 {
+        position: absolute;
+        top: 42%;
+        z-index: 999;
+    }
+    .t4 {
+        position: absolute;
+        top: 97%;
+        z-index: 999;
+    }
+    .t3 {
+        position: absolute;
+        top: 69%;
+        z-index: 999;
+    }
+    .t1 {
+        position: absolute;
+        top: 14%;
+        z-index: 999;
+    }
+    .textp {
+        width: 73%;
+        margin-left: 25%;
+        margin-right: 25%;
+        background-color: rgb(158, 90, 183);
+        font-size: 9px;
+    }
+    .desig {
+        margin-bottom: 2%;
+        font-size: 30px;
+        color: rgb(87, 19, 87);
+        font-weight: bold;
+    }
+}
+
+@media(min-width:365px) and (max-width:457px) {
+    .foot {
+        padding-top: 50%;
+    }
+    #not h1,
+    .noticetitle {
+        margin-top: 65%;
+    }
+    .p1,
+    .p2,
+    .p3,
+    .p4 {
+        width: 300px;
+        height: 300px;
+    }
+    .p1 {
+        margin-bottom: 38%;
+    }
+    .p2 {
+        margin-bottom: 38%;
+        margin-top: 8%;
+    }
+    .p3 {
+        margin-top: 7%;
+        margin-bottom: 38%;
+    }
+    .p4 {
+        margin-top: 3%;
+    }
+    .t2 {
+        position: absolute;
+        top: 42%;
+        z-index: 999;
+    }
+    .t4 {
+        position: absolute;
+        top: 98%;
+        z-index: 999;
+    }
+    .t1 {
+        position: absolute;
+        top: 14%;
+        z-index: 999;
+    }
+    .t3 {
+        position: absolute;
+        top: 70%;
+        z-index: 999;
+    }
+    .textp {
+        width: 73%;
+        margin-left: 25%;
+        margin-right: 25%;
+        background-color: rgb(158, 90, 183);
+        font-size: 9px;
+    }
+    .desig {
+        margin-bottom: 2%;
+        font-size: 30px;
+        color: rgb(87, 19, 87);
+        font-weight: bold;
+    }
+}
+
+@media(min-width:339px) and (max-width:364px) {
+    .foot {
+        padding-top: 60%;
+    }
+    #not h1,
+    .noticetitle {
+        margin-top: 65%;
+    }
+    .p1,
+    .p2,
+    .p3,
+    .p4 {
+        width: 300px;
+        height: 300px;
+    }
+    .p1 {
+        margin-bottom: 38%;
+    }
+    .p2 {
+        margin-bottom: 38%;
+        margin-top: 14%;
+    }
+    .p3 {
+        margin-top: 7%;
+        margin-bottom: 38%;
+    }
+    .p4 {
+        margin-top: 4%;
+    }
+    .t2 {
+        position: absolute;
+        top: 42%;
+        z-index: 999;
+    }
+    .t4 {
+        position: absolute;
+        top: 98%;
+        z-index: 999;
+    }
+    .t1 {
+        position: absolute;
+        top: 14%;
+        z-index: 999;
+    }
+    .t3 {
+        position: absolute;
+        top: 70%;
+        z-index: 999;
+    }
+    .textp {
+        width: 73%;
+        margin-left: 25%;
+        margin-right: 25%;
+        background-color: rgb(158, 90, 183);
+        font-size: 9px;
+    }
+    .desig {
+        margin-bottom: 2%;
+        font-size: 30px;
+        color: rgb(87, 19, 87);
+        font-weight: bold;
+    }
+}
+
+@media (min-width:280px) and (max-width:339px) {
+    .foot {
+        margin-top: 5%;
+        padding-top: 95%;
+    }
+    #not h1,
+    .noticetitle {
+        margin-top: 105%;
+    }
+    .p1,
+    .p2,
+    .p3,
+    .p4 {
+        width: 230px;
+        height: 230px;
+    }
+    .p1 {
+        margin-bottom: 74%;
+    }
+    .p2 {
+        margin-bottom: 74%;
+        margin-top: 12%;
+    }
+    .p3 {
+        margin-top: 7%;
+        margin-bottom: 74%;
+    }
+    .p4 {
+        margin-top: 10%;
+    }
+    .t2 {
+        position: absolute;
+        top: 43%;
+        z-index: 999;
+    }
+    .t4 {
+        position: absolute;
+        top: 100%;
+        z-index: 999;
+    }
+    .t1 {
+        position: absolute;
+        top: 11%;
+        z-index: 999;
+    }
+    .t3 {
+        position: absolute;
+        top: 72%;
+        z-index: 999;
+    }
+    .textp {
+        width: 73%;
+        margin-left: 25%;
+        margin-right: 25%;
+        background-color: rgb(158, 90, 183);
+        font-size: 9px;
+    }
+    .desig {
+        margin-bottom: 2%;
+        font-size: 30px;
+        color: rgb(87, 19, 87);
+        font-weight: bold;
+    }
+}
+
+@media(max-width:280px) {
+    .foot {
+=======
+     @media (min-width:717px) and (max-width:1327px){
+        .footer
+        {
+            padding-top: 5%;
+        }
+       .p1
+       {     
+           margin-bottom: 20%;
+       }
+       .p1,.p2,.p3,.p4{
+           width:400; 
+           height:300;
+         }
+       .p2
+       {
+           margin-bottom: 24%;
+           margin-top:10%;
+       }
+       .p3{
+           margin-bottom: 24%;
+       }
+       .p4{
+           margin-top:8%;
+           margin-bottom: 24%;
+       }
+       .t2
+       {
+           position: absolute;
+           top:35%;
+           z-index: 999;
+   
+           
+       }
+       .t3{
+           position: absolute;
+           top:63%;
+           z-index: 999;
+       }
+       .t1
+       {
+           position: absolute;
+           top:12%;
+           z-index: 999;
+       }
+       .textp
+       {
+           width:73%;
+           margin-left: 25%;
+           margin-right: 25%;
+           background-color: rgb(158, 90, 183);
+           font-size: 12px;
+       }
+       #timeline h1,.noticetitle{
+           margin-top: -1%;
+       }
+       .t4
+       {
+           position: absolute;
+           top:88%;
+           z-index: 999;
+   
+           
+       }
+       .desig
+       {
+           margin-bottom: 2%;
+           font-size: 30px;
+           color: rgb(87, 19, 87);
+           font-weight: bold;
+       }
+     }
+     @media (min-width:602px) and (max-width:716px){
+        .footer
+        {
+            padding-top: 10%;
+        }
+       .p1
+       {     
+           margin-bottom: 20%;
+       }
+       .p1,.p2,.p3,.p4{
+           width:400; 
+           height:300;
+         }
+       .p2
+       {
+           margin-bottom: 24%;
+           margin-top:15%;
+       }
+       .p3{
+           margin-bottom: 24%;
+       }
+       .p4{
+           margin-top:8%;
+           margin-bottom: 24%;
+       }
+       .t2
+       {
+           position: absolute;
+           top:36%;
+           z-index: 999;
+   
+           
+       }
+       .t3{
+           position: absolute;
+           top:63%;
+           z-index: 999;
+       }
+       .t1
+       {
+           position: absolute;
+           top:12%;
+           z-index: 999;
+       }
+       .textp
+       {
+           width:73%;
+           margin-left: 25%;
+           margin-right: 25%;
+           background-color: rgb(158, 90, 183);
+           font-size: 12px;
+       }
+       .desig
+       {
+           margin-bottom: 2%;
+           font-size: 30px;
+           color: rgb(87, 19, 87);
+           font-weight: bold;
+       }
+       #timeline h1,.noticetitle{
+           margin-top: -1%;
+       }
+       .t4
+       {
+           position: absolute;
+           top:88%;
+           z-index: 999;
+   
+       }
+     }
+     @media (min-width:457px) and (max-width:601px){
+        .foot
+        {
+            padding-top: 50%;
+        }
+       
+       #not h1,.noticetitle{
+           margin-top: 40%;
+       }
+       .p1,.p2,.p3,.p4{
+           width:400; 
+           height:300;
+         }
+       .p1
+       {       
+           margin-bottom: 25%;
+       }
+       .p2
+       {
+           margin-bottom: 25%;
+           margin-top:9%;
+       }
+       .p3{
+           margin-top: 8%;
+       }
+       .p4{
+           margin-top:29%;
+       }
+       .t2
+       {
+           position: absolute;
+           top:42%;
+           z-index: 999;
+           
+       }
+       .t4{
+           position: absolute;
+           top:97%;
+           z-index: 999;
+       }
+       .t3{
+           position: absolute;
+           top:69%;
+           z-index: 999;
+   
+       }
+      
+       .t1
+       {
+           position: absolute;
+           top:14%;
+           z-index: 999;
+       }
+       .textp
+       {
+           width:73%;
+           margin-left: 25%;
+           margin-right: 25%;
+           background-color: rgb(158, 90, 183);
+           font-size: 9px;
+       }
+       .desig
+       {
+           margin-bottom: 2%;
+           font-size: 30px;
+           color: rgb(87, 19, 87);
+           font-weight: bold;
+       }
+     }
+     @media(min-width:365px) and (max-width:457px){
+        .foot
+        {
+            padding-top: 60%;
+        }
+       #not h1,.noticetitle{
+           margin-top: 65%;
+       }
+       .p1,.p2,.p3,.p4{
+           width:300px; 
+           height:300px;
+         }
+       .p1
+       {       
+           margin-bottom: 38%;
+   
+       }
+       .p2
+       {
+           margin-bottom: 38%;
+           margin-top:8%;
+       }
+       .p3{
+           margin-top: 7%;
+           margin-bottom: 38%;
+       }
+       .p4{
+           margin-top:3%;
+       }
+       .t2
+       {
+           position: absolute;
+           top:42%;
+           z-index: 999;
+           
+       }
+       .t4{
+           position: absolute;
+           top:98%;
+           z-index: 999;
+       }
+       .t1
+       {
+           position: absolute;
+           top:14%;
+           z-index: 999;
+       }
+       .t3{
+           position: absolute;
+           top:70%;
+   
+           z-index: 999;
+       }
+       .textp
+       {
+           width:73%;
+           margin-left: 25%;
+           margin-right: 25%;
+           background-color: rgb(158, 90, 183);
+           font-size: 9px;
+       }
+       .desig
+       {
+           margin-bottom: 2%;
+           font-size: 30px;
+           color: rgb(87, 19, 87);
+           font-weight: bold;
+       }
+     }
+     @media(min-width:339px) and (max-width:364px){
+        .foot
+        {
+            padding-top: 70%;
+        }
+        #not h1,.noticetitle{
+            margin-top: 65%;
+        }
+        .p1,.p2,.p3,.p4{
+            width:300px; 
+            height:300px;
+          }
+        .p1
+        {       
+            margin-bottom: 38%;
+    
+        }
+        .p2
+        {
+            margin-bottom: 38%;
+            margin-top:14%;
+        }
+        .p3{
+            margin-top: 7%;
+            margin-bottom: 38%;
+        }
+        .p4{
+            margin-top:4%;
+        }
+        .t2
+        {
+            position: absolute;
+            top:42%;
+            z-index: 999;
+            
+        }
+        .t4{
+            position: absolute;
+            top:98%;
+            z-index: 999;
+        }
+        .t1
+        {
+            position: absolute;
+            top:14%;
+            z-index: 999;
+        }
+        .t3{
+            position: absolute;
+            top:70%;
+    
+            z-index: 999;
+        }
+        .textp
+        {
+            width:73%;
+            margin-left: 25%;
+            margin-right: 25%;
+            background-color: rgb(158, 90, 183);
+            font-size: 9px;
+        }
+        .desig
+        {
+            margin-bottom: 2%;
+            font-size: 30px;
+            color: rgb(87, 19, 87);
+            font-weight: bold;
+        }
+      }
+     @media (min-width:280px) and (max-width:339px){
+       
+        .foot
+        
+        {
+
+            margin-top:5%;
+            padding-top: 95%;
+        }
+       #not h1,.noticetitle{
+           margin-top:105%;
+       }
+       .p1,.p2,.p3,.p4{
+           width:230px; 
+           height:230px;
+         }
+       
+       .p1
+       {       
+           margin-bottom: 74%;
+       }
+       .p2
+       {
+           margin-bottom: 74%;
+           margin-top:12%;
+       }
+       .p3{
+           margin-top: 7%;
+           margin-bottom: 74%;
+       }
+       .p4{
+           margin-top:10%;
+          
+       }
+       .t2
+       {
+           position: absolute;
+           top:43%;
+           z-index: 999;
+           
+       }
+       .t4{
+           position: absolute;
+           top:100%;
+           z-index: 999;
+       }
+       .t1
+       {
+           position: absolute;
+           top:11%;
+           z-index: 999;
+       }
+       .t3{
+           position: absolute;
+           top:72%;
+   
+           z-index: 999;
+       }
+       .textp
+       {
+           width:73%;
+           margin-left: 25%;
+           margin-right: 25%;
+           background-color: rgb(158, 90, 183);
+           font-size: 9px;
+       }
+       .desig
+       {
+           margin-bottom: 2%;
+           font-size: 30px;
+           color: rgb(87, 19, 87);
+           font-weight: bold;
+       }
+     }
+   @media(max-width:280px)
+   {
+    .foot
+    {
+>>>>>>> 88b85ec12b6852a71bdbee05f79a199afd5576c9
+        padding-top: 90%;
+    }
+    #not h1,
+    .noticetitle {
+        margin-top: 95%;
+    }
+    .p1,
+    .p2,
+    .p3,
+    .p4 {
+        width: 250px;
+        height: 250px;
+    }
+    .p1 {
+        margin-bottom: 79%;
+    }
+    .p2 {
+        margin-bottom: 74%;
+    }
+    .p3 {
+        margin-top: 7%;
+        margin-bottom: 74%;
+    }
+    .p4 {
+        margin-top: 8%;
+    }
+    .t2 {
+        position: absolute;
+        top: 41%;
+        z-index: 999;
+    }
+    .t4 {
+        position: absolute;
+        top: 98%;
+        z-index: 999;
+    }
+    .t1 {
+        position: absolute;
+        top: 14%;
+        z-index: 999;
+    }
+    .t3 {
+        position: absolute;
+        top: 70%;
+        z-index: 999;
+    }
+    .textp {
+        width: 73%;
+        margin-left: 25%;
+        margin-right: 25%;
+        background-color: rgb(158, 90, 183);
+        font-size: 9px;
+    }
+    .desig {
+        margin-bottom: 2%;
+        font-size: 30px;
+        color: rgb(87, 19, 87);
+        font-weight: bold;
+    }
+}

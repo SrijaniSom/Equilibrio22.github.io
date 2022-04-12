@@ -1,0 +1,543 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Equilibrio'22</title>
+        <link rel = "icon" href = "{% static 'images/neweq.png' %}"type = "image/x-icon">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+         
+        <link rel="stylesheet" href="{% static 'css/events.css' %}">
+        <link rel="stylesheet" href="{% static 'css/faq.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
+        <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
+       
+ 
+        <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+        <link rel="stylesheet" href="{% static 'css/deskof.css' %}">
+        <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+        <link rel="stylesheet" href="{% static 'css/newsletter.css' %}">
+        <link rel="stylesheet" href="{% static 'css/social.css' %}">
+        <link rel="stylesheet" href="{% static 'css/flipdown.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css.map' %}">
+        <link rel="stylesheet" href="{% static 'css/style.scss' %}">
+        <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<style>
+
+.card-img-top {
+    height: 300px
+}
+
+.card-no-border .card {
+    background-color: rgba(255, 255, 255, 0.13);;
+    border-color: #280c47;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05)
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+
+.pro-img {
+    margin-top: -80px;
+    margin-bottom: 20px
+}
+
+.little-profile .pro-img img {
+    width: 128px;
+    height: 128px;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 100%
+}
+
+
+
+h3 {
+    line-height: 30px;
+    font-size: 21px
+}
+
+.btn-rounded.btn-md {
+    padding: 12px 35px;
+    font-size: 16px
+}
+
+html body .m-t-10 {
+    margin-top: 10px
+}
+
+.btn-primary,
+.btn-primary.disabled {
+    background: #7460ee;
+    border: 1px solid #7460ee;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(116, 96, 238, 0.14), 0 3px 1px -2px rgba(116, 96, 238, 0.2), 0 1px 5px 0 rgba(116, 96, 238, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(116, 96, 238, 0.14), 0 3px 1px -2px rgba(116, 96, 238, 0.2), 0 1px 5px 0 rgba(116, 96, 238, 0.12);
+    -webkit-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
+    transition: 0.2s ease-in
+}
+
+.btn-rounded {
+    border-radius: 60px;
+    padding: 7px 18px
+}
+
+.m-t-20 {
+    margin-top: 20px
+}
+
+.text-center {
+    text-align: center !important
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #455a64;
+
+    font-weight: 400
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+.template, .card{
+  background: rgb(21, 21, 37);
+}
+.login-section {
+        background-color: rgba(255, 255, 255, 0.13);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    }
+    
+    #login form {
+        margin: 0 auto;
+        padding: 50px 35px;
+    }
+    
+   
+
+    #login .form-control{
+        font-size: 15px;
+    }
+    
+    #login .form-check-input {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 3px;
+        font-size: 20px;
+        font-weight: 300;
+        color: black;
+    }
+    
+    #login .form-label {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+    }
+    
+    #login form * {
+        font-family: 'Poppins', sans-serif;
+        color: #000000;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+    }
+    
+    #login h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+        text-align: center;
+        margin-bottom: 8%;
+        color: white;
+    }
+
+</style>
+<script>
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#back2Top').fadeIn();
+        } else {
+            $('#back2Top').fadeOut();
+        }
+    });
+    $(document).ready(function() {
+        $("#back2Top").click(function(event) {
+            event.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+            return false;
+        });
+
+    });
+
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    $(document).on("scroll", function() {
+        var pageTop = $(document).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var tags = $(".tag");
+
+        for (var i = 0; i < tags.length; i++) {
+            var tag = tags[i];
+
+            if ($(tag).position().top < pageBottom) {
+                $(tag).addClass("visible");
+            } else {
+                $(tag).removeClass("visible");
+            }
+        }
+    });
+
+    $(".hover").mouseleave(
+        function() {
+            $(this).removeClass("hover");
+        }
+    );
+
+    function NavBar() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 1)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        } else {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 0.8)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        let timer_ = 1647973800
+        let flipdown = new FlipDown(timer_)
+            .start()
+            .ifEnded(() => {
+                document.querySelector(".flipdown").innerHTML = `<h2>Timer is ended</h2>`;
+            })
+    })
+</script>
+
+<body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+    
+    
+    <header id="header">
+        <div class="topnav" id="myTopnav">
+            <a href="#"><img class="logo" src="{% static 'images/neweq.png' %}"></a>
+            <a href="{% url 'index' %}" style="margin-left: 5%;">Home</a>
+            <a href="{% url 'eventcategory' %}" style="margin-left: 5%;">Events</a>
+            <a href="{% url 'teams' %}" style="margin-left: 5%;">Teams</a>
+            <a href="{% url 'workshop' %}" style="margin-left: 5%;">Workshops</a>
+            <a href="{% url 'sponsor' %}" style="margin-left: 5%;">Sponsors</a>
+            <a href="{% url 'faq' %}" style="margin-left: 5%;">FAQs</a>
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'logoutuser' %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Logout</a>
+                <a href="{% url 'profile' request.user.id %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Hi, {{request.user.username }}</a>
+            {% else %}
+                <a href="{% url 'login' %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Login</a>
+                <a href="{% url 'register' %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Register</a>
+            
+            {% endif %}
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+        </div>
+    </header>
+    
+
+        <div class="template col-12 p-0" style="background-color: #280c47;">
+            <!-- Column -->
+            <div class="card"> <img class="card-img-top" src="https://i.imgur.com/K7A78We.jpg" alt="Card image cap">
+                <div class="card-body little-profile text-center">
+                    
+                    <div class="container" id="login">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                      <h3>Personal Details</h3>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="first" class="form-label">Name</label>
+                            <input type="text" class="form-control" placeholder="name"  name="name" id="first" value="{{stu.user.username}}" required>
+                          </div>
+                        </div>
+                        <!--  col-md-6   -->
+                  
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="email"  class="form-label">Email id</label>
+                            <input type="email" class="form-control" placeholder="" name="email" id="email id" value="{{stu.email}}" required>
+                          </div>
+                        </div>
+                        <!--  col-md-6   -->
+                      </div>
+                  
+                  
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="phone"  class="form-label">Phone</label>
+                            <input type="number" class="form-control" placeholder="" id="phone number" name="phone" value="{{stu.phone}}" required>
+                          </div>
+                  
+                  
+                        </div>
+                        <!--  col-md-6   -->
+                  
+                        <div class="col-md-6">
+                  
+                          <div class="form-group">
+                            <label for="college"  class="form-label">College Name</label>
+                            {% if stu.part_of == "Btech from GGV students"  or stu.part_of == "Non-Btech from GGV students" %}
+                            <input type="text" class="form-control" id="phone" placeholder="college name" name="college_name" value="Guru Ghasidas University" required>
+                            {% else %}
+                            <input type="text" class="form-control" id="phone" placeholder="college name" name="college_name" value="{{stu.college_name}}" required >
+                            {% endif %}
+                          </div>
+                        </div>
+                        <!--  col-md-6   -->
+                      </div>
+                      <!--  row   -->
+                  
+                  
+                      <div class="row">
+                        <div class="col-md-6">
+                  
+                          <div class="form-group">
+                            <label for="dept"  class="form-label">Department</label>
+                            <input type="text" class="form-control" id="email" placeholder="department" name="department" value="{{stu.department}}" required>
+                          </div>
+                        </div>
+                        <!--  col-md-6   -->
+                  
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="sem"  class="form-label">Semester</label>
+                            <input type="number" class="form-control" id="sem" placeholder="semester" name="semester" value="{{stu.semester}}"required>
+                          </div>
+                  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                  
+                          <div class="form-group">
+                            <label for="password"  class="form-label">Password</label>
+                                  <input type="password" class="form-control" name="password" value={{stu.user.password}}>
+                          </div>
+                        </div>
+                        
+                  
+                        
+                    </div>
+                        
+                        
+                      
+
+                      
+                     </div>
+                     <input type="submit" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">
+                    </form>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer footer-dark" style="padding-top: 5%;">
+
+      <div class="footer-top" style="background-image:linear-gradient(to left, rgb(67, 1, 143) , rgb(152, 18, 156));">
+          <div class="container">
+              <div class="inner-content">
+                  <div class="row">
+                      <div class="col-lg-3 col-md-4 col-12">
+                          <div class="footer-logo">
+                              <a >
+                                  <img src="{% static 'images/neweq.png' %}" alt="#" style="height:75px;width:auto">
+                              </a>
+                          </div>
+                      </div>
+                      <div class="col-lg-9 col-md-8 col-12" >
+                          <div class="footer-newsletter">
+                              <h4 class="title">
+                                  Subscribe to our Newsletter
+                                  <span style="padding-right: 2%;">Get all the latest information, events and workshops ! </span>
+                              </h4>
+                              <div class="newsletter-form-head">
+                                <form action="{% url 'subscribe' %}" method="POST" class="newsletter-form">
+                                    {% csrf_token %}
+                                    <input name="email" placeholder="Email address here..." type="email">
+                                    <div class="button">
+                                        <button class="btn">Subscribe<span class="dir-part"></span></button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="footer-middle">
+          <div class="container">
+              <div class="bottom-inner">
+                  <div class="row">
+                      <div class="col-lg-3 col-md-6 col-12">
+
+                          <div class="single-footer f-contact">
+                              <h3>Get In Touch With Us</h3>
+                              <p class="phone">Phone: +91 76778 60002</p>
+                              <p class="phone">Email : coordinators22@equifestggu.org</p>
+                          </div>
+
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-12">
+
+                         
+
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-12">
+
+                          <div class="single-footer f-link">
+                              <h3>Information</h3>
+                              <ul>
+                                  <li><a href="{% url 'index' %}">About Us</a></li>
+                                  <li><a href="{% url 'workshop' %}">Workshops</a></li>
+                                  <li><a href="{% url 'sponsor' %}">Sponsors</a></li>
+                                  <li><a href="{% url 'faq' %}">FAQs Page</a></li>
+                              </ul>
+                          </div>
+
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-12">
+
+                          <div class="single-footer f-link">
+                              <h3>Peek into</h3>
+                              <ul>
+                                  <li><a href="{% url 'deskof' %}">Desk of</a></li>
+                                  <li><a href="{% url 'teams' %}">Teams</a></li>
+                                  <li><a href="{% url 'eventcategory' %}">Events</a></li>
+                                  <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                              </ul>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="footer-bottom">
+          <div class="container">
+              <div class="inner-content">
+                  <div class="row align-items-center">
+                      <div class="col-lg-4 col-12">
+                          <div class="payment-gateway">
+                              <span>Equilibrio 2022</span>
+                              
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                          <div class="copyright">
+                              copyright &copy; Equilibrio'22
+                              
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                          <ul class="socila">
+                              <li>
+                                  <span>Follow Us On:</span>
+                              </li>
+                              <li><a href="https://m.facebook.com/equilibrio.fest/?__tn__=C-R"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="https://twitter.com/equilibrio_ggv?t=ocAsYsYHcW2LKyQOpRoA9Q&s=08"><i
+                    class="fa fa-twitter"></i></a></li>
+                              <li><a href="https://www.instagram.com/equilibrio_ggv/"><i class="fa fa-instagram"></i></a></li>
+                              <li><a href="https://www.linkedin.com/company/equilibrio-ggv/posts/?feedView=all"><i
+                    class="fa fa-linkedin"></i></a></li>
+                              <li><a href="https://www.youtube.com/channel/UCBMS9qtWUw-m5k4U7lBth8A"><i class="fa fa-youtube"></i></a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </footer>
+</body>
+</html>

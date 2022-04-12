@@ -1,0 +1,274 @@
+*
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+html, body
+{
+	
+	width: 100%;
+	height: 100%;
+}
+@media screen and (min-width:1053px){
+    #workshop{
+      margin-top: 10%;
+    }
+  }
+  @media (max-width:1052px) and (min-width:510px){
+    #workshop {
+      margin-top: 20%;
+    }
+  }
+  @media (max-width:509px){
+    #workshop{
+      margin-top: 35%;
+    }
+  }
+
+body{
+    background: rgb(21, 21, 37);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+a:hover{
+  text-decoration: none;
+}
+.footer {
+    background-color: rgb(21, 21, 37);
+    position: relative;
+    z-index: -1000002;
+}
+.fa {
+    color: plum;
+}
+.footer-top{
+    padding: 4% 0%;
+}
+.footer .footer-top .footer-newsletter .title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    float: left;
+}
+.footer .footer-top .footer-newsletter .title span {
+    color: #c2c2c2;
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 400;
+}
+.footer .footer-top .footer-newsletter .newsletter-form input {
+    height: 50px;
+    background-color: rgba(32, 31, 31, 0.308);
+    border-radius: 4px;
+    width: 300px;
+    display: inline-block;
+    border: none;
+    padding: 0 20px;
+    color: rgb(255, 255, 255);
+}
+.footer .footer-top .footer-newsletter .newsletter-form .button {
+    display: inline-block;
+    margin-left: 6px;
+    position: relative;
+    top: -2px;
+}
+
+.footer .footer-top .footer-newsletter .newsletter-form .button .btn {
+    height: 50px;
+}
+footer .button .btn {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px 30px;
+    background-color: #df68cf;
+    color: #fff;
+    border: none;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    margin-right: 7px;
+    overflow: hidden;
+}
+
+
+.footer .footer-middle {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+.footer .single-footer {
+    margin-top: 40px;
+}
+.footer .single-footer.f-contact .phone {
+    color: #d6d6d6;
+}
+.footer .single-footer.f-contact ul {
+    margin: 10px 0;
+}
+.footer ul li a {
+    color: plum !important;
+}
+footer ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: plum;
+}
+.footer .single-footer h3 {
+    position: relative;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.footer .single-footer.f-contact ul li {
+    display: block;
+    margin-bottom: 10px;
+    color: plum;
+}
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 24px;
+}
+.footer .single-footer {
+    margin-top: 40px;
+}
+.footer .single-footer.our-app .app-btn li {
+    display: block;
+    margin-bottom: 15px;
+}
+.footer .footer-bottom .inner-content {
+    border-top: 1px solid #f1e2e226;
+    padding: 25px 0;
+}
+.align-items-center {
+    align-items: center !important;
+}
+.footer .footer-bottom .payment-gateway span {
+    display: inline-block;
+    margin-right: 12px;
+    color: #fff;
+}
+.footer .footer-bottom .copyright {
+    text-align: center;
+}
+.footer .footer-bottom .payment-gateway img {
+    width: 200px;
+}
+.footer .footer-bottom .socila {
+    display: block;
+    float: right;
+}
+.footer .footer-bottom .socila li {
+    margin: 0;
+    margin-right: 5px;
+    display: inline-block;
+}
+.footer .footer-bottom .socila li:last-child {
+    margin: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px){
+.footer .footer-bottom .inner-content {
+    text-align: center;
+}
+.footer .footer-bottom .payment-gateway {
+    margin-bottom: 12px;
+}
+.footer .footer-bottom .copyright {
+    margin-bottom: 12px;
+}
+
+.footer .footer-bottom .socila {
+    float: none;
+    text-align: center;
+}
+}
+@media (max-width: 767px){
+    .footer .footer-bottom .payment-gateway span {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .footer .single-footer {
+        margin-top: 30px;
+        text-align: center;
+    }
+    .footer .footer-middle {
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+    .footer .single-footer {
+        margin-top: 30px;
+        text-align: center;
+    }
+footer .button .btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.footer .footer-top .inner-content {
+    padding: 40px 0;
+    text-align: center;
+}
+.footer .footer-top .footer-newsletter .newsletter-form .button .btn {
+    width: 100%;
+}
+.footer .footer-top .inner-content {
+    padding: 60px 0;
+    border-bottom: 1px solid #ffffff26;
+}
+.footer .footer-top .footer-newsletter .title span {
+    margin-top: 10px;
+}
+.footer .footer-top .footer-newsletter .title {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 18px;
+    width: 100%;
+    float: left;
+}
+.footer .footer-top .inner-content {
+    padding: 40px 0;
+    text-align: center;
+}
+.footer .footer-top .footer-newsletter .newsletter-form .button {
+    margin: 0;
+    margin-top: 10px;
+    top: 0;
+    width: 100%;
+}
+.footer .footer-top .footer-newsletter {
+    padding: 0 20px;
+}
+.footer .footer-top .footer-newsletter .newsletter-form {
+    float: none;
+    margin-top: 20px;
+}
+.footer .footer-top .footer-newsletter .newsletter-form input {
+    width: 100%;
+    text-align: center;
+}
+.footer .footer-top .footer-newsletter .title {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 18px;
+    width: 100%;
+}
+.footer .footer-top .footer-newsletter .newsletter-form .button .btn {
+    width: 100%;
+}
+
+}
+
+
+
+

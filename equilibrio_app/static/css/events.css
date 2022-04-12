@@ -1,0 +1,292 @@
+ 
+ @media screen and (min-width:1053px){
+  #events{
+    margin-top: 10%;
+  }
+}
+@media (max-width:1052px) and (min-width:510px){
+  #events {
+    margin-top: 20%;
+  }
+}
+@media (max-width:509px){
+  #events{
+    margin-top: 35%;
+  }
+}
+#events .item {
+    margin-top: 10px;
+    position: relative;
+  }
+  
+ #events a {
+    width: 100%;
+    padding:2% 2% 2% 0%;
+    border-radius: 3px;
+    color: rgb(174, 0, 255);
+    font-weight: bold;
+    transition: background 0.5s ease;
+  }
+  
+  #events a:hover{
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  #events i {
+    color: rgb(174, 0, 255);
+    margin-left: 20px;
+  }
+  
+  .arrow1 {
+    animation: slide1 1s ease-in-out infinite;
+    margin-left: 9px;
+  }
+  #events  .container .card .imgBx::before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    height: 100%;
+
+    border-radius: inherit; 
+    background: linear-gradient(to right, rgba(108, 16, 170, 0.637), rgb(235, 71, 235));
+  }
+  
+
+#events .container .card{
+    position: relative;
+    height: 300px;
+    background-color: rgb(241, 215, 247);
+    color: black;
+    margin: 2%;
+   
+
+  }
+  #events .col-12{
+	  padding: 0%;
+  }
+#events .container .row{
+	margin-top: 2%;	
+	justify-content: center;
+	margin-bottom: 2%;
+}
+#events #event-btn{
+	display: none;
+	border-radius: 50px;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient( 
+-180deg
+ , rgb(193, 125, 188) 0%, rgb(158, 90, 183) 96%);
+    background-position: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    box-shadow: none;
+    max-width: 300px;
+    padding: 0px 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    text-align: center;
+    height: 45px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none !important;
+    background-repeat: no-repeat !important;
+}
+#events .container .col-12{
+	margin-top: 2%;
+}
+  #events  .container .card .imgBx{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(158, 90, 183);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    }
+	#events    .container .card:hover .imgBx{
+      width: 150px;
+      height: 150px;
+      left: -75px;
+      top: calc(50% - 75px);
+      transition:  0.5s ease-in-out;
+      background: rgb(193, 125, 188);
+    }
+    #events .container .card .imgBx:before{
+      content: attr(data-text);
+      position: absolute;
+      bottom:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 100px;
+      color: rgba(255, 255, 255, .05);
+      font-weight: 700;
+    }
+    #events .container .card .imgBx img{
+      max-width: 100px;
+      transition: 0.5s ease-in-out;
+    }
+    #events .container .card:hover .imgBx img{
+      max-width: 75px;
+    }
+    #events .container .card .content{
+      position: absolute;
+      right: 0;
+      width: calc(100% - 75px);
+      height: 100%;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    #events .container .card .content h3{
+      margin-bottom: 5px;
+      font-style: 24px;
+    }
+
+    @keyframes slide1 {
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+    
+      50% {
+        transform: translate(10px, 0);
+      }
+    }
+    
+    /* #events .container .card .content a{
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 10px;
+      background: #333;
+      text-decoration: none;
+      color: #fff;
+    } */
+    #events #event-2,#event-3{
+      display: block;
+    }
+    @media (max-width: 992px){
+      /* .container{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      } */
+      /* .container .card{
+        width: 400px;
+      } */
+    }
+	@media (max-width: 1400px) and (min-width: 992px){
+		#events .container .card .content p{
+			font-size: 12px;
+		}
+    #events a{
+      font-weight: bold;
+    }
+    #events .container .card .imgBx:before{
+      font-size: 75px;
+      /* :25%top; */
+    }
+		#events .container .card .content a{
+			font-size: 12px;
+		}
+    #events #event-1,#event-2,#event-3{
+      display: block;
+    }
+	}
+	@media (max-width: 992px) and (min-width:768px){
+		#events .container .card .content h3{
+			margin-bottom: 2px;
+			font-style: 17px;
+		  }
+      #events .container .card .imgBx:before{
+        font-size: 60px;
+        /* top:20%; */
+      }
+		#events .container .card .content p{
+			font-size: 9px;
+		}
+		#events .container .card .content a{
+			font-size: 9px;
+		}
+		#events .container .card .content a{
+			margin-top: 3px;
+		  }
+      #events #event-1,#event-2,#event-3{
+        display: block;
+      }
+	}
+    @media (max-width: 768px) and (min-width: 575px){
+		#events .container .card .content h3{
+			margin-bottom: 0px;
+			font-size: 13px;
+		  }
+      #events .container .card .imgBx:before{
+        font-size: 20px;
+        /* top:25%; */
+      }
+      #events .container .content p{
+        margin-top: 0px;
+        font-size: 10px;
+      }
+		#events .container .card .content a{
+			font-size: 10px;
+			margin-top: 0px;
+		}
+    #events #event-1,#event-2,#event-3{
+      display: block;
+    }
+		
+    }
+	@media (max-width: 576px) {
+		#events .container .card .imgBx:before{
+      font-size: 45px;
+      bottom: 5%;
+    }
+    
+    #events .container .content p{
+      margin-top: 8px;
+      font-style: 7px;
+    }
+    
+		
+		#events .container .card{
+			width: auto;
+			flex-direction: column;
+			height: auto;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      }
+		#events .container .card .imgBx{
+			position: relative;
+		}
+	
+		#events .container .card .imgBx,
+		#events .container .card:hover .imgBx{
+			width: 100%;
+			height: 120px;
+			left: 0;
+		}
+		#events .container .card .imgBx img,
+		#events .container .card:hover .imgBx img{
+			max-width: 100px;
+		}
+		#events .container .card .content{
+			position: relative;
+			width: 100%;
+		}
+	}

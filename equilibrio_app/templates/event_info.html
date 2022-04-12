@@ -1,0 +1,520 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+
+    <!-- LInking bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrio'22</title>
+    <link rel="icon" href="{% static 'images/neweq.png' %}" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/events.css' %}">
+    <link rel="stylesheet" href="{% static 'css/faq.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/deskof.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/newsletter.css' %}">
+    <link rel="stylesheet" href="{% static 'css/social.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flipdown.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css.map' %}">
+    <link rel="stylesheet" href="{% static 'css/style.scss' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+<style>
+    body {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        /* background: linear-gradient(rgba(21, 21, 37, 0.8), rgba(21, 21, 37, 0.8)), url(https://hosting.renderforestsites.com/images/5699226/139073/661f7933c083e586d1fdbc230e538aff.jpg) no-repeat center center fixed ;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        display: flex;
+        display: -webkit-flex;
+        -webkit-justify-content: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        align-items: center; */
+        background: rgb(21, 21, 37);
+        background-size: cover;
+    }
+
+    .heading {
+        color: rgb(235 99 228);
+    }
+
+    .cust_card {
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.13);
+
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .cust_card:hover {
+        transform: scale(1.03);
+        transition: all .2s linear;
+    }
+
+    .closebtn {
+
+        border-radius: 10px;
+        margin-bottom: 5%;
+
+        padding: 2%;
+        background: none;
+        border: rgb(235, 99, 228) solid 1px;
+        color: whitesmoke;
+        text-align: center;
+        align-items: center;
+
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .closebtn:hover {
+        background-color: rgb(235, 99, 228);
+        border-radius: 0px;
+    }
+</style>
+
+<script>
+    $(window).scroll(function () {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#back2Top').fadeIn();
+        } else {
+            $('#back2Top').fadeOut();
+        }
+    });
+    $(document).ready(function () {
+        $("#back2Top").click(function (event) {
+            event.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+            return false;
+        });
+
+    });
+
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    $(document).on("scroll", function () {
+        var pageTop = $(document).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var tags = $(".tag");
+
+        for (var i = 0; i < tags.length; i++) {
+            var tag = tags[i];
+
+            if ($(tag).position().top < pageBottom) {
+                $(tag).addClass("visible");
+            } else {
+                $(tag).removeClass("visible");
+            }
+        }
+    });
+
+    $(".hover").mouseleave(
+        function () {
+            $(this).removeClass("hover");
+        }
+    );
+
+    function NavBar() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 1)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        } else {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 0.8)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        let timer_ = 1647973800
+        let flipdown = new FlipDown(timer_)
+            .start()
+            .ifEnded(() => {
+                document.querySelector(".flipdown").innerHTML = `<h2>Timer is ended</h2>`;
+            })
+    })
+</script>
+
+<body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+    <div class="bubble-1"></div>
+    <div class="bubble-2"></div>
+
+    <header id="header">
+        <div class="topnav" id="myTopnav">
+            <a href="#"><img class="logo" src="{% static 'images/neweq.png' %}"></a>
+            <a href="{% url 'index' %}" style="margin-left: 5%;">Home</a>
+            <a href="{% url 'eventcategory' %}" style="margin-left: 5%;">Events</a>
+            <a href="{% url 'teams' %}" style="margin-left: 5%;">Teams</a>
+            <a href="{% url 'workshop' %}" style="margin-left: 5%;">Workshops</a>
+            <a href="{% url 'sponsor' %}" style="margin-left: 5%;">Sponsors</a>
+            <a href="{% url 'faq' %}" style="margin-left: 5%;">FAQs</a>
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'logoutuser' %}"
+                style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Logout</a>
+            <a href="{% url 'profile' request.user.id %}"
+                style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Hi, {{request.user.username}}</a>
+            {% else %}
+            <a href="{% url 'login' %}"
+                style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Login</a>
+            <a href="{% url 'register' %}"
+                style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Register</a>
+
+            {% endif %}
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+        </div>
+    </header>
+
+    <div id="Sponsors" style="margin-top: 8%;">
+        <div class="container text-center">
+            <div class="row ">
+                <div class="col-sm-12">
+                    <h1 class="sponsors-title text-center text-white" style="font-weight:500">{{event.event_name}}</h1>
+                    <p style="color: white !important;">Register Now !</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="cust_card col-md-12 border p-5" style="margin:2%;">
+                    <h2 class="heading text-center mb-5  ">What is {{ event.event_name }} ?</h2>
+                    <p class="text-white">{{event.event_desc}}</p>
+                </div>
+                <br>
+
+                    {% if event.round1 is not None %}
+
+                    <div class="cust_card col-md-12 border " style="margin:2%">
+                        <h2 class="heading text-center mb-5">Round 1</h2>
+                        <p class="text-white">
+                            {% for i in event.round_1 %}
+                            {{i}}
+                            {% endfor %}
+                        </p>
+                    </div>
+
+                    {% endif %}
+
+                    {% if event.round2 is not None %}
+
+                    <div class="cust_card col-md-12 border " style="margin:2%">
+                        <h2 class="heading text-center mb-5">Round 2</h2>
+                        <p class="text-white">
+                            {% for i in event.round_2 %}
+                            {{i}}
+                            {% endfor %}
+                        </p>
+                    </div>
+
+                    {% endif %}
+
+                    {% if event.round3 is not None%}
+                    <div class="cust_card col-md-12 border " style="margin:2%">
+                        <h2 class="heading text-center mb-5">Round 3</h2>
+                        <p class="text-white">
+                            {% for i in event.round_3 %}
+                            {{i}}
+                            {% endfor %}
+                        </p>
+                    </div>
+                    {% endif %}
+                    <br>
+
+                <br>
+                {% if event.Theme is not None %}
+                <div class="row mb-3">
+                    <div class="cust_card col-md-12 border   p-5" style="margin:2%">
+                        <h2 class="heading text-center mb-5">Themes</h2>
+                        <p class="text-white">
+                        <ul class="text-white">
+                            {% for i in event.themes %}
+                            {{i}}
+                            {% endfor %}
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                {% endif %}
+                <br>
+                {% if event.rules is not None%}
+
+                <div class="cust_card col-md-12 border   p-5" style="margin:2%">
+                    <h2 class="heading text-center mb-5">Rules and Regulation</h2>
+                    <p class="text-white">
+                    <ul class="text-white">
+                        {% for i in event.rul %}
+                        {{i}}
+                        {% endfor %}
+                    </ul>
+                    </p>
+                </div>
+
+                {% endif %}
+                <br>
+                {% if event.judge is not None%}
+
+                <div class="cust_card col-md-12 border   p-5 " style="margin:2%">
+                    <h2 class="heading text-center mb-5">Judgement Creiteria</h2>
+                    <p class="text-white">
+                    <ul class="text-white">
+                        {% for i in event.jud %}
+                        {{i}}
+                        {% endfor %}
+                    </ul>
+                    </p>
+
+                    {% endif %}
+                    <br>
+                    {% if event.perks is not None%}
+
+                    <div class="cust_card col-md-12 border   p-5 " style="margin-top:2%">
+                        <h2 class="heading text-center mb-5">Perks/Prizes</h2>
+                        <p class="text-white">
+
+                            {% for i in event.perk %}
+                            {{i}}
+                            {% endfor %}
+
+                        </p>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container-fluid ">
+            <div class="row md-3" >
+                <div class="row text-center">
+                    <div class="col-sm-6" style="margin-bottom:5%">
+                        <a class="closebtn" href="{% url 'registerevent' event.id %}">Register</a>
+                    </div>
+                    <div class="col-sm-6" style="margin-bottom:3%">
+                        <a class="closebtn" href="{% url 'events' event.category.id %}">Back</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer footer-dark" style="padding-top: 5%;z-index: 10000;">
+
+            <div class="footer-top"
+                style="background-image:linear-gradient(to left, rgb(67, 1, 143) , rgb(152, 18, 156));">
+                <div class="container">
+                    <div class="inner-content">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <div class="footer-logo">
+                                    <a>
+                                        <img src="{% static 'images/neweq.png' %}" alt="#"
+                                            style="height:75px;width:auto">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-8 col-12">
+                                <div class="footer-newsletter">
+                                    <h4 class="title">
+                                        Subscribe to our Newsletter
+                                        <span style="padding-right: 2%;">Get all the latest information, events and
+                                            workshops ! </span>
+                                    </h4>
+                                    <div class="newsletter-form-head">
+                                        <form action="{% url 'subscribe' %}" method="POST" class="newsletter-form">
+                                            {% csrf_token %}
+                                            <input name="email" placeholder="Email address here..." type="email">
+                                            <div class="button">
+                                                <button class="btn">Subscribe<span class="dir-part"></span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer-middle" style="">
+                <div class="container">
+                    <div class="bottom-inner">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12">
+
+                                <div class="single-footer f-contact">
+                                    <h3>Get In Touch With Us</h3>
+                                    <p class="phone">Phone: +91 76778 60002</p>
+                                    <p class="phone">Email : coordinators22@equifestggu.org</p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-12">
+
+                                <div class="single-footer f-link">
+                                    <h3>Information</h3>
+                                    <ul>
+                                        <li><a href="{% url 'index' %}">About Us</a></li>
+                                        <li><a href="{% url 'workshop' %}">Workshops</a></li>
+                                        <li><a href="{% url 'sponsor' %}">Sponsors</a></li>
+                                        <li><a href="{% url 'faq' %}">FAQs Page</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+
+                                <div class="single-footer f-link">
+                                    <h3>Peek into</h3>
+                                    <ul>
+                                        <li><a href="{% url 'deskof' %}">Desk of</a></li>
+                                        <li><a href="{% url 'teams' %}">Teams</a></li>
+                                        <li><a href="{% url 'eventcategory' %}">Events</a></li>
+                                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="inner-content">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-12">
+                                <div class="payment-gateway">
+                                    <span>Equilibrio 2022</span>
+                                   
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-12">
+                                <div class="copyright">
+                                    copyright &copy; Equilibrio'22
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-12">
+                                <ul class="socila">
+                                    <li>
+                                        <span>Follow Us On:</span>
+                                    </li>
+                                    <li><a href="https://m.facebook.com/equilibrio.fest/?__tn__=C-R"><i
+                                                class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/equilibrio_ggv?t=ocAsYsYHcW2LKyQOpRoA9Q&s=08"><i
+                                                class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/equilibrio_ggv/"><i
+                                                class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/equilibrio-ggv/posts/?feedView=all"><i
+                                                class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCBMS9qtWUw-m5k4U7lBth8A"><i
+                                                class="fa fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+</body>
+
+</html>

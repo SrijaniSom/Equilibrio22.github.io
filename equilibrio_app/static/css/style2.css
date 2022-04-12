@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  
+  
+  .timer {
+    font-family: "Roboto";
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  .timer .flipdown {
+    margin: auto;
+    text-align: center;
+  }
+  
+  .timer h1 {
+    
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .timer .flipdown h2 {
+    
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .flipdown.flipdown__theme-dark .rotor-group-heading:before {
+    background-image: url(https://hosting.renderforestsites.com/images/5699226/139073/a557594d6767c487626ae79340c45769.jpg);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Steelfish Rg', 'helvetica neue',
+             helvetica, arial, sans-serif;
+    
+
+  }
+  @media screen and (min-width:550px){
+    .flipdown.flipdown__theme-dark .rotor-group-heading:before {
+     font-size: 20px;
+  
+    }
+  }
+  @media (max-width:549px){
+    .flipdown.flipdown__theme-dark .rotor-group-heading:before {
+      font-size: 12px;
+    }
+  }
+  
+  .rotor-group-heading {
+    margin-bottom: 10px;
+  }
+  
+  .flipdown.flipdown__theme-dark .rotor-bottom, .flipdown.flipdown__theme-dark .rotor-leaf-rear {
+    color: rgb(29, 6, 71);
+    background-image: linear-gradient(
+      -180deg
+      , rgb(121, 253, 225) 0%, rgb(153, 72, 228) 96%);
+    backdrop-filter: blur(10px);
+  }
+  
+  .flipdown.flipdown__theme-dark .rotor, .flipdown.flipdown__theme-dark .rotor-top, .flipdown.flipdown__theme-dark .rotor-leaf-front {
+    color: rgb(29, 6, 71);
+    background-image: linear-gradient(
+      -180deg
+      , rgb(76, 230, 196) 0%, rgb(165, 80, 235) 96%);     
+    backdrop-filter: blur(10px);
+        
+  }
+  
+  .flipdown.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):before, .flipdown.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):after {
+    background-image: linear-gradient(
+      -180deg
+      , rgb(76, 230, 196) 0%, rgb(165, 80, 235) 96%);
+        backdrop-filter: blur(10px);
+        
+      
+  }
+  /*# sourceMappingURL=style.css.map */

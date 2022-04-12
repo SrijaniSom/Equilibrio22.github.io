@@ -1,0 +1,165 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'css/chem.css' %}" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrio'22</title>
+    <link rel = "icon" href = "{% static 'images/neweq.png' %}"
+        type = "image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</head>
+<style>
+    a:hover{
+        color:white;
+    }
+    .
+</style>
+<script>
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#back2Top').fadeIn();
+        } else {
+            $('#back2Top').fadeOut();
+        }
+    });
+    $(document).ready(function() {
+        $("#back2Top").click(function(event) {
+            event.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+            return false;
+        });
+
+    });
+
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    $(document).on("scroll", function() {
+        var pageTop = $(document).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var tags = $(".tag");
+
+        for (var i = 0; i < tags.length; i++) {
+            var tag = tags[i];
+
+            if ($(tag).position().top < pageBottom) {
+                $(tag).addClass("visible");
+            } else {
+                $(tag).removeClass("visible");
+            }
+        }
+    });
+
+    $(".hover").mouseleave(
+        function() {
+            $(this).removeClass("hover");
+        }
+    );
+
+    function NavBar() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 1)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        } else {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 0.8)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        let timer_ = 1647973800
+        let flipdown = new FlipDown(timer_)
+            .start()
+            .ifEnded(() => {
+                document.querySelector(".flipdown").innerHTML = `<h2>Timer is ended</h2>`;
+            })
+    })
+</script>
+
+<body>
+
+    <div class="container" id="fp">
+        <button class="back-btn">
+           <a href="{% url 'eventcategory' %}"> Go Back </a>
+        </button>
+        <h1 class="noticetitle" style="text-align: center;font-weight: 550;color: white;font-family: sans-serif;">Explore Now</h1>
+        <p style="color: white !important;font-family: 'Montserrat', sans-serif;text-align:center;margin-top: 10px;margin-bottom:5%"></p>
+
+        <div class="row">
+            {% for i in event %}
+            <div class="col-md-4 col-12 d-flex justify-content-center" style="margin-top: 3%;">
+                <article class="card card--1" id="card1">
+                    <div class="card__info-hover">
+    
+                        <path fill="#000000"
+                            d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+                        </svg>
+    
+    
+                    </div>
+                    <div class="card__img" style="background-image:url('{{i.image}}')"></div>
+                    <a href="#" class="card_link">
+                        <div class="card__img--hover" style="background-image:url('{{i.image}}')"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">{{ i.category.category_name }}</span>
+                        <h3 class="card__title">{{ i.event_name }}</h3>
+                        <a class="closebtn" href="{% url 'eventinfo' i.id %}" style="text-decoration:none;font-size:15px">Read more</a>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,96 @@
+
+.blog-list .single-blog {
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.13);
+   
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    margin: 0;
+}
+
+
+.blog-section .single-blog {
+    margin-top: 30px;
+    overflow: hidden!important;
+    -webkit-box-shadow: 0 0 20px #00000012;
+    box-shadow: 0 0 20px #00000012;
+    padding: 8px;
+    border-radius: 4px;
+}
+.blog-section .single-blog .blog-img {
+    overflow: hidden;
+}
+.blog-section .single-blog .blog-img a {
+    width: 100%;
+    color: white;
+    size: 25px;
+    font-weight: bold;
+}
+#workshop span, a {
+    display: inline-block;
+    text-decoration: none;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.blog-section .single-blog .blog-img img {
+    width: 100%;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+#workshop img {
+    max-width: 100%;
+}
+
+.blog-section .single-blog .blog-content .category {
+    font-size: 17px;
+    color: plum;
+    display: inline-block;
+    font-weight: 700;
+}
+.blog-section .single-blog .blog-content h4 {
+    display: block;
+    margin-top: 10px;
+    line-height: 28px;
+    color: white;
+    font-weight: bold;
+}
+.blog-section .single-blog .blog-content p {
+    display: block;
+    margin-top: 20px;
+    color: white;
+    font-weight: 700;
+}
+.blog-section .single-blog .blog-content .button {
+    margin-top: 25px;
+}
+.blog-section .single-blog .blog-content .button .btn {
+    background-color: transparent;
+    border: 1px solid #dfdfdf;
+    color: #081828;
+    font-weight: 700;
+}
+.blog-section .single-blog .blog-content {
+    font-weight: 700;
+    color: white;
+    padding: 20px;
+}
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+#workshop.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+}
+.section {
+    padding-top: 40px;
+    padding-bottom: 90px;
+    position: relative;
+}

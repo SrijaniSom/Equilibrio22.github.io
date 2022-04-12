@@ -1,0 +1,161 @@
+@media screen and (min-width:1053px){
+    .student-co-ordinate h2{
+      margin-top: 10%;
+    }
+  }
+  @media (max-width:1052px) and (min-width:510px){
+    .student-co-ordinate h2{
+      margin-top: 20%;
+    }
+  }
+  @media (max-width:509px){
+    .student-co-ordinate h2{
+      margin-top: 35%;
+    }
+  }
+
+.student-co-ordinate{
+    text-align: center;
+    padding: 36px ;
+   /* background-color: black;*/
+    color: white;
+    background: linear-gradient(rgba(21, 21, 37, 0.8), rgba(21, 21, 37, 0.8)), url(https://hosting.renderforestsites.com/images/5699226/139073/661f7933c083e586d1fdbc230e538aff.jpg) center center / cover no-repeat;
+    
+}
+.main-text{
+    margin:0 0 17px 0;
+    font-size: 33px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:10px 0;
+}
+.coordinate{
+    width:25%;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.coordinate .img{
+    width: 90%;
+    height:90%;
+    position: relative;
+    border-radius: 50%;
+    padding: 15px;
+    border: 4px solid rgb(158, 90, 183);
+    background: linear-gradient(rgba(21, 21, 37, 0.8), rgba(21, 21, 37, 0.8)), url(https://hosting.renderforestsites.com/images/5699226/139073/661f7933c083e586d1fdbc230e538aff.jpg) center center / cover no-repeat;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: linear-gradient(rgba(21, 21, 37, 0.8), rgba(21, 21, 37, 0.8));
+    opacity:0;
+    width:100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius:50%;
+}
+.social-media:hover{
+    opacity:0.9;
+    font-size: 30px;
+    color: white;
+}
+
+.social-media a {
+    width: 30%;
+}
+.icon{    
+    font-size: 30px;
+    color: white;
+}
+.img-c{
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
+}
+.name,.designation,.intro-c{
+    margin:12px;
+    color: rgb(255, 255, 255);
+}
+.name{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+.designation{
+   color: white;
+   font-weight:600; 
+    font-size: 17px;
+}
+.coordinate hr{
+    background-color: rgb(193, 125, 188);
+    border:1px solid rgb(193, 125, 188);
+    height:3px;
+    width:50%;
+}
+
+@media only screen and (max-width:1230px){
+    .content{
+        flex-wrap: wrap;
+        padding:30px;
+    }  
+    .coordinate{
+        width:50%;
+    }
+    .img{
+        width:70%;
+    }
+    .icon{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width:700px){
+    .student-co-ordinate{
+        padding:0 20px;
+    }
+    .content{
+        flex-wrap: wrap;
+        padding: 0;
+    }  
+    .coordinate{
+        width:100%;
+        padding: 10px;
+    } 
+    .main-text{
+        font-size:200%;
+    }   
+    .img{
+        width:40%;
+    } 
+    .icon{
+        font-size: 20px;
+    }
+    .intro-c{
+        width:80%;
+    }
+}
+@media only screen and (max-width:400px){
+    .student-co-ordinate{
+        padding:20px 0;
+    }
+    .main-text{
+        font-size:130%;
+    } 
+    .icon{
+        font-size: 15px;
+    }
+}
+
+.fa{
+    color: rgb(193, 125, 188) ;
+}

@@ -1,0 +1,56 @@
+@media only screen and (max-width:1230px){
+    .content{
+        flex-wrap: wrap;
+        padding:30px;
+    }  
+    .coordinate{
+        width:50%;
+    }
+    .img{
+        width:70%;
+    }
+    .icon{
+        font-size: 25px;
+    }
+
+}
+@media (max-width:700px) and (min-width:400px){
+    .student-co-ordinate{
+        padding:0 20px;
+    }
+    .content{
+        flex-wrap: wrap;
+        padding: 0;
+    }  
+    .coordinate{
+        width:100%;
+        padding: 10px;
+    } 
+    .main-text{
+        font-size:200%;
+        margin-top: 5%;
+        padding-top: 50%;
+    }   
+    .img{
+        width:40%;
+    } 
+    .icon{
+        font-size: 20px;
+    }
+    .intro-c{
+        width:80%;
+    }
+}
+@media only screen and (max-width:400px){
+    .student-co-ordinate{
+        padding:20px 0;
+    }
+    .main-text{
+        font-size:130%;
+        margin-top: 5%;
+    } 
+    .icon{
+        font-size: 15px;
+    }
+
+}

@@ -1,0 +1,122 @@
+@media screen and (min-width:1053px){
+    #Sponsors{
+      margin-top: 10%;
+    }
+  }
+  @media (max-width:1052px) and (min-width:510px){
+    #Sponsors {
+      margin-top: 20%;
+    }
+  }
+  @media (max-width:509px){
+    #Sponsors{
+      margin-top: 35%;
+    }
+  }
+.fa {
+    color: rgb(193, 125, 188);
+}
+.sponsors-title {
+
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 33px;
+    text-align: center;
+    padding: 1%;
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-top: 5%;
+}
+
+
+#Sponsors .row{
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+.sponsors-btn{
+    
+    border-radius: 50px;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(
+-180deg
+, rgb(193, 125, 188) 0%, rgb(158, 90, 183) 96%);
+    background-position: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    box-shadow: none;
+    max-width: 300px;
+    padding: 0px 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+    text-decoration: none !important;
+    background-repeat: no-repeat !important;
+    margin:2%;
+}
+#Sponsors h1{
+   text-align: center;
+}
+#Sponsors img{
+    width:275px;
+    display: block;
+}
+#Sponsors h3{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 4%;
+}
+#Sponsors #partners img{
+    height: 70px;
+    width: auto;
+    display: block;
+    filter:hue-rotate(0.5);
+}
+#Sponsors button{
+    font-size: 17px;
+}
+
+@media only screen and (max-width:495px){
+    #Sponsors img{
+        padding: 5px;
+        width: 250px;
+    }
+    #Sponsors #partners img{
+        height: 30px;
+        width: auto;
+    }
+    #Sponsors h1{
+        font-size: 25px;
+    }
+    #Sponsors{
+        margin-bottom: 5%;
+    }
+}
+
+@media only screen and (max-width:764px) and (min-width:495px){
+    #Sponsors img{
+        padding: 5px;
+        width: 250px;
+    }
+    .sponsors-title{
+        font-size: 30px;
+    }
+}

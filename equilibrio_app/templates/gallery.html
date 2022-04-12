@@ -1,0 +1,690 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrio'22</title>
+    <link rel="icon" href="{% static 'images/neweq.png' %}" sizes="64x64" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+     
+    <link rel="stylesheet" href="{% static 'css/coordinate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/notice.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
+    <link rel="stylesheet" href="{% static 'css/teams.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sponsors.css' %}">
+    <script rel="text/javascript" src="{% static 'js/timeline.js' %}"></script>
+    <script rel="text/javascript" src="{% static 'js/team.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/deskof.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/newsletter.css' %}">
+    <link rel="stylesheet" href="{% static 'css/social.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<style>
+    .tag {
+        opacity: 0;
+        transform: translate(0, 10vh);
+        transition: all 1s;
+    }
+    
+    .tag.visible {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    
+    .reveal {
+        position: relative;
+        opacity: 0;
+    }
+    
+    .reveal.active {
+        opacity: 1;
+    }
+    
+    .active.fade-left {
+        animation: fade-left 1s ease-in;
+    }
+    
+    .active.fade-right {
+        animation: fade-right 1s ease-in;
+    }
+    
+    @keyframes fade-left {
+        0% {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fade-right {
+        0% {
+            transform: translateX(100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    #back2Top {
+        width: 40px;
+        line-height: 40px;
+        overflow: hidden;
+        z-index: 999;
+        display: none;
+        cursor: pointer;
+        -moz-transform: rotate(270deg);
+        -webkit-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+        position: fixed;
+        bottom: 50px;
+        right: 2%;
+        background-color: rgb(212, 197, 216);
+        color: rgb(209, 116, 201);
+        border-radius: 50%;
+        box-shadow: 5px 5px 5px solid purple;
+        text-align: center;
+        font-size: 30px;
+        text-decoration: none;
+    }
+    
+    #back2Top:hover {
+        background-color: #DDF;
+        color: rgb(174, 43, 226);
+    }
+</style>
+<script>
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#back2Top').fadeIn();
+        } else {
+            $('#back2Top').fadeOut();
+        }
+    });
+    $(document).ready(function() {
+        $("#back2Top").click(function(event) {
+            event.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+            return false;
+        });
+
+    });
+
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    $(document).on("scroll", function() {
+        var pageTop = $(document).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var tags = $(".tag");
+
+        for (var i = 0; i < tags.length; i++) {
+            var tag = tags[i];
+
+            if ($(tag).position().top < pageBottom) {
+                $(tag).addClass("visible");
+            } else {
+                $(tag).removeClass("visible");
+            }
+        }
+    });
+
+    $(".hover").mouseleave(
+        function() {
+            $(this).removeClass("hover");
+        }
+    );
+
+    function NavBar() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 1)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        } else {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 0.8)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        }
+    }
+</script>
+
+<script>
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#back2Top').fadeIn();
+        } else {
+            $('#back2Top').fadeOut();
+        }
+    });
+    $(document).ready(function() {
+        $("#back2Top").click(function(event) {
+            event.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+            return false;
+        });
+
+    });
+
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    $(document).on("scroll", function() {
+        var pageTop = $(document).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var tags = $(".tag");
+
+        for (var i = 0; i < tags.length; i++) {
+            var tag = tags[i];
+
+            if ($(tag).position().top < pageBottom) {
+                $(tag).addClass("visible");
+            } else {
+                $(tag).removeClass("visible");
+            }
+        }
+    });
+
+    $(".hover").mouseleave(
+        function() {
+            $(this).removeClass("hover");
+        }
+    );
+
+    function NavBar() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 1)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        } else {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 0.8)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        let timer_ = 1647973800
+        let flipdown = new FlipDown(timer_)
+            .start()
+            .ifEnded(() => {
+                document.querySelector(".flipdown").innerHTML = `<h2>Timer is ended</h2>`;
+            })
+    })
+</script>
+
+<body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+    
+    
+    <header id="header">
+        <div class="topnav" id="myTopnav">
+            <a href="#"><img class="logo" src="{% static 'images/neweq.png' %}"></a>
+            <a href="{% url 'index' %}" style="margin-left: 5%;">Home</a>
+            <a href="{% url 'eventcategory' %}" style="margin-left: 5%;">Events</a>
+            <a href="{% url 'teams' %}" style="margin-left: 5%;">Teams</a>
+            <a href="{% url 'workshop' %}" style="margin-left: 5%;">Workshops</a>
+            <a href="{% url 'sponsor' %}" style="margin-left: 5%;">Sponsors</a>
+            <a href="{% url 'faq' %}" style="margin-left: 5%;">FAQs</a>
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'logoutuser' %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Logout</a>
+                <a href="{% url 'profile' request.user.id %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Hi, {{request.user.username }}</a>
+            {% else %}
+                <a href="{% url 'login' %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Login</a>
+                <a href="{% url 'register' %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Register</a>
+            
+            {% endif %}
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+        </div>
+    </header>
+ 
+
+
+
+    <div id="gallery">
+
+        <div class="container text-center ">
+            <div class="row">
+                <div class="col-sm-offset-2 col-md-8 col-sm-12">
+                    <div>
+                        <h1 class="section-title">PHOTO GALLERY</h1>
+                        <p style="color: white !important;">Best captured moments</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <div class="container">
+                    <div class="box">
+                        <div class="r1">
+                            <img id="image-1" src="{% static 'images/1.JPG' %}">
+                            <img id="image-2" src="{% static 'images/14.JPG' %}">
+                            <img id="image-3" src="{% static 'images/3.JPG' %}">
+
+                        </div>
+                        <div class="r2">
+                            <img id="image-7" src="{% static 'images/1.JPG' %}">
+                            <img id="image-8" src="{% static 'images/14.JPG' %}">
+                            <img id="image-9" src="{% static 'images/9.JPG' %}">
+                        </div>
+                        <div class="r3">
+                            <img id="image-4" src="{% static 'images/6.JPG' %}">
+                            <img id="image-5" src="{% static 'images/14.JPG' %}">
+                            <img id="image-6" src="{% static 'images/3.JPG' %}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Footer-->
+    <footer class="footer footer-dark" style="padding-top: 5%;">
+
+        <div class="footer-top" style="background-image:linear-gradient(to left, rgb(67, 1, 143) , rgb(152, 18, 156));">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-12">
+                            <div class="footer-logo">
+                                <a>
+                                    <img src="{% static 'images/neweq.png' %}" alt="#" style="height:75px;width:auto">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-12">
+                            <div class="footer-newsletter">
+                                <h4 class="title">
+                                    Subscribe to our Newsletter
+                                    <span style="padding-right: 2%;">Get all the latest information, events and workshops ! </span>
+                                </h4>
+                                <div class="newsletter-form-head">
+                                    <form action="{% url 'subscribe' %}" method="POST" class="newsletter-form">
+                                        {% csrf_token %}
+                                        <input name="email" placeholder="Email address here..." type="email">
+                                        <div class="button">
+                                            <button class="btn">Subscribe<span class="dir-part"></span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-middle">
+            <div class="container">
+                <div class="bottom-inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+
+                            <div class="single-footer f-contact">
+                                <h3>Get In Touch With Us</h3>
+                                <p class="phone">Phone: +91 76778 60002</p>
+                                <p class="phone">Email : coordinators22@equifestggu.org</p>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+
+                           
+          
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+
+                            <div class="single-footer f-link">
+                                <h3>Information</h3>
+                                <ul>
+                                    <li><a href="{% url 'index' %}">About Us</a></li>
+                                    <li><a href="{% url 'workshop' %}">Workshops</a></li>
+                                    <li><a href="{% url 'sponsor' %}">Sponsors</a></li>
+                                    <li><a href="{% url 'faq' %}">FAQs Page</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+
+                            <div class="single-footer f-link">
+                                <h3>Peek into</h3>
+                                <ul>
+                                    <li><a href="{% url 'deskof' %}">Desk of</a></li>
+                                    <li><a href="{% url 'teams' %}">Teams</a></li>
+                                    <li><a href="{% url 'eventcategory' %}">Events</a></li>
+                                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-12">
+                            <div class="payment-gateway">
+                                <span>Equilibrio 2022</span>
+                              
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="copyright">
+                                copyright &copy; Equilibrio'22
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <ul class="socila">
+                                <li>
+                                    <span>Follow Us On:</span>
+                                </li>
+                                <li><a href="https://m.facebook.com/equilibrio.fest/?__tn__=C-R"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/equilibrio_ggv?t=ocAsYsYHcW2LKyQOpRoA9Q&s=08"><i
+                      class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/equilibrio_ggv/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/equilibrio-ggv/posts/?feedView=all"><i
+                      class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCBMS9qtWUw-m5k4U7lBth8A"><i class="fa fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('#container').addClass('loaded');
+            // Once the container has finished, the scroll appears
+            if ($('#container').hasClass('loaded')) {
+                // It is so that once the container is gone, the entire preloader section is deleted
+                $('#preloader').delay(9000).queue(function() {
+                    $(this).remove();
+                });
+            }
+        }, 3000);
+    });
+
+    (function($) {
+        $(function() {
+            $('nav ul li a:not(:only-child)').click(function(e) {
+                $(this).siblings('.nav-dropdown').toggle();
+                $('.dropdown').not($(this).siblings()).hide();
+                e.stopPropagation();
+            });
+            $('html').click(function() {
+                $('.nav-dropdown').hide();
+            });
+            $('#nav-toggle').click(function() {
+                $('nav ul').slideToggle();
+            });
+            $('#nav-toggle').on('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    })(jQuery);
+
+    var i = document.getElementById("image-1");
+    var currentPos = 0;
+    var images1 = ["{% static 'images/1.JPG' %}", "{% static 'images/2.JPG' %}", "{% static 'images/3.JPG' %}", "{% static 'images/4.JPG' %}", "{% static 'images/5.JPG' %}"]
+    var images2 = ["{% static 'images/6.JPG' %}", "{% static 'images/7.JPG' %}", "{% static 'images/8.JPG' %}", "{% static 'images/9.JPG' %}", "{% static 'images/10.JPG' %}"]
+    var images3 = ["{% static 'images/11.JPG' %}", "{% static 'images/12.JPG' %}", "{% static 'images/13.JPG' %}", "{% static 'images/14.JPG' %}", "{% static 'images/15.JPG' %}"]
+    var images4 = ["{% static 'images/16.JPG' %}", "{% static 'images/17.JPG' %}", "{% static 'images/18.JPG' %}", "{% static 'images/19.JPG' %}", "{% static 'images/20.JPG' %}"]
+    var images5 = ["{% static 'images/21.JPG' %}", "{% static 'images/22.JPG' %}", "{% static 'images/23.JPG' %}", "{% static 'images/24.JPG' %}", "{% static 'images/25.JPG' %}"]
+    var images6 = ["{% static 'images/17.JPG' %}", "{% static 'images/27.JPG' %}", "{% static 'images/8.JPG' %}", "{% static 'images/29.JPG' %}", "{% static 'images/30.JPG' %}"]
+    var images7 = ["{% static 'images/26.JPG' %}", "{% static 'images/17.JPG' %}", "{% static 'images/28.JPG' %}", "{% static 'images/14.JPG' %}", "{% static 'images/42.JPG' %}"]
+    var images8 = ["{% static 'images/40.JPG' %}", "{% static 'images/18.JPG' %}", "{% static 'images/9.JPG' %}", "{% static 'images/1.JPG' %}", "{% static 'images/30.JPG' %}"]
+    var images9 = ["{% static 'images/4.JPG' %}", "{% static 'images/5.JPG' %}", "{% static 'images/10.JPG' %}", "{% static 'images/11.JPG' %}", "{% static 'images/3.JPG' %}"]
+
+    var land = ["https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+        "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+        "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+        "https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+    ]
+    var por = ["https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        "https://images.unsplash.com/photo-1579710758949-3ab36db30f1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    ]
+
+    function volgendefoto() {
+        if (++currentPos >= images1.length)
+            currentPos = 0;
+
+        i.src = images1[currentPos];
+    }
+    setInterval(volgendefoto, 3000);
+
+    var i2 = document.getElementById("image-2");
+    var pos2 = 0;
+
+    function if2() {
+        if (++pos2 >= images2.length)
+            pos2 = 0;
+        i2.src = images2[pos2];
+    }
+    setInterval(if2, 3000);
+
+    var i3 = document.getElementById("image-3");
+    var pos3 = 0;
+
+    function if3() {
+        if (++pos3 >= images3.length)
+            pos3 = 0;
+        i3.src = images3[pos3];
+    }
+    setInterval(if3, 3000);
+
+    var i4 = document.getElementById("image-4");
+    var pos4 = 0;
+
+    function if4() {
+        if (++pos4 >= images4.length)
+            pos4 = 0;
+
+        i4.src = images4[currentPos];
+    }
+    setInterval(if4, 3000);
+
+    var i5 = document.getElementById("image-5");
+    var pos5 = 0;
+
+    function if5() {
+        if (++pos5 >= images5.length)
+            pos5 = 0;
+        i5.src = images5[pos5];
+    }
+    setInterval(if5, 3000);
+
+    var i6 = document.getElementById("image-6");
+    var pos6 = 0;
+
+    function if6() {
+        if (++pos6 >= images6.length)
+            pos6 = 0;
+        i6.src = images6[pos6];
+    }
+    setInterval(if6, 3000);
+
+    var i7 = document.getElementById("image-7");
+    var pos7 = 0;
+
+    function if7() {
+        if (++pos7 >= images7.length)
+            pos7 = 0;
+        i7.src = images7[pos7];
+    }
+    setInterval(if7, 3000);
+
+    var i8 = document.getElementById("image-8");
+    var pos8 = 0;
+
+    function if8() {
+        if (++pos8 >= images8.length)
+            pos8 = 0;
+        i8.src = images8[pos8];
+    }
+    setInterval(if8, 3000);
+
+    var i8 = document.getElementById("image-9");
+    var pos8 = 0;
+
+    function if8() {
+        if (++pos8 >= images9.length)
+            pos8 = 0;
+        i8.src = images9[pos8];
+    }
+    setInterval(if8, 3000);
+
+    function myFunction() {
+        var x = document.getElementById("myDIV-1");
+        var y = document.getElementById("myDIV-2");
+        var z = document.getElementById("myDIV-3");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        if (y.style.display === "none") {
+            y.style.display = "block";
+        } else {
+            y.style.display = "none";
+        }
+        if (z.style.display === "none") {
+            z.style.display = "block";
+        } else {
+            z.style.display = "none";
+        }
+    }
+
+
+    function myEvents() {
+        var x = document.getElementById("event-btn")
+        var y = document.getElementById("event-2");
+        var z = document.getElementById("event-3");
+
+        if (y.style.display === "none") {
+            y.style.display = "block";
+            x.innerHTML = "Show Less";
+        } else {
+            y.style.display = "none";
+            x.innerHTML = "View More";
+        }
+        if (z.style.display === "none") {
+            z.style.display = "block";
+        } else {
+            z.style.display = "none";
+        }
+    }
+</script>
+
+</html>

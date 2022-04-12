@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+ 
+  .timer{
+    font-family:"Roboto";
+    margin:auto;
+
+    box-sizing: border-box;;
+  }
+  .timer .flipdown{
+    margin:auto;
+    text-align: center;
+  }
+  .timer h1{
+    text-align:center;
+    font-size:50px;
+    text-transform:uppercase;
+    color:#fff;
+    margin-bottom:30px;
+  }
+  .timer .flipdown h2{
+    text-align:center;
+    font-size:30px;
+    text-transform:uppercase;
+    color:#fff;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+  }
+  .flipdown.flipdown__theme-dark .rotor-group-heading:before {
+    color: rgb(133, 129, 129);
+  }
+  .rotor-group-heading{
+    margin-bottom:10px;
+  }
+  .flipdown.flipdown__theme-dark .rotor-bottom, .flipdown.flipdown__theme-dark .rotor-leaf-rear {
+    color: #000;
+    background-color: rgb(104, 97, 97);
+  }
+  .flipdown.flipdown__theme-dark .rotor, .flipdown.flipdown__theme-dark .rotor-top, .flipdown.flipdown__theme-dark .rotor-leaf-front {
+    color: #000;
+    background-color: rgb(104, 97, 97);
+  }
+  
+  .flipdown.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):before, .flipdown.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):after {
+    background-color: rgb(104, 97, 97);
+  }

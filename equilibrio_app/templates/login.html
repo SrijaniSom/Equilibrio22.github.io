@@ -1,0 +1,601 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrio'22</title>
+    <link rel = "icon" href = "{% static 'images/neweq.png' %}"type = "image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
+    <link rel="stylesheet" href="{% static 'css/teams.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sponsors.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/deskof.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/social.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<style>
+
+    .tag {
+        opacity: 0;
+        transform: translate(0, 10vh);
+        transition: all 1s;
+    }
+    
+    .tag.visible {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    
+    .reveal {
+        position: relative;
+        opacity: 0;
+    }
+    
+    .reveal.active {
+        opacity: 1;
+    }
+    
+    .active.fade-left {
+        animation: fade-left 1s ease-in;
+    }
+    
+    .active.fade-right {
+        animation: fade-right 1s ease-in;
+    }
+    
+    @keyframes fade-left {
+        0% {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fade-right {
+        0% {
+            transform: translateX(100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    .login-section {
+        background-color: rgba(255, 255, 255, 0.13);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    }
+    
+    #login form {
+        margin: 0 auto;
+        padding: 50px 35px;
+    }
+    
+    #login .btn {
+        margin-top: 25px;
+        width: 100%;
+        background-color: #ffffff;
+        color: #080710;
+        padding: 7px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #login .form-control{
+        font-size: 15px;
+    }
+    
+    #login .form-check-input {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 3px;
+        font-size: 20px;
+        font-weight: 300;
+        color: black;
+    }
+    
+    #login .form-label {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+    }
+    
+    #login form * {
+        font-family: 'Poppins', sans-serif;
+        color: #000000;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+    }
+    
+    #login form h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+        text-align: center;
+        margin-bottom: 8%;
+        color: white;
+    }
+    
+    @media screen and (min-width:856px) {
+        svg {
+            width: 50;
+            height: 50;
+        }
+    }
+    
+    @media (max-width:856px) and (min-width:500px) {
+        #login form {
+            width: 90%;
+        }
+    }
+    
+    @media (max-width:768px) {
+        .svg-section {
+            margin-bottom: 5%;
+        }
+    }
+    
+    @media (max-width:500px) and (min-width:485px) {
+        #login form {
+            width: 90%;
+            height: 70%;
+        }
+        #login .shape:last-child {
+            right: -30px;
+            bottom: -80px;
+        }
+        #login form h3 {
+            margin-bottom: 10%;
+        }
+    }
+    
+    @media (max-width:486px) and (min-width:448px) {
+        #login form {
+            width: 90%;
+            height: 70%;
+        }
+        #login .shape:last-child {
+            right: -20px;
+            bottom: -80px;
+        }
+    }
+    
+    @media (max-width:449px) and (min-width:416px) {
+        #login form {
+            width: 90%;
+            height: 70%;
+        }
+        #login .background .shape {
+            height: 165px;
+            width: 165px;
+        }
+        #login .shape:first-child {
+            left: -20px;
+            top: -80px;
+        }
+        .shape:last-child {
+            right: 30px;
+            bottom: -90px;
+        }
+    }
+    
+    @media (max-width:415px) and (min-width:401px) {
+        #login form {
+            width: 90%;
+            left: 51%;
+            height: 70%;
+            top: 57%;
+        }
+        #login .shape:last-child {
+            right: 30px;
+            bottom: -100px;
+        }
+    }
+    
+    @media (max-width:400px) and (min-width:377px) {
+        #login form {
+            width: 90%;
+            left: 52%;
+            height: 70%;
+            top: 57%;
+        }
+        #login .shape:last-child {
+            right: 30px;
+            bottom: -100px;
+        }
+    }
+    
+    @media (max-width:376px) {
+        #login form {
+            width: 90%;
+            height: 70%;
+            left: 57%;
+            top: 57%;
+        }
+        #login form h3 {
+            margin-bottom: 20%;
+        }
+        #login .shape:last-child {
+            right: 30px;
+            bottom: -100px;
+        }
+        #login .shape:first-child {
+            background: linear-gradient(to left, #9418ad, #d48ad1);
+            left: -30px;
+            top: -70px;
+        }
+    }
+</style>
+<script>
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#back2Top').fadeIn();
+        } else {
+            $('#back2Top').fadeOut();
+        }
+    });
+    $(document).ready(function() {
+        $("#back2Top").click(function(event) {
+            event.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+            return false;
+        });
+
+    });
+
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    $(document).on("scroll", function() {
+        var pageTop = $(document).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var tags = $(".tag");
+
+        for (var i = 0; i < tags.length; i++) {
+            var tag = tags[i];
+
+            if ($(tag).position().top < pageBottom) {
+                $(tag).addClass("visible");
+            } else {
+                $(tag).removeClass("visible");
+            }
+        }
+    });
+
+    $(".hover").mouseleave(
+        function() {
+            $(this).removeClass("hover");
+        }
+    );
+
+    function NavBar() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 1)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        } else {
+            document.getElementById("myTopnav").style.width = "100%";
+            document.getElementById("myTopnav").style.backgroundColor = "rgba(6, 18, 33, 0.8)";
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.top = "0%";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        let timer_ = 1647973800
+        let flipdown = new FlipDown(timer_)
+            .start()
+            .ifEnded(() => {
+                document.querySelector(".flipdown").innerHTML = `<h2>Timer is ended</h2>`;
+            })
+    })
+</script>
+
+<body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+    
+    
+    <header id="header">
+        <div class="topnav" id="myTopnav">
+            <a href="#"><img class="logo" src="{% static 'images/neweq.png' %}"></a>
+            <a href="{% url 'index' %}" style="margin-left: 5%;">Home</a>
+            <a href="{% url 'eventcategory' %}" style="margin-left: 5%;">Events</a>
+            <a href="{% url 'teams' %}" style="margin-left: 5%;">Teams</a>
+            <a href="{% url 'workshop' %}" style="margin-left: 5%;">Workshops</a>
+            <a href="{% url 'sponsor' %}" style="margin-left: 5%;">Sponsors</a>
+            <a href="{% url 'faq' %}" style="margin-left: 5%;">FAQs</a>
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'logoutuser' %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Logout</a>
+                <a href="{% url 'profile' request.user.id %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Hi, {{request.user.username }}</a>
+            {% else %}
+                <a href="{% url 'login' %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Login</a>
+                <a href="{% url 'register' %}" style="margin-left: 5%;color:plum;font-size:bold;font-family:sans-serif">Register</a>
+            
+            {% endif %}
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+        </div>
+    </header>
+
+   
+
+    <div id="Sponsors">
+        <div class="container" >
+            <div class="row text-center" >
+              {% if messages %}
+              <div class="col-12 text-center" style="background-color:plum;padding:=0.5%;margin-bottom:2%;border-radius:20px;font-size:20px;font-size:solid">
+                {% for message in messages %} {% if message.tags == 'error' %}
+                <div class="alert alert-danger" style="margin-top: 10px">
+                  {{ message }}
+                </div>
+                {% endif %} {% if message.tags == 'success' %}
+                <div class="alert alert-sucess" style="margin-top: 10px">
+                  {{ message }}
+                </div>
+                {% endif %} {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+        </div>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-md-6 svg-section">
+                    <div class="container text-center" id="login">
+                        <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 744.84799 747.07702" xmlns:xlink="http://www.w3.org/1999/xlink"><path id="fa3b9e12-7275-481e-bee9-64fd9595a50d-367" data-name="Path 1" d="M299.205,705.80851l-6.56-25.872a335.96693,335.96693,0,0,0-35.643-12.788l-.828,12.024-3.358-13.247c-15.021-4.29394-25.24-6.183-25.24-6.183s13.8,52.489,42.754,92.617l33.734,5.926-26.207,3.779a135.92592,135.92592,0,0,0,11.719,12.422c42.115,39.092,89.024,57.028,104.773,40.06s-5.625-62.412-47.74-101.5c-13.056-12.119-29.457-21.844-45.875-29.5Z" transform="translate(-227.576 -76.46149)" fill="#f2f2f2"/><path id="bde08021-c30f-4979-a9d8-cb90b72b5ca2-368" data-name="Path 2" d="M361.591,677.70647l7.758-25.538a335.93951,335.93951,0,0,0-23.9-29.371l-6.924,9.865,3.972-13.076c-10.641-11.436-18.412-18.335-18.412-18.335s-15.315,52.067-11.275,101.384l25.815,22.51-24.392-10.312a135.91879,135.91879,0,0,0,3.614,16.694c15.846,55.234,46.731,94.835,68.983,88.451s27.446-56.335,11.6-111.569c-4.912-17.123-13.926-33.926-24.023-48.965Z" transform="translate(-227.576 -76.46149)" fill="#f2f2f2"/><path id="b3ac2088-de9b-4f7f-bc99-0ed9705c1a9d-369" data-name="Path 22" d="M747.327,253.4445h-4.092v-112.1a64.883,64.883,0,0,0-64.883-64.883H440.845a64.883,64.883,0,0,0-64.883,64.883v615a64.883,64.883,0,0,0,64.883,64.883H678.352a64.883,64.883,0,0,0,64.882-64.883v-423.105h4.092Z" transform="translate(-227.576 -76.46149)" fill="#e6e6e6"/><path id="b2715b96-3117-487c-acc0-20904544b5b7-370" data-name="Path 23" d="M680.97,93.3355h-31a23.02,23.02,0,0,1-21.316,31.714H492.589a23.02,23.02,0,0,1-21.314-31.714H442.319a48.454,48.454,0,0,0-48.454,48.454v614.107a48.454,48.454,0,0,0,48.454,48.454H680.97a48.454,48.454,0,0,0,48.454-48.454h0V141.7885a48.454,48.454,0,0,0-48.454-48.453Z" transform="translate(-227.576 -76.46149)" fill="#fff"/><path id="b06d66ec-6c84-45dd-8c27-1263a6253192-371" data-name="Path 6" d="M531.234,337.96451a24.437,24.437,0,0,1,12.23-21.174,24.45,24.45,0,1,0,0,42.345A24.43391,24.43391,0,0,1,531.234,337.96451Z" transform="translate(-227.576 -76.46149)" fill="#ccc"/><path id="e73810fe-4cf4-40cc-8c7c-ca544ce30bd4-372" data-name="Path 7" d="M561.971,337.96451a24.43594,24.43594,0,0,1,12.23-21.174,24.45,24.45,0,1,0,0,42.345A24.43391,24.43391,0,0,1,561.971,337.96451Z" transform="translate(-227.576 -76.46149)" fill="#ccc"/><circle id="a4813fcf-056e-4514-bb8b-e6506f49341f" data-name="Ellipse 1" cx="364.43401" cy="261.50202" r="24.45" fill="#9e5ab7"/><path id="bbe451c3-febc-41ba-8083-4c8307a2e73e-373" data-name="Path 8" d="M632.872,414.3305h-142.5a5.123,5.123,0,0,1-5.117-5.117v-142.5a5.123,5.123,0,0,1,5.117-5.117h142.5a5.123,5.123,0,0,1,5.117,5.117v142.5A5.123,5.123,0,0,1,632.872,414.3305Zm-142.5-150.686a3.073,3.073,0,0,0-3.07,3.07v142.5a3.073,3.073,0,0,0,3.07,3.07h142.5a3.073,3.073,0,0,0,3.07-3.07v-142.5a3.073,3.073,0,0,0-3.07-3.07Z" transform="translate(-227.576 -76.46149)" fill="#ccc"/><rect id="bb28937d-932f-4fdf-befe-f406e51091fe" data-name="Rectangle 1" x="218.56201" y="447.10197" width="218.552" height="2.047" fill="#ccc"/><circle id="fcef55fc-4968-45b2-93bb-1a1080c85fc7" data-name="Ellipse 2" cx="225.46401" cy="427.41999" r="6.902" fill="#9e5ab7"/><rect id="ff33d889-4c74-4b91-85ef-b4882cc8fe76" data-name="Rectangle 2" x="218.56201" y="516.11803" width="218.552" height="2.047" fill="#ccc"/><circle id="e8fa0310-b872-4adf-aedd-0c6eda09f3b8" data-name="Ellipse 3" cx="225.46401" cy="496.43702" r="6.902" fill="#9e5ab7"/><path d="M660.69043,671.17188H591.62207a4.50493,4.50493,0,0,1-4.5-4.5v-24.208a4.50492,4.50492,0,0,1,4.5-4.5h69.06836a4.50491,4.50491,0,0,1,4.5,4.5v24.208A4.50492,4.50492,0,0,1,660.69043,671.17188Z" transform="translate(-227.576 -76.46149)" fill="#9e5ab7"/><circle id="e12ee00d-aa4a-4413-a013-11d20b7f97f7" data-name="Ellipse 7" cx="247.97799" cy="427.41999" r="6.902" fill="#9e5ab7"/><circle id="f58f497e-6949-45c8-be5f-eee2aa0f6586" data-name="Ellipse 8" cx="270.492" cy="427.41999" r="6.902" fill="#9e5ab7"/><circle id="b4d4939a-c6e6-4f4d-ba6c-e8b05485017d" data-name="Ellipse 9" cx="247.97799" cy="496.43702" r="6.902" fill="#9e5ab7"/><circle id="aff120b1-519b-4e96-ac87-836aa55663de" data-name="Ellipse 10" cx="270.492" cy="496.43702" r="6.902" fill="#9e5ab7"/><path id="f1094013-1297-477a-ac57-08eac07c4bd5-374" data-name="Path 88" d="M969.642,823.53851H251.656c-1.537,0-2.782-.546-2.782-1.218s1.245-1.219,2.782-1.219H969.642c1.536,0,2.782.546,2.782,1.219S971.178,823.53851,969.642,823.53851Z" transform="translate(-227.576 -76.46149)" fill="#3f3d56"/><path d="M792.25256,565.92292a10.09371,10.09371,0,0,1,1.41075.78731l44.8523-19.14319,1.60093-11.81526,17.92157-.10956-1.05873,27.0982-59.19987,15.65584a10.60791,10.60791,0,0,1-.44749,1.20835,10.2346,10.2346,0,1,1-5.07946-13.68169Z" transform="translate(-227.576 -76.46149)" fill="#ffb8b8"/><polygon points="636.98 735.021 624.72 735.021 618.888 687.733 636.982 687.734 636.98 735.021" fill="#ffb8b8"/><path d="M615.96281,731.51778h23.64387a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H601.076a0,0,0,0,1,0,0v0A14.88686,14.88686,0,0,1,615.96281,731.51778Z" fill="#2f2e41"/><polygon points="684.66 731.557 672.459 732.759 662.018 686.271 680.025 684.497 684.66 731.557" fill="#ffb8b8"/><path d="M891.68576,806.12757h23.64387a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H876.7989a0,0,0,0,1,0,0v0A14.88686,14.88686,0,0,1,891.68576,806.12757Z" transform="translate(-303.00873 15.2906) rotate(-5.62529)" fill="#2f2e41"/><circle cx="640.3925" cy="384.57375" r="24.56103" fill="#ffb8b8"/><path d="M849.55636,801.91945a4.47086,4.47086,0,0,1-4.415-3.69726c-6.34571-35.22559-27.08789-150.40528-27.584-153.59571a1.42684,1.42684,0,0,1-.01562-.22168v-8.58789a1.489,1.489,0,0,1,.27929-.87207l2.74024-3.83789a1.47845,1.47845,0,0,1,1.14355-.625c15.62207-.73242,66.78418-2.8789,69.25586.209h0c2.48242,3.10351,1.60547,12.50683,1.4043,14.36035l.00977.19336,22.98535,146.99512a4.51238,4.51238,0,0,1-3.71485,5.13476l-14.35644,2.36524a4.52127,4.52127,0,0,1-5.02539-3.09278c-4.44043-14.18847-19.3291-61.918-24.48926-80.38672a.49922.49922,0,0,0-.98047.13868c.25781,17.60546.88086,62.52343,1.0957,78.0371l.02344,1.6709a4.51811,4.51811,0,0,1-4.09277,4.53614l-13.84375,1.25781C849.83565,801.91359,849.695,801.91945,849.55636,801.91945Z" transform="translate(-227.576 -76.46149)" fill="#2f2e41"/><path id="ae7af94f-88d7-4204-9f07-e3651de85c05-375" data-name="Path 99" d="M852.38089,495.2538c-4.28634,2.548-6.85116,7.23043-8.32276,11.9951a113.681,113.681,0,0,0-4.88444,27.15943l-1.55553,27.60021-19.25508,73.1699c16.68871,14.1207,26.31542,10.91153,48.78049-.63879s25.03222,3.85117,25.03222,3.85117l4.49236-62.25839,6.41837-68.03232a30.16418,30.16418,0,0,0-4.86143-4.67415,49.65848,49.65848,0,0,0-42.44229-8.99538Z" transform="translate(-227.576 -76.46149)" fill="#9e5ab7"/><path d="M846.12661,580.70047a10.52561,10.52561,0,0,1,1.50061.70389l44.34832-22.1972.736-12.02551,18.2938-1.26127.98041,27.4126L852.7199,592.93235a10.4958,10.4958,0,1,1-6.59329-12.23188Z" transform="translate(-227.576 -76.46149)" fill="#ffb8b8"/><path id="a6768b0e-63d0-4b31-8462-9b2e0b00f0fd-376" data-name="Path 101" d="M902.76552,508.41151c10.91151,3.85117,12.83354,45.57369,12.83354,45.57369-12.8367-7.06036-28.24139,4.49318-28.24139,4.49318s-3.20916-10.91154-7.06034-25.03223a24.52987,24.52987,0,0,1,5.13436-23.10625S891.854,504.558,902.76552,508.41151Z" transform="translate(-227.576 -76.46149)" fill="#9e5ab7"/><path id="bfd7963f-0cf8-4885-9d3a-2c00bccda2e3-377" data-name="Path 102" d="M889.99122,467.53052c-3.06-2.44837-7.23517,2.00173-7.23517,2.00173l-2.4484-22.03349s-15.30095,1.8329-25.0935-.61161-11.32255,8.87513-11.32255,8.87513a78.57978,78.57978,0,0,1-.30582-13.77092c.61158-5.50838,8.56838-11.01675,22.6451-14.68932S887.6518,439.543,887.6518,439.543C897.44542,444.43877,893.05121,469.97891,889.99122,467.53052Z" transform="translate(-227.576 -76.46149)" fill="#2f2e41"/></svg>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="container text-center" id="login">
+                        <form action="{% url 'login' %}" method="POST" class="login-section">
+                            {% csrf_token %}
+                            <h3>Login Here</h3>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <input type="submit" class="btn" value="Submit">
+                            <p style="padding:2% 0%;color:#9370DB;margin-top:6%">Don't have an Account? &nbsp;<a href="{% url 'register' %}" style="color: rgb(255, 255, 255);text-decoration: none;">Click Here</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+
+
+    </div>
+    <!--Footer-->
+
+
+    <footer class="footer footer-dark" style="padding-top: 5%;">
+
+        <div class="footer-top" style="background-image:linear-gradient(to left, rgb(67, 1, 143) , rgb(152, 18, 156));">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-12">
+                            <div class="footer-logo">
+                                <a>
+                                    <img src="{% static 'images/neweq.png' %}" alt="#" style="height:75px;width:auto">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-12">
+                            <div class="footer-newsletter">
+                                <h4 class="title">
+                                    Subscribe to our Newsletter
+                                    <span style="padding-right: 2%;">Get all the latest information, events and workshops ! </span>
+                                </h4>
+                                <div class="newsletter-form-head">
+                                    <form action="{% url 'subscribe' %}" method="POST" class="newsletter-form">
+                                        {% csrf_token %}
+                                        <input name="email" placeholder="Email address here..." type="email">
+                                        <div class="button">
+                                            <button class="btn">Subscribe<span class="dir-part"></span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-middle">
+            <div class="container">
+                <div class="bottom-inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+
+                            <div class="single-footer f-contact">
+                                <h3>Get In Touch With Us</h3>
+                                <p class="phone">Phone: +91 76778 60002</p>
+                                <p class="phone">Email : coordinators22@equifestggu.org</p>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+
+                           
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+
+                            <div class="single-footer f-link">
+                                <h3>Information</h3>
+                                <ul>
+                                    <li><a href="{% url 'index' %}">About Us</a></li>
+                                    <li><a href="{% url 'workshop' %}">Workshops</a></li>
+                                    <li><a href="{% url 'sponsor' %}">Sponsors</a></li>
+                                    <li><a href="{% url 'faq' %}">FAQs Page</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+
+                            <div class="single-footer f-link">
+                                <h3>Peek into</h3>
+                                <ul>
+                                    <li><a href="{% url 'deskof' %}">Desk of</a></li>
+                                    <li><a href="{% url 'teams' %}">Teams</a></li>
+                                    <li><a href="{% url 'eventcategory' %}">Events</a></li>
+                                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-12">
+                            <div class="payment-gateway">
+                                <span>Equilibrio 2022</span>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="copyright">
+                                copyright &copy; Equilibrio'22
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <ul class="socila">
+                                <li>
+                                    <span>Follow Us On:</span>
+                                </li>
+                                <li><a href="https://m.facebook.com/equilibrio.fest/?__tn__=C-R"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/equilibrio_ggv?t=ocAsYsYHcW2LKyQOpRoA9Q&s=08"><i
+                      class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/equilibrio_ggv/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/equilibrio-ggv/posts/?feedView=all"><i
+                      class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCBMS9qtWUw-m5k4U7lBth8A"><i class="fa fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('#container').addClass('loaded');
+
+            if ($('#container').hasClass('loaded')) {
+
+                $('#preloader').delay(9000).queue(function() {
+                    $(this).remove();
+                });
+            }
+        }, 3000);
+    });
+
+    (function($) {
+        $(function() {
+            $('nav ul li a:not(:only-child)').click(function(e) {
+                $(this).siblings('.nav-dropdown').toggle();
+                $('.dropdown').not($(this).siblings()).hide();
+                e.stopPropagation();
+            });
+            $('html').click(function() {
+                $('.nav-dropdown').hide();
+            });
+            $('#nav-toggle').click(function() {
+                $('nav ul').slideToggle();
+            });
+            $('#nav-toggle').on('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    })(jQuery);
+</script>
+
+</html>
